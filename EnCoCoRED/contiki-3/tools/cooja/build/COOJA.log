@@ -1,0 +1,29 @@
+[16:01:37 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:01:39 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:01:39 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
+[16:03:15 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 8139072215047023741
+[16:03:15 - Thread-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:03:44 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[16:04:01 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[16:04:01 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:04:02 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[16:04:02 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[16:04:03 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[16:04:03 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:04 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:04:05 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[16:04:06 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:04:06 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:04:21 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:04:21 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000 ms
+[16:04:22 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[18:21:54 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:21:54 - Thread-2] [LogScriptEngine.java:309] [INFO] - Test script finished
+[18:21:54 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
