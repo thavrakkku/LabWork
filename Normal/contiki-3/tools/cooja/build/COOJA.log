@@ -1,0 +1,55 @@
+[07:45:13 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[07:45:14 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[07:45:14 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
+[07:45:51 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 670160269666035582
+[07:45:51 - Thread-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[07:45:51 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[07:45:51 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[07:45:51 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[07:45:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[07:45:52 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[07:45:52 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:53 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:45:54 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[07:45:54 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[07:45:55 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[07:45:57 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:47:10 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[07:47:10 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:47:10 - Thread-2] [Simulation.java:420] [INFO] - Simulation random seed: 670160269666035582
+[07:47:10 - Thread-2] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[07:47:10 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[07:47:11 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[07:47:11 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[07:47:12 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[07:47:12 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[07:47:12 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[07:47:13 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:13 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:13 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:13 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:47:14 - Thread-2] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[07:47:15 - Thread-2] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[07:47:15 - Thread-2] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:47:17 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1658191637806
+[07:47:24 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1658191644466.pcap
+[07:47:25 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1658191645121	Duration: 7315 ms	Simulated time 6157 ms	Ratio 0.8416951469583048
+[07:47:27 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1658191647959
+[07:47:30 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1658191650100	Duration: 2142 ms	Simulated time 39385 ms	Ratio 18.38702147525677
+[07:47:32 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1658191652757
+[07:47:37 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1658191657798	Duration: 5041 ms	Simulated time 62547 ms	Ratio 12.407657210870859
+[07:47:46 - Thread-3] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[07:47:46 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
