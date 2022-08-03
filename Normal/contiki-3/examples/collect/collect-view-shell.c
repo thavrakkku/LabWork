@@ -62,7 +62,7 @@ PROCESS_THREAD(collect_view_shell_process, ev, data)
 
   /* shell_download_init(); */
   /* shell_rime_sendcmd_init(); */
-  /* shell_ps_init(); */
+  //shell_ps_init(); 
   shell_reboot_init();
   shell_rime_init();
   shell_rime_netcmd_init();
