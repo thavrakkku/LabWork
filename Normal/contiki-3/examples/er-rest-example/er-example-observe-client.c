@@ -162,62 +162,35 @@ notification_callback(coap_observee_t *obs, void *notification,
 {
   int len = 0;
   const uint8_t *payload = NULL;
-printf("Con: %d\n",con);
-  printf("Notification handler\n");
-  printf("Observee URI: %s\n", obs->url);
+
+  printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
+  printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
+	printf("Con: %d\n",con);
+  	printf("Notification handler\n");
+  	printf("Observee URI: %s\n", obs->url);
   if(notification) {
     len = coap_get_payload(notification, &payload);
   }
+  
   switch(flag) {
   case NOTIFICATION_OK:
-    printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
-	
-    break;
+
+
+  //Fixing this part
+    if (&obs->addr==&server_ipaddr1)
+		{
+			printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
+		//printf("Observe Block-Wise coming1111\n");
+		//r=1;	/* code */
+		}
+	else{
+	//printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
+	printf("Observe Block-Wise coming1111\n");
+	}
+	break;
   case OBSERVE_OK: /* server accepeted observation request */
     printf("OBSERVE_OK: %*s\n", len, (char *)payload);
-
-    break;
-  case OBSERVE_NOT_SUPPORTED:
-    printf("OBSERVE_NOT_SUPPORTED: %*s\n", len, (char *)payload);
-    obs = NULL;
-    break;
-  case ERROR_RESPONSE_CODE:
-    printf("ERROR_RESPONSE_CODE: %*s\n", len, (char *)payload);
-    obs = NULL;
-    break;
-  case NO_REPLY_FROM_SERVER:
-    printf("NO_REPLY_FROM_SERVER: "
-           "removing observe registration with token %x%x\n",
-           obs->token[0], obs->token[1]);
-    obs = NULL;
-    break;
-  }
-}
-
-static void
-notification_callback1(coap_observee_t *obs, void *notification,
-                      coap_notification_flag_t flag)
-{
-  int len = 0;
-  const uint8_t *payload = NULL;
-
-  printf("Notification handler\n");
-  printf("Observee URI: %s\n", obs->url);
-  if(notification) {
-    len = coap_get_payload(notification, &payload);
-  }
-  switch(flag) {
-  case NOTIFICATION_OK:
-		
-		r=1;	
-	    	
-	printf("NOTIFICATION OK: %*s\n",len,(char *)payload);
 	
-	
-	
-    break;
-  case OBSERVE_OK: /* server accepeted observation request */
-    printf("OBSERVE_OK: %*s\n", len, (char *)payload);
     break;
   case OBSERVE_NOT_SUPPORTED:
     printf("OBSERVE_NOT_SUPPORTED: %*s\n", len, (char *)payload);
@@ -316,7 +289,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
   SENSORS_ACTIVATE(button_sensor);
  	// printf("Press a button to start/stop observation of remote resource\n");
 #endif
-  /* toggle observation every time the timer elapses or the button is pressed */
+  
   while(1) {
 
     PROCESS_YIELD();
@@ -345,7 +318,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Start Calculation--\n");
 			break;
 		case 1:			
-			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			printf("--Connecting to number 3--\n");
 			break; 
 		case 2:
@@ -423,6 +396,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 		//ctr
 		
 		printf("Con: %d\n",con);
+
 		printf("R: %d\n",r);
 		//end
 		//con=0;

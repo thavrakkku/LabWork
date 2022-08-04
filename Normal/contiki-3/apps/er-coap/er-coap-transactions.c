@@ -177,7 +177,7 @@ coap_check_transactions()
       ++(t->retrans_counter);
       
     //  ctr_lose++;
-	    PRINTF("\nCTR_Lose_a_In_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
+	    PRINTF("CTR_Lose_a_In_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
 	
     //  PRINTF("Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
       coap_send_transaction(t);
