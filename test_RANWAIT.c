@@ -1,4 +1,13 @@
-#include 
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void main(){
+    char* a='allDone';
+    barber(a);
+}
+
+
 void *barber(void *junk) {
     // While there are still customers to be serviced...
     // Our barber is omnicient and can tell if there are 
