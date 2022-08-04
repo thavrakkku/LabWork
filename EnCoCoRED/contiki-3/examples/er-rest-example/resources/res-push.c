@@ -44,13 +44,19 @@
 // added 12:02 22-06-22
 #include "lib/random.h"
 /* added 11:08 08-02-22 */
-#include "net/ip/uip.h"
+//#include "net/ip/uip.h"
 
-#include "net/ip/uip-debug.h"
+//#include "net/ip/uip-debug.h"
 
-#define UIP_IP_BUF   ((struct uip_ip_hdr *)&uip_buf[UIP_LLH_LEN])
+//#define UIP_IP_BUF   ((struct uip_ip_hdr *)&uip_buf[UIP_LLH_LEN])
 
 /* End 11:08 08-02-22 */
+/* adde 04-08-22 */
+#ifndef PERIOD
+#define PERIOD 1
+#endif
+#define RANDWAIT (PERIOD)
+/* End adde 04-08-22 */
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_periodic_handler(void);
@@ -62,9 +68,10 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                  0.05*CLOCK_SECOND,
+                 RANDWAIT *CLOCK_SECOND,
                   res_periodic_handler);
-
+// RANDWAIT *CLOCK_SECOND,
+//random_rand() % (CLOCK_SECOND * RANDWAIT)
 /*
  * Use local resource state that is accessed by res_get_handler() and altered by res_periodic_handler() or PUT or POST.
  */
@@ -89,7 +96,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu", temperature,oldtemp));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,CLOCK_SECOND * RANDWAIT));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */

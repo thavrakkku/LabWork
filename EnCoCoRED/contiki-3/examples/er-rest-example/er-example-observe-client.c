@@ -116,7 +116,7 @@
 
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 /* Toggle interval in seconds */
-#define TOGGLE_INTERVAL 20
+#define TOGGLE_INTERVAL 100
 /* The path of the resource to observe */
 #define OBS_RESOURCE_URI "test/push"
 
@@ -249,6 +249,7 @@ client_chunk_handler(void *response)
 /*
  * Toggle the observation of the remote resource
  */
+/*
 void
 toggle_observation(void)
 {
@@ -266,7 +267,7 @@ toggle_observation(void)
 
   }
 }
-
+*/
 /*----------------------------------------------------------------------------*/
 /*
  * The main (proto-)thread. It starts/stops the observation of the remote
@@ -416,7 +417,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 20--\n");
 			break;
 	}
-	if(con==19){con=0;}
+	if(con>11){con=0;}
 
 	if(etimer_expired(&et)) {
 		//ctr
@@ -424,7 +425,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 		printf("Con: %d\n",con);
 		printf("R: %d\n",r);
 		//end
-		con=0;
+		//con=0;
       
 	  //toggle_observation();
 
@@ -436,6 +437,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	 //printf("\n--Toggle Button--\n");
 	//con=50;
 	con++;
+	//etimer_reset(&et);
 		
 #endif
     }

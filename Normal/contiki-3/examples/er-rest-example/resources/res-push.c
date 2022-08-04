@@ -68,9 +68,10 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                  RANDWAIT *CLOCK_SECOND,
+                 RANDWAIT *CLOCK_SECOND,
                   res_periodic_handler);
-
+// RANDWAIT *CLOCK_SECOND,
+//random_rand() % (CLOCK_SECOND * RANDWAIT)
 /*
  * Use local resource state that is accessed by res_get_handler() and altered by res_periodic_handler() or PUT or POST.
  */
@@ -95,7 +96,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu", temperature,oldtemp));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,CLOCK_SECOND * RANDWAIT));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
