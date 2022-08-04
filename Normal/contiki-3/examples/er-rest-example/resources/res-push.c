@@ -44,13 +44,19 @@
 // added 12:02 22-06-22
 #include "lib/random.h"
 /* added 11:08 08-02-22 */
-#include "net/ip/uip.h"
+//#include "net/ip/uip.h"
 
-#include "net/ip/uip-debug.h"
+//#include "net/ip/uip-debug.h"
 
-#define UIP_IP_BUF   ((struct uip_ip_hdr *)&uip_buf[UIP_LLH_LEN])
+//#define UIP_IP_BUF   ((struct uip_ip_hdr *)&uip_buf[UIP_LLH_LEN])
 
 /* End 11:08 08-02-22 */
+/* adde 04-08-22 */
+#ifndef PERIOD
+#define PERIOD 1
+#endif
+#define RANDWAIT (PERIOD)
+/* End adde 04-08-22 */
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_periodic_handler(void);
@@ -62,7 +68,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                  1*CLOCK_SECOND,
+                  RANDWAIT *CLOCK_SECOND,
                   res_periodic_handler);
 
 /*
