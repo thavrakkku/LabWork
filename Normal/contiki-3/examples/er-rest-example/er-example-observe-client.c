@@ -71,7 +71,9 @@
 /*----------------------------------------------------------------------------*/
 /* FIXME: This server address is hard-coded for Cooja */
 //#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212,0x7402, 0x0002, 0x0202)
-///*	
+#define use_br 0
+#if use_br
+	
 	#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0003)
 	#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0004)
 	#define SERVER_NODE3(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0005)
@@ -90,8 +92,7 @@
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00012)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00013) 
 	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)   
-//*/ 
-/*
+#else
 	#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
 	#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x4)
 	#define SERVER_NODE3(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x5)
@@ -110,8 +111,7 @@
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x12)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x13)
 	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)
-
-*/
+#endif
 
 
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
@@ -417,7 +417,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 20--\n");
 			break;
 	}
-	if(con>11){con=0;}
+	if(con>17){con=0;}
 
 	if(etimer_expired(&et)) {
 		//ctr

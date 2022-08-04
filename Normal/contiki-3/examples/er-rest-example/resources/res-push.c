@@ -55,7 +55,11 @@
 #ifndef PERIOD
 #define PERIOD 1
 #endif
-#define RANDWAIT (PERIOD)
+
+#define START_INTERVAL		(15 * CLOCK_SECOND)
+#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
+#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+
 /* End adde 04-08-22 */
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
@@ -68,7 +72,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                 RANDWAIT *CLOCK_SECOND,
+                 PERIOD*CLOCK_SECOND,
                   res_periodic_handler);
 // RANDWAIT *CLOCK_SECOND,
 //random_rand() % (CLOCK_SECOND * RANDWAIT)
@@ -96,7 +100,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,CLOCK_SECOND * RANDWAIT));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,SEND_TIME));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
@@ -137,8 +141,8 @@ res_periodic_handler()
 //temperature=randomsend;
 	
   /* Usually a condition is defined under with subscribers are notified, e.g., large enough delta in sensor reading. */
-  if(temperature!=oldtemp) {
-  //if(1) {
+ // if(temperature!=oldtemp) {
+  if(1) {
   //if(j<1000) {
 
 /* Notify the registered observers which will trigger the res_get_handler to create the response. */
@@ -147,7 +151,7 @@ res_periodic_handler()
 //**make it sleep for ....second
       
     	REST.notify_subscribers(&res_push);
-	oldtemp=temperature;
+	//oldtemp=temperature;
 	//j++;
 	  //}
   }
