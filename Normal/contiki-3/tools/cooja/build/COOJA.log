@@ -889,3 +889,49 @@
 [01:55:52 - Thread-70] [LogScriptEngine.java:389] [INFO] - Test script at 20.00%, done in 68.2 sec
 [01:55:55 - Thread-70] [LogScriptEngine.java:389] [INFO] - Test script at 25.00%, done in 60.4 sec
 [01:55:57 - Thread-70] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659639357654	Duration: 20042 ms	Simulated time 148120 ms	Ratio 7.390479992016765
+[10:18:54 - AWT-EventQueue-0] [Cooja.java:2559] [WARN] - Memory usage is getting critical. Reboot Cooja to avoid out of memory error. Current memory usage is 82.249%.
+[10:18:56 - Thread-69] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:18:56 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:18:56 - Thread-71] [Simulation.java:420] [INFO] - Simulation random seed: 6281549860562245876
+[10:18:57 - Thread-71] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[10:18:59 - Thread-71] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap-observe-client.h:57:2: warning: #warning "COAP_MAX_OPEN_TRANSACTIONS smaller than COAP_MAX_OBSERVEES: " "this may be a problem" [-Wcpp]
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c: In function ‘notification_callback’:
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c:177:1: error: a label can only be part of a statement and a declaration is not a statement
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c:178:1: error: expected expression before ‘char’
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c:179:1: warning: passing argument 2 of ‘strcpy’ from incompatible pointer type [enabled by default]
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> /usr/lib/gcc/msp430/4.6.3/../../../../msp430/include/string.h:48:14: note: expected ‘const char *’ but argument is of type ‘union uip_ipaddr_t *’
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c: At top level:
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client.c:128:12: warning: ‘registernode’ defined but not used [-Wunused-variable]
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../Makefile.include:261: er-example-observe-client.co] Error 1
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:19:00 - Thread-71] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:20:20 - Thread-71] [Simulation.java:420] [INFO] - Simulation random seed: 6281549860562245876
+[10:20:20 - Thread-71] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[10:20:20 - Thread-71] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[10:20:21 - Thread-71] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[10:20:21 - Thread-71] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:20:21 - Thread-71] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:20:21 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[10:20:22 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[10:20:22 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:20:23 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:20:24 - Thread-71] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:20:24 - Thread-71] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:20:24 - Thread-71] [LogScriptEngine.java:265] [INFO] - Script timeout in 500000 ms
+[10:20:24 - Thread-71] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:20:30 - Thread-74] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1659669630110
+[10:20:34 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1659669634327.pcap
+[10:20:37 - Thread-74] [LogScriptEngine.java:389] [INFO] - Test script at 5.00%, done in 234.5 sec
+[10:20:39 - Thread-74] [LogScriptEngine.java:389] [INFO] - Test script at 10.00%, done in 133.9 sec
+[10:20:42 - Thread-74] [LogScriptEngine.java:389] [INFO] - Test script at 15.00%, done in 98.6 sec
+[10:20:43 - Thread-74] [LogScriptEngine.java:389] [INFO] - Test script at 20.00%, done in 76.2 sec
+[10:20:46 - Thread-74] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659669646836	Duration: 16726 ms	Simulated time 122657 ms	Ratio 7.33331340428076

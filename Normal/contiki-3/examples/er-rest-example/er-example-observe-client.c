@@ -156,6 +156,7 @@ uip_ipaddr_t	server_ipaddr18;
 /*
  * Handle the response to the observe request and the following notifications
  */
+
 static void
 notification_callback(coap_observee_t *obs, void *notification,
                       coap_notification_flag_t flag)
@@ -175,7 +176,6 @@ notification_callback(coap_observee_t *obs, void *notification,
   switch(flag) {
   case NOTIFICATION_OK:
 
-
   //Fixing this part
     if (&obs->addr==&server_ipaddr1)
 		{
@@ -185,7 +185,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 		}
 	else{
 	//printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
-	printf("Observe Block-Wise coming1111\n");
+	printf("IP:%s\n",ip1);
 	}
 	break;
   case OBSERVE_OK: /* server accepeted observation request */
