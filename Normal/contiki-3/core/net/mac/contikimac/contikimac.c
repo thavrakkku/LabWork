@@ -106,6 +106,8 @@ static int we_are_receiving_burst = 0;
 
 /* INTER_PACKET_DEADLINE is the maximum time a receiver waits for the
    next packet of a burst when FRAME_PENDING is set. */
+   
+   //CTR note
 #define INTER_PACKET_DEADLINE               CLOCK_SECOND / 32
 
 /* ContikiMAC performs periodic channel checks. Each channel check
