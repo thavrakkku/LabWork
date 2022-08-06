@@ -163,9 +163,9 @@ notification_callback(coap_observee_t *obs, void *notification,
 {
   int len = 0;
   const uint8_t *payload = NULL;
-
-  printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
-  printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
+	printf("R: %d\n",r);
+  	printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
+  	printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
 	printf("Con: %d\n",con);
   	printf("Notification handler\n");
   	printf("Observee URI: %s\n", obs->url);
@@ -177,15 +177,15 @@ notification_callback(coap_observee_t *obs, void *notification,
   case NOTIFICATION_OK:
 
   //Fixing this part
-    if (&obs->addr==&server_ipaddr1)
+    if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr1))
 		{
-			printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
-		//printf("Observe Block-Wise coming1111\n");
-		//r=1;	/* code */
+		printf("Observe Block-Wise coming1111\n");
+		r=1;
+		c=2;	/* code */
 		}
 	else{
-	//printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
-	printf("IP:%s\n",ip1);
+	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
+	
 	}
 	break;
   case OBSERVE_OK: /* server accepeted observation request */
