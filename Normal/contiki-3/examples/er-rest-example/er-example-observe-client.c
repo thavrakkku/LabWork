@@ -207,7 +207,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr5)){
 		printf("Observe OK form 7\n");
-		increase_conn(20);
+		increase_conn(6);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr6)){
 		printf("Observe OK form 8\n");
@@ -219,7 +219,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
 		printf("Observe OK form 10\n");
-		increase_conn(9);
+		increase_conn(20);
 	}
 /* End of CTR Note */
 
