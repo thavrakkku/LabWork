@@ -53,7 +53,7 @@
 /* End 11:08 08-02-22 */
 /* adde 04-08-22 */
 #ifndef PERIOD
-#define PERIOD 1
+#define PERIOD 2
 #endif
 
 #define START_INTERVAL		(15 * CLOCK_SECOND)
@@ -141,8 +141,8 @@ res_periodic_handler()
 //temperature=randomsend;
 	
   /* Usually a condition is defined under with subscribers are notified, e.g., large enough delta in sensor reading. */
- // if(temperature!=oldtemp) {
-  if(1) {
+  if(temperature!=oldtemp) {
+ // if(1) {
   //if(j<1000) {
 
 /* Notify the registered observers which will trigger the res_get_handler to create the response. */
@@ -151,7 +151,7 @@ res_periodic_handler()
 //**make it sleep for ....second
       
     	REST.notify_subscribers(&res_push);
-	//oldtemp=temperature;
+	  oldtemp=temperature;
 	//j++;
 	  //}
   }
