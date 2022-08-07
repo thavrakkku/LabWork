@@ -1352,17 +1352,18 @@ struct uip_conn {
   uint16_t mss;          /**< Current maximum segment size for the
 			 connection. */
   uint16_t initialmss;   /**< Initial maximum segment size for the
-			 connection. */  //CTR NOTE
+			 connection. */  
   uint8_t sa;            /**< Retransmission time-out calculation state
 			 variable. */
   uint8_t sv;            /**< Retransmission time-out calculation state
 			 variable. */
+  /* CTR NOTE RTO retransmission timer, number of restransmissions */
   uint8_t rto;           /**< Retransmission time-out. */
   uint8_t tcpstateflags; /**< TCP state and flags. */
   uint8_t timer;         /**< The retransmission timer. */
   uint8_t nrtx;          /**< The number of retransmissions for the last
 			 segment sent. */
-
+/* End CTR NOTE */
   /** The application state. */
   uip_tcp_appstate_t appstate;
 };

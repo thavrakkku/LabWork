@@ -107,9 +107,11 @@ static int we_are_receiving_burst = 0;
 /* INTER_PACKET_DEADLINE is the maximum time a receiver waits for the
    next packet of a burst when FRAME_PENDING is set. */
    
-   //CTR note
+ /* CTR NOTE Time Before packet drop */
+
 #define INTER_PACKET_DEADLINE               CLOCK_SECOND / 32
 
+/* End CTR NOTE */
 /* ContikiMAC performs periodic channel checks. Each channel check
    consists of two or more CCA checks. CCA_COUNT_MAX is the number of
    CCAs to be done for each periodic channel check. The default is

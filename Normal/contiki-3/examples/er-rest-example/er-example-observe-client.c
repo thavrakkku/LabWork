@@ -157,24 +157,28 @@ uip_ipaddr_t	server_ipaddr18;
  * Handle the response to the observe request and the following notifications
  */
 
-//CTR Note Function to Auto Connect to all the server
+/*CTR Note Function to Auto Connect to all the server */
 static void increase_conn(int num){
 	if (num>con){
 		con=num;
 	}
 	//printf("con still running=%d\n",con);
 }
-/// end of CTR Note
+/* end of CTR Note */
 static void
 notification_callback(coap_observee_t *obs, void *notification,
                       coap_notification_flag_t flag)
 {
   int len = 0;
   const uint8_t *payload = NULL;
-	printf("R: %d\n",r);
-  	printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
-  	printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
-	printf("Con: %d\n",con);
+
+/* CTR note check IP */
+	//printf("R: %d\n",r);
+  	//printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
+  	//printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
+	//printf("Con: %d\n",con);
+/* end of CTR note */
+
   	printf("Notification handler\n");
   	printf("Observee URI: %s\n", obs->url);
   if(notification) {
@@ -184,49 +188,40 @@ notification_callback(coap_observee_t *obs, void *notification,
   switch(flag) {
   case NOTIFICATION_OK:
 
-//CTR Note check incoming observe IP for connection condition
+/* CTR Note check incoming observe IP for connection condition */
     if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr1)){
 		printf("Observe OK form 3\n");
-		//r=1;
 		increase_conn(2);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr2)){
 		printf("Observe OK form 4\n");
-		//r=2;
 		increase_conn(3);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr3)){
 		printf("Observe OK form 5\n");
-		//r=3;
 		increase_conn(4);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr4)){
 		printf("Observe OK form 6\n");
-		//r=4;
 		increase_conn(5);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr5)){
 		printf("Observe OK form 7\n");
-		//r=5;
 		increase_conn(20);
-	
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr6)){
 		printf("Observe OK form 8\n");
-		//r=6;
 		increase_conn(7);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr7)){
 		printf("Observe OK form 9\n");
-		//r=7;
 		increase_conn(8);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
 		printf("Observe OK form 10\n");
-		//r=8;
 		increase_conn(9);
 	}
-// end of CTR Note
+/* End of CTR Note */
 
 	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
 	break;
