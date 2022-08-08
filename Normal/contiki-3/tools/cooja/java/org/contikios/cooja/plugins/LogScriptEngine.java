@@ -61,7 +61,7 @@ import org.contikios.cooja.TimeEvent;
  */
 public class LogScriptEngine {
   private static Logger logger = Logger.getLogger(LogScriptEngine.class);
-  private static final long DEFAULT_TIMEOUT = 20*60*1000*Simulation.MILLISECOND; /* 1200s = 20 minutes */
+  private static final long DEFAULT_TIMEOUT = 20*60*1000*Simulation.MILLISECOND; /* 1200s = 20 minutes */ /*CTR NOTE DEFAULT SCRIPT TIMEOUT */
 
   private ScriptEngine engine =
     new ScriptEngineManager().getEngineByName("JavaScript");
@@ -259,8 +259,8 @@ public class LogScriptEngine {
 
     timeout = parser.getTimeoutTime();
     if (timeout < 0) {
-      timeout = DEFAULT_TIMEOUT;
-      logger.info("Default script timeout in " + (timeout/Simulation.MILLISECOND) + " ms");
+      timeout = DEFAULT_TIMEOUT; /*CTR NOTE DEFAULT SCRIPT TIMEOUT */
+      logger.info("Default script timeout in " + (timeout/Simulation.MILLISECOND) + " ms");/*Ctr Note Script Timeout */
     } else {
       logger.info("Script timeout in " + (timeout/Simulation.MILLISECOND) + " ms");
     }
@@ -270,7 +270,7 @@ public class LogScriptEngine {
     /* Setup script control */
     semaphoreScript = new Semaphore(1);
     semaphoreSim = new Semaphore(1);
-    engine.put("TIMEOUT", false);
+    engine.put("TIMEOUT", false); 
     engine.put("SHUTDOWN", false);
     engine.put("SEMAPHORE_SCRIPT", semaphoreScript);
     engine.put("SEMAPHORE_SIM", semaphoreSim);

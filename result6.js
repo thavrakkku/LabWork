@@ -56,12 +56,13 @@ m11_sending =0;m11_receiving =0;m12_sending =0;m12_receiving =0;m13_sending =0;m
 m15_sending =0;m15_receiving =0;m16_sending =0;m16_receiving =0;m17_sending =0;m17_receiving =0;m18_sending =0;m18_receiving =0;
 m19_sending =0;m19_receiving =0;m20_sending =0;m20_receiving =0;
 
-function start_measure(number){
-    if(number>1){
+function start_measure(){
+    if(start_calculate>1){
         return;
     }
+    start_calculate=start_calculate+1;
     log.log("start timed out.\n");
-    //TIMEOUT(300000);
+    TIMEOUT(300000);
 }
 timeout_function = function () {
     log.log("Script timed out.\n");
@@ -78,14 +79,13 @@ while(1) {
 
 array = new Array();
 YIELD();
-
+log.log(start_calculate+"\n");
     msgs= msg + "_TIME:" + time + "_ID:" + id + "_Time2:"+ a + "\n";
-
+    
     msgArray = msgs.split('_');
     if(msgArray[0].equals("--Start Calculation--")){
-        start_calculate = start_calculate+1;
-        start_measure(start_calculate);
-        log.log("\nTime:"+start_calculate+"\n");
+        start_calculate = start_calculate+1; 
+        start_measure();   
     }
     if(start_calculate >= 1){
     if(msgArray[0].equals("CTR")){
