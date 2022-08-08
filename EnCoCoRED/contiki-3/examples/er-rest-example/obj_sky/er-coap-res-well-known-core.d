@@ -4,8 +4,8 @@ obj_sky/er-coap-res-well-known-core.o: \
  ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
  ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h \
  ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
  ../../core/./sys/pt.h ../../core/./sys/cc.h ../../core/./sys/autostart.h \
  ../../core/./sys/process.h ../../core/./sys/timer.h \
@@ -67,8 +67,8 @@ obj_sky/er-coap-res-well-known-core.o: \
  ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
  ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h :
  ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
  ../../core/./sys/pt.h ../../core/./sys/cc.h ../../core/./sys/autostart.h :
  ../../core/./sys/process.h ../../core/./sys/timer.h :

@@ -1,6 +1,6 @@
 obj_sky/compower.o: ../../core/sys/compower.c \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./sys/energest.h ../../core/./sys/rtimer.h \
  ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/compower.h \
  ../../core/./net/packetbuf.h ../../core/./net/linkaddr.h \
@@ -18,8 +18,8 @@ obj_sky/compower.o: ../../core/sys/compower.c \
  ../../core/./sys/procinit.h ../../core/./sys/loader.h \
  ../../core/./sys/clock.h ../../core/./sys/energest.h
 ../../core/sys/compower.c :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./sys/energest.h ../../core/./sys/rtimer.h :
  ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/compower.h :
  ../../core/./net/packetbuf.h ../../core/./net/linkaddr.h :

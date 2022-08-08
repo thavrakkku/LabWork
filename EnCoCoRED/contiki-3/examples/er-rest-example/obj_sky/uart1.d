@@ -1,7 +1,7 @@
 obj_sky/uart1.o: ../../cpu/msp430/f1xxx/uart1.c ../../core/./contiki.h \
  ../../core/./contiki-version.h ../../platform/sky/./contiki-conf.h \
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../core/./contiki-default-conf.h \
+ project-conf.h ../../platform/sky/./platform-conf.h \
+ ../../cpu/msp430/./msp430def.h ../../core/./contiki-default-conf.h \
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h \
  ../../core/./sys/lc-switch.h ../../core/./sys/cc.h \
  ../../core/./sys/autostart.h ../../core/./sys/process.h \
@@ -17,8 +17,8 @@ obj_sky/uart1.o: ../../cpu/msp430/f1xxx/uart1.c ../../core/./contiki.h \
  ../../core/./lib/ringbuf.h ../../cpu/msp430/./isr_compat.h
 ../../cpu/msp430/f1xxx/uart1.c ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/sky/./contiki-conf.h :
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../core/./contiki-default-conf.h :
+ project-conf.h ../../platform/sky/./platform-conf.h :
+ ../../cpu/msp430/./msp430def.h ../../core/./contiki-default-conf.h :
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h :
  ../../core/./sys/lc-switch.h ../../core/./sys/cc.h :
  ../../core/./sys/autostart.h ../../core/./sys/process.h :

@@ -1,8 +1,8 @@
 obj_sky/nullsec.o: ../../core/net/llsec/nullsec.c \
  ../../core/./net/llsec/nullsec.h ../../core/./net/llsec/llsec.h \
  ../../core/./net/mac/mac.h ../../platform/sky/./contiki-conf.h \
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../core/./dev/radio.h \
+ project-conf.h ../../platform/sky/./platform-conf.h \
+ ../../cpu/msp430/./msp430def.h ../../core/./dev/radio.h \
  ../../core/./net/mac/frame802154.h ../../core/./net/netstack.h \
  ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h \
  ../../core/./net/packetbuf.h ../../core/./net/linkaddr.h \
@@ -23,8 +23,8 @@ obj_sky/nullsec.o: ../../core/net/llsec/nullsec.c \
 ../../core/net/llsec/nullsec.c :
  ../../core/./net/llsec/nullsec.h ../../core/./net/llsec/llsec.h :
  ../../core/./net/mac/mac.h ../../platform/sky/./contiki-conf.h :
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../core/./dev/radio.h :
+ project-conf.h ../../platform/sky/./platform-conf.h :
+ ../../cpu/msp430/./msp430def.h ../../core/./dev/radio.h :
  ../../core/./net/mac/frame802154.h ../../core/./net/netstack.h :
  ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h :
  ../../core/./net/packetbuf.h ../../core/./net/linkaddr.h :

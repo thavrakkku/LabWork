@@ -1,7 +1,7 @@
 obj_sky/sht11-sensor.o: ../../dev/sht11/sht11-sensor.c \
  ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
  ../../core/./sys/cc.h ../../core/./sys/autostart.h \
@@ -16,8 +16,8 @@ obj_sky/sht11-sensor.o: ../../dev/sht11/sht11-sensor.c \
  ../../dev/sht11/sht11.h ../../dev/sht11/sht11-sensor.h
 ../../dev/sht11/sht11-sensor.c :
  ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
  ../../core/./sys/cc.h ../../core/./sys/autostart.h :

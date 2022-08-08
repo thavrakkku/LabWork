@@ -51,7 +51,7 @@ PERIODIC_RESOURCE(res_push_copy,
                   NULL,
                   NULL,
                   NULL,
-                  1 * CLOCK_SECOND,
+                  5 * CLOCK_SECOND,
                   res_periodic_handler);
 
 /*

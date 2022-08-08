@@ -1,9 +1,10 @@
 obj_sky/phase.o: ../../core/net/mac/phase.c ../../core/./net/mac/phase.h \
  ../../core/./net/linkaddr.h ../../platform/sky/./contiki-conf.h \
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../core/./sys/timer.h ../../core/./sys/clock.h \
- ../../core/./sys/rtimer.h ../../cpu/msp430/./rtimer-arch.h \
- ../../core/./lib/list.h ../../core/./lib/memb.h ../../core/./sys/cc.h \
+ project-conf.h ../../platform/sky/./platform-conf.h \
+ ../../cpu/msp430/./msp430def.h ../../core/./sys/timer.h \
+ ../../core/./sys/clock.h ../../core/./sys/rtimer.h \
+ ../../cpu/msp430/./rtimer-arch.h ../../core/./lib/list.h \
+ ../../core/./lib/memb.h ../../core/./sys/cc.h \
  ../../core/./net/netstack.h ../../core/./net/llsec/llsec.h \
  ../../core/./net/mac/mac.h ../../core/./dev/radio.h \
  ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h \
@@ -23,10 +24,11 @@ obj_sky/phase.o: ../../core/net/mac/phase.c ../../core/./net/mac/phase.h \
  ../../core/./net/nbr-table.h
 ../../core/net/mac/phase.c ../../core/./net/mac/phase.h :
  ../../core/./net/linkaddr.h ../../platform/sky/./contiki-conf.h :
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../core/./sys/timer.h ../../core/./sys/clock.h :
- ../../core/./sys/rtimer.h ../../cpu/msp430/./rtimer-arch.h :
- ../../core/./lib/list.h ../../core/./lib/memb.h ../../core/./sys/cc.h :
+ project-conf.h ../../platform/sky/./platform-conf.h :
+ ../../cpu/msp430/./msp430def.h ../../core/./sys/timer.h :
+ ../../core/./sys/clock.h ../../core/./sys/rtimer.h :
+ ../../cpu/msp430/./rtimer-arch.h ../../core/./lib/list.h :
+ ../../core/./lib/memb.h ../../core/./sys/cc.h :
  ../../core/./net/netstack.h ../../core/./net/llsec/llsec.h :
  ../../core/./net/mac/mac.h ../../core/./dev/radio.h :
  ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h :

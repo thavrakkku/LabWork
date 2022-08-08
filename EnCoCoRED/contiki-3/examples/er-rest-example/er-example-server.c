@@ -59,6 +59,15 @@
 #define PRINTLLADDR(addr)
 #endif
 
+#ifndef PERIOD
+#define PERIOD 1
+#endif
+
+#define START_INTERVAL		(15 * CLOCK_SECOND)
+#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
+#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+
+
 /*
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
@@ -93,6 +102,8 @@ extern resource_t res_radio;
 extern resource_t res_sht11;
 #endif
 */
+// Wait Event
+// static struct etimer timer;
 
 PROCESS(er_example_server, "Erbium Example Server");
 AUTOSTART_PROCESSES(&er_example_server);
@@ -157,6 +168,13 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Define application-specific events here. */
   while(1) {
+  /* //Wait Events 
+    PRINTF("Wait %lu seconde\n",SEND_TIME);
+    etimer_set(&timer,SEND_TIME);
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+    PRINTF("Done\n");
+  */
+
     PROCESS_WAIT_EVENT();
 #if PLATFORM_HAS_BUTTON
     if(ev == sensors_event && data == &button_sensor) {

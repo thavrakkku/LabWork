@@ -1,7 +1,7 @@
 obj_sky/rest-engine.o: ../../apps/rest-engine/rest-engine.c \
  ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
  ../../core/./sys/cc.h ../../core/./sys/autostart.h \
@@ -18,8 +18,8 @@ obj_sky/rest-engine.o: ../../apps/rest-engine/rest-engine.c \
  ../../core/./lib/random.h ../../apps/rest-engine/rest-constants.h
 ../../apps/rest-engine/rest-engine.c :
  ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
  ../../core/./sys/cc.h ../../core/./sys/autostart.h :

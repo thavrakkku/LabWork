@@ -1,6 +1,6 @@
 obj_sky/uip-udp-packet.o: ../../core/net/ip/uip-udp-packet.c \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/uip.h \
  ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h \
  ../../core/./contiki.h ../../core/./contiki-version.h \
@@ -21,8 +21,8 @@ obj_sky/uip-udp-packet.o: ../../core/net/ip/uip-udp-packet.c \
  ../../core/./net/ipv6/multicast/roll-tm.h \
  ../../core/./net/ipv6/multicast/uip-mcast6-stats.h
 ../../core/net/ip/uip-udp-packet.c :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/uip.h :
  ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h :
  ../../core/./contiki.h ../../core/./contiki-version.h :

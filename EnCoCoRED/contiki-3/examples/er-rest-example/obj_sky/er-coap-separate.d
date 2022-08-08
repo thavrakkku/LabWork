@@ -1,37 +1,37 @@
 obj_sky/er-coap-separate.o: ../../apps/er-coap/er-coap-separate.c \
- ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h \
+ ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h project-conf.h \
  ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../apps/er-coap/er-coap-separate.h \
- ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h \
- ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
- ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
- ../../core/./sys/autostart.h ../../core/./sys/process.h \
- ../../core/./sys/timer.h ../../core/./sys/clock.h \
- ../../core/./sys/ctimer.h ../../core/./sys/etimer.h \
- ../../core/./sys/timer.h ../../core/./sys/etimer.h \
- ../../core/./sys/rtimer.h ../../cpu/msp430/./rtimer-arch.h \
- ../../core/./sys/rtimer.h ../../core/./sys/pt.h \
- ../../core/./sys/procinit.h ../../core/./sys/loader.h \
- ../../core/./sys/clock.h ../../core/./sys/energest.h \
- ../../core/./net/ip/tcpip.h ../../core/./contiki.h \
- ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
- ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h \
- ../../core/./net/ipv4/uip-fw.h ../../core/./net/ipv4/uip-fw-drv.h \
- ../../core/./net/ipv4/uip-fw.h ../../core/./net/ipv4/uip_arp.h \
- ../../core/./net/ip/uiplib.h ../../core/./net/ip/uip-udp-packet.h \
- ../../core/./net/ip/simple-udp.h ../../core/./net/ip/uip-nameserver.h \
- ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ipv6/uip-ds6.h \
- ../../core/./sys/stimer.h ../../core/./net/ipv6/uip-nd6.h \
- ../../core/./net/ipv6/uip-ds6-route.h ../../core/./lib/list.h \
- ../../core/./net/ipv6/uip-ds6-nbr.h ../../core/./net/nbr-table.h \
- ../../core/./net/linkaddr.h ../../core/./net/netstack.h \
- ../../core/./net/llsec/llsec.h ../../core/./net/mac/mac.h \
- ../../core/./dev/radio.h ../../core/./net/mac/rdc.h \
- ../../core/./net/mac/framer.h ../../core/./net/ipv6/uip-ds6.h \
- ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h \
- ../../core/./net/ip/psock.h ../../core/./contiki-lib.h \
- ../../core/./lib/list.h ../../core/./lib/memb.h ../../core/./lib/mmem.h \
+ ../../apps/er-coap/er-coap-separate.h ../../apps/er-coap/er-coap.h \
+ ../../core/./contiki-net.h ../../core/./contiki.h \
+ ../../core/./contiki-version.h ../../core/./contiki-default-conf.h \
+ ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h \
+ ../../core/./sys/lc-switch.h ../../core/./sys/autostart.h \
+ ../../core/./sys/process.h ../../core/./sys/timer.h \
+ ../../core/./sys/clock.h ../../core/./sys/ctimer.h \
+ ../../core/./sys/etimer.h ../../core/./sys/timer.h \
+ ../../core/./sys/etimer.h ../../core/./sys/rtimer.h \
+ ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/rtimer.h \
+ ../../core/./sys/pt.h ../../core/./sys/procinit.h \
+ ../../core/./sys/loader.h ../../core/./sys/clock.h \
+ ../../core/./sys/energest.h ../../core/./net/ip/tcpip.h \
+ ../../core/./contiki.h ../../core/./net/ip/uip.h \
+ ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h \
+ ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h \
+ ../../core/./net/ipv4/uip-fw-drv.h ../../core/./net/ipv4/uip-fw.h \
+ ../../core/./net/ipv4/uip_arp.h ../../core/./net/ip/uiplib.h \
+ ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/simple-udp.h \
+ ../../core/./net/ip/uip-nameserver.h ../../core/./net/ipv6/uip-icmp6.h \
+ ../../core/./net/ipv6/uip-ds6.h ../../core/./sys/stimer.h \
+ ../../core/./net/ipv6/uip-nd6.h ../../core/./net/ipv6/uip-ds6-route.h \
+ ../../core/./lib/list.h ../../core/./net/ipv6/uip-ds6-nbr.h \
+ ../../core/./net/nbr-table.h ../../core/./net/linkaddr.h \
+ ../../core/./net/netstack.h ../../core/./net/llsec/llsec.h \
+ ../../core/./net/mac/mac.h ../../core/./dev/radio.h \
+ ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h \
+ ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/resolv.h \
+ ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h \
+ ../../core/./contiki-lib.h ../../core/./lib/list.h \
+ ../../core/./lib/memb.h ../../core/./lib/mmem.h \
  ../../core/./lib/random.h ../../core/./net/ip/udp-socket.h \
  ../../core/./net/ip/tcp-socket.h ../../core/./net/rime/rime.h \
  ../../core/./net/rime/announcement.h ../../core/./net/rime/collect.h \
@@ -58,39 +58,39 @@ obj_sky/er-coap-separate.o: ../../apps/er-coap/er-coap-separate.c \
  ../../apps/rest-engine/rest-constants.h \
  ../../apps/er-coap/er-coap-transactions.h
 ../../apps/er-coap/er-coap-separate.c :
- ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h :
+ ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h project-conf.h :
  ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../apps/er-coap/er-coap-separate.h :
- ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h :
- ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
- ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
- ../../core/./sys/autostart.h ../../core/./sys/process.h :
- ../../core/./sys/timer.h ../../core/./sys/clock.h :
- ../../core/./sys/ctimer.h ../../core/./sys/etimer.h :
- ../../core/./sys/timer.h ../../core/./sys/etimer.h :
- ../../core/./sys/rtimer.h ../../cpu/msp430/./rtimer-arch.h :
- ../../core/./sys/rtimer.h ../../core/./sys/pt.h :
- ../../core/./sys/procinit.h ../../core/./sys/loader.h :
- ../../core/./sys/clock.h ../../core/./sys/energest.h :
- ../../core/./net/ip/tcpip.h ../../core/./contiki.h :
- ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
- ../../core/./net/ip/tcpip.h ../../core/./net/ip/uip.h :
- ../../core/./net/ipv4/uip-fw.h ../../core/./net/ipv4/uip-fw-drv.h :
- ../../core/./net/ipv4/uip-fw.h ../../core/./net/ipv4/uip_arp.h :
- ../../core/./net/ip/uiplib.h ../../core/./net/ip/uip-udp-packet.h :
- ../../core/./net/ip/simple-udp.h ../../core/./net/ip/uip-nameserver.h :
- ../../core/./net/ipv6/uip-icmp6.h ../../core/./net/ipv6/uip-ds6.h :
- ../../core/./sys/stimer.h ../../core/./net/ipv6/uip-nd6.h :
- ../../core/./net/ipv6/uip-ds6-route.h ../../core/./lib/list.h :
- ../../core/./net/ipv6/uip-ds6-nbr.h ../../core/./net/nbr-table.h :
- ../../core/./net/linkaddr.h ../../core/./net/netstack.h :
- ../../core/./net/llsec/llsec.h ../../core/./net/mac/mac.h :
- ../../core/./dev/radio.h ../../core/./net/mac/rdc.h :
- ../../core/./net/mac/framer.h ../../core/./net/ipv6/uip-ds6.h :
- ../../core/./net/ip/resolv.h ../../core/./net/ip/uip.h :
- ../../core/./net/ip/psock.h ../../core/./contiki-lib.h :
- ../../core/./lib/list.h ../../core/./lib/memb.h ../../core/./lib/mmem.h :
+ ../../apps/er-coap/er-coap-separate.h ../../apps/er-coap/er-coap.h :
+ ../../core/./contiki-net.h ../../core/./contiki.h :
+ ../../core/./contiki-version.h ../../core/./contiki-default-conf.h :
+ ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h :
+ ../../core/./sys/lc-switch.h ../../core/./sys/autostart.h :
+ ../../core/./sys/process.h ../../core/./sys/timer.h :
+ ../../core/./sys/clock.h ../../core/./sys/ctimer.h :
+ ../../core/./sys/etimer.h ../../core/./sys/timer.h :
+ ../../core/./sys/etimer.h ../../core/./sys/rtimer.h :
+ ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/rtimer.h :
+ ../../core/./sys/pt.h ../../core/./sys/procinit.h :
+ ../../core/./sys/loader.h ../../core/./sys/clock.h :
+ ../../core/./sys/energest.h ../../core/./net/ip/tcpip.h :
+ ../../core/./contiki.h ../../core/./net/ip/uip.h :
+ ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h :
+ ../../core/./net/ip/uip.h ../../core/./net/ipv4/uip-fw.h :
+ ../../core/./net/ipv4/uip-fw-drv.h ../../core/./net/ipv4/uip-fw.h :
+ ../../core/./net/ipv4/uip_arp.h ../../core/./net/ip/uiplib.h :
+ ../../core/./net/ip/uip-udp-packet.h ../../core/./net/ip/simple-udp.h :
+ ../../core/./net/ip/uip-nameserver.h ../../core/./net/ipv6/uip-icmp6.h :
+ ../../core/./net/ipv6/uip-ds6.h ../../core/./sys/stimer.h :
+ ../../core/./net/ipv6/uip-nd6.h ../../core/./net/ipv6/uip-ds6-route.h :
+ ../../core/./lib/list.h ../../core/./net/ipv6/uip-ds6-nbr.h :
+ ../../core/./net/nbr-table.h ../../core/./net/linkaddr.h :
+ ../../core/./net/netstack.h ../../core/./net/llsec/llsec.h :
+ ../../core/./net/mac/mac.h ../../core/./dev/radio.h :
+ ../../core/./net/mac/rdc.h ../../core/./net/mac/framer.h :
+ ../../core/./net/ipv6/uip-ds6.h ../../core/./net/ip/resolv.h :
+ ../../core/./net/ip/uip.h ../../core/./net/ip/psock.h :
+ ../../core/./contiki-lib.h ../../core/./lib/list.h :
+ ../../core/./lib/memb.h ../../core/./lib/mmem.h :
  ../../core/./lib/random.h ../../core/./net/ip/udp-socket.h :
  ../../core/./net/ip/tcp-socket.h ../../core/./net/rime/rime.h :
  ../../core/./net/rime/announcement.h ../../core/./net/rime/collect.h :

@@ -1,8 +1,8 @@
 obj_sky/print-stats.o: ../../core/lib/print-stats.c \
  ../../core/./lib/print-stats.h ../../core/./net/rime/rime.h \
  ../../core/./net/rime/announcement.h ../../core/./net/linkaddr.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./net/rime/collect.h ../../core/./net/rime/runicast.h \
  ../../core/./net/rime/stunicast.h ../../core/./sys/ctimer.h \
  ../../core/./sys/etimer.h ../../core/./sys/timer.h \
@@ -38,8 +38,8 @@ obj_sky/print-stats.o: ../../core/lib/print-stats.c \
 ../../core/lib/print-stats.c :
  ../../core/./lib/print-stats.h ../../core/./net/rime/rime.h :
  ../../core/./net/rime/announcement.h ../../core/./net/linkaddr.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./net/rime/collect.h ../../core/./net/rime/runicast.h :
  ../../core/./net/rime/stunicast.h ../../core/./sys/ctimer.h :
  ../../core/./sys/etimer.h ../../core/./sys/timer.h :

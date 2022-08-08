@@ -1,7 +1,7 @@
 obj_sky/uip-ipchksum.o: ../../cpu/msp430/./uip-ipchksum.c \
  ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./net/ip/tcpip.h ../../core/./contiki.h \
  ../../core/./contiki-version.h ../../core/./contiki-default-conf.h \
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h \
@@ -16,8 +16,8 @@ obj_sky/uip-ipchksum.o: ../../cpu/msp430/./uip-ipchksum.c \
  ../../core/./sys/clock.h ../../core/./sys/energest.h
 ../../cpu/msp430/./uip-ipchksum.c :
  ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./net/ip/tcpip.h ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../core/./contiki-default-conf.h :
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h :

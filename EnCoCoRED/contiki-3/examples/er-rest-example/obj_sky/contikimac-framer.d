@@ -2,8 +2,8 @@ obj_sky/contikimac-framer.o: \
  ../../core/net/mac/contikimac/contikimac-framer.c \
  ../../core/./net/mac/contikimac/contikimac-framer.h \
  ../../core/./net/mac/framer.h ../../core/./net/packetbuf.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./net/linkaddr.h ../../core/./net/llsec/llsec802154.h \
  ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h \
  ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h \
@@ -24,8 +24,8 @@ obj_sky/contikimac-framer.o: \
  ../../core/net/mac/contikimac/contikimac-framer.c :
  ../../core/./net/mac/contikimac/contikimac-framer.h :
  ../../core/./net/mac/framer.h ../../core/./net/packetbuf.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./net/linkaddr.h ../../core/./net/llsec/llsec802154.h :
  ../../core/./net/mac/frame802154.h ../../core/./net/ip/uip.h :
  ../../core/./net/ip/uipopt.h ../../core/./net/ip/tcpip.h :

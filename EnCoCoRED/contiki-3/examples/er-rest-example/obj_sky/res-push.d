@@ -1,8 +1,8 @@
 obj_sky/res-push.o: resources/res-push.c \
  ../../apps/rest-engine/rest-engine.h ../../core/./contiki.h \
  ../../core/./contiki-version.h ../../platform/sky/./contiki-conf.h \
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../core/./contiki-default-conf.h \
+ project-conf.h ../../platform/sky/./platform-conf.h \
+ ../../cpu/msp430/./msp430def.h ../../core/./contiki-default-conf.h \
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h \
  ../../core/./sys/lc-switch.h ../../core/./sys/cc.h \
  ../../core/./sys/autostart.h ../../core/./sys/process.h \
@@ -53,12 +53,13 @@ obj_sky/res-push.o: resources/res-push.c \
  ../../core/./net/rime/rmh.h ../../core/./net/rime/route.h \
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h \
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h \
- ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h
+ ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h \
+ ../../core/./lib/random.h ../../core/./net/ip/uip-debug.h
 resources/res-push.c :
  ../../apps/rest-engine/rest-engine.h ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/sky/./contiki-conf.h :
- ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../core/./contiki-default-conf.h :
+ project-conf.h ../../platform/sky/./platform-conf.h :
+ ../../cpu/msp430/./msp430def.h ../../core/./contiki-default-conf.h :
  ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h :
  ../../core/./sys/lc-switch.h ../../core/./sys/cc.h :
  ../../core/./sys/autostart.h ../../core/./sys/process.h :
@@ -110,3 +111,4 @@ resources/res-push.c :
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h :
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h :
  ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h :
+ ../../core/./lib/random.h ../../core/./net/ip/uip-debug.h :

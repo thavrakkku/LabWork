@@ -125,9 +125,9 @@ static coap_observee_t *obs;
 static coap_packet_t request[1];
 
 static	int r=0;
-static	int registernode=0;
 static 	int con=1;
-
+static int test_node=7;
+static int i=0;
 
 /*----------------------------------------------------------------------------*/
 PROCESS(er_example_observe_client, "Erbium Coap Observe Client Example");
@@ -156,68 +156,78 @@ uip_ipaddr_t	server_ipaddr18;
 /*
  * Handle the response to the observe request and the following notifications
  */
+
+/*CTR Note Function to Auto Connect to all the server */
+static void increase_conn(int num){
+	if (num>con){
+		con=num;
+	}
+	//printf("con still running=%d\n",con);
+}
+/* end of CTR Note */
 static void
 notification_callback(coap_observee_t *obs, void *notification,
                       coap_notification_flag_t flag)
 {
   int len = 0;
   const uint8_t *payload = NULL;
-printf("Con: %d\n",con);
-  printf("Notification handler\n");
-  printf("Observee URI: %s\n", obs->url);
+
+/* CTR note check IP */
+	//printf("R: %d\n",r);
+  	//printf("IP:");PRINT6ADDR(&obs->addr);printf("\n");
+  	//printf("IP2:");PRINT6ADDR(&server_ipaddr1);printf("\n");
+	//printf("Con: %d\n",con);
+/* end of CTR note */
+
+  	printf("Notification handler\n");
+  	printf("Observee URI: %s\n", obs->url);
   if(notification) {
     len = coap_get_payload(notification, &payload);
   }
+  
   switch(flag) {
   case NOTIFICATION_OK:
-    printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
-	
-    break;
+
+/* CTR Note check incoming observe IP for connection condition */
+    if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr1)){
+		printf("Observe OK form 3\n");
+		increase_conn(2);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr2)){
+		printf("Observe OK form 4\n");
+		increase_conn(3);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr3)){
+		printf("Observe OK form 5\n");
+		increase_conn(4);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr4)){
+		printf("Observe OK form 6\n");
+		increase_conn(5);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr5)){
+		printf("Observe OK form 7\n");
+		increase_conn(6);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr6)){
+		printf("Observe OK form 8\n");
+		increase_conn(7);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr7)){
+		printf("Observe OK form 9\n");
+		increase_conn(8);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
+		printf("Observe OK form 10\n");
+		increase_conn(20);
+	}
+/* End of CTR Note */
+
+	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
+	break;
   case OBSERVE_OK: /* server accepeted observation request */
     printf("OBSERVE_OK: %*s\n", len, (char *)payload);
-
-    break;
-  case OBSERVE_NOT_SUPPORTED:
-    printf("OBSERVE_NOT_SUPPORTED: %*s\n", len, (char *)payload);
-    obs = NULL;
-    break;
-  case ERROR_RESPONSE_CODE:
-    printf("ERROR_RESPONSE_CODE: %*s\n", len, (char *)payload);
-    obs = NULL;
-    break;
-  case NO_REPLY_FROM_SERVER:
-    printf("NO_REPLY_FROM_SERVER: "
-           "removing observe registration with token %x%x\n",
-           obs->token[0], obs->token[1]);
-    obs = NULL;
-    break;
-  }
-}
-
-static void
-notification_callback1(coap_observee_t *obs, void *notification,
-                      coap_notification_flag_t flag)
-{
-  int len = 0;
-  const uint8_t *payload = NULL;
-
-  printf("Notification handler\n");
-  printf("Observee URI: %s\n", obs->url);
-  if(notification) {
-    len = coap_get_payload(notification, &payload);
-  }
-  switch(flag) {
-  case NOTIFICATION_OK:
-		
-		r=1;	
-	    	
-	printf("NOTIFICATION OK: %*s\n",len,(char *)payload);
 	
-	
-	
-    break;
-  case OBSERVE_OK: /* server accepeted observation request */
-    printf("OBSERVE_OK: %*s\n", len, (char *)payload);
     break;
   case OBSERVE_NOT_SUPPORTED:
     printf("OBSERVE_NOT_SUPPORTED: %*s\n", len, (char *)payload);
@@ -245,36 +255,6 @@ client_chunk_handler(void *response)
 
   printf("|%.*s", len, (char *)chunk);
 }
-/*----------------------------------------------------------------------------*/
-/*
- * Toggle the observation of the remote resource
- */
-/*
-void
-toggle_observation(void)
-{
-  if(obs) {
-    printf("Stopping observation \n");
-    coap_obs_remove_observee(obs);
-    obs = NULL;
-  } else {
-    printf("Starting observation\n");
-
-	obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise",notification_callback1, NULL);
-   	obs = coap_obs_request_registration(&server_ipaddr2, REMOTE_PORT,"test/push", notification_callback, NULL);
-	obs = coap_obs_request_registration(&server_ipaddr3, REMOTE_PORT,"test/push", notification_callback, NULL);
-	obs = coap_obs_request_registration(&server_ipaddr4, REMOTE_PORT,"test/push", notification_callback, NULL);
-
-  }
-}
-*/
-/*----------------------------------------------------------------------------*/
-/*
- * The main (proto-)thread. It starts/stops the observation of the remote
- * resource every time the timer elapses or the button (if available) is
- * pressed
- */
-
 
 PROCESS_THREAD(er_example_observe_client, ev, data)
 {
@@ -316,7 +296,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
   SENSORS_ACTIVATE(button_sensor);
  	// printf("Press a button to start/stop observation of remote resource\n");
 #endif
-  /* toggle observation every time the timer elapses or the button is pressed */
+  
   while(1) {
 
     PROCESS_YIELD();
@@ -340,12 +320,13 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			}
     
 	switch(con){	
-		case 0:			
+		case 20:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
 			printf("--Start Calculation--\n");
 			break;
 		case 1:			
-			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
+			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 3--\n");
 			break; 
 		case 2:
@@ -417,12 +398,13 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 20--\n");
 			break;
 	}
-	if(con>17){con=0;}
+	//if(con>17){con=0;}
 
 	if(etimer_expired(&et)) {
 		//ctr
 		
 		printf("Con: %d\n",con);
+
 		printf("R: %d\n",r);
 		//end
 		//con=0;
@@ -436,11 +418,14 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
      }  else if(ev == sensors_event && data == &button_sensor) {
 	 //printf("\n--Toggle Button--\n");
 	//con=50;
-	con++;
+	//con++;
 	//etimer_reset(&et);
 		
 #endif
     }
   }
-  PROCESS_END();
+  PROCESS_END();{
+		/* code */
+	}
+	
 }

@@ -1,6 +1,6 @@
 obj_sky/rpl-timers.o: ../../core/net/rpl/rpl-timers.c \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./net/rpl/rpl-private.h ../../core/./net/rpl/rpl.h \
  ../../core/./net/rpl/rpl-conf.h ../../core/./lib/list.h \
  ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h \
@@ -31,8 +31,8 @@ obj_sky/rpl-timers.o: ../../core/net/rpl/rpl-timers.c \
  ../../core/./net/ipv6/multicast/uip-mcast6-stats.h \
  ../../core/./lib/random.h ../../core/./net/ip/uip-debug.h
 ../../core/net/rpl/rpl-timers.c :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./net/rpl/rpl-private.h ../../core/./net/rpl/rpl.h :
  ../../core/./net/rpl/rpl-conf.h ../../core/./lib/list.h :
  ../../core/./net/ip/uip.h ../../core/./net/ip/uipopt.h :

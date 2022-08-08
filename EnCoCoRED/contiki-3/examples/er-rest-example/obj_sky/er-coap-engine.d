@@ -1,7 +1,7 @@
 obj_sky/er-coap-engine.o: ../../apps/er-coap/er-coap-engine.c \
- ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h \
+ ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h project-conf.h \
  ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
- project-conf.h ../../apps/er-coap/er-coap-engine.h ../../core/sys/pt.h \
+ ../../apps/er-coap/er-coap-engine.h ../../core/sys/pt.h \
  ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
  ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h \
  ../../core/./contiki.h ../../core/./contiki-version.h \
@@ -62,9 +62,9 @@ obj_sky/er-coap-engine.o: ../../apps/er-coap/er-coap-engine.c \
  ../../apps/er-coap/er-coap-separate.h \
  ../../apps/er-coap/er-coap-observe-client.h
 ../../apps/er-coap/er-coap-engine.c :
- ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h :
+ ../../core/./sys/cc.h ../../platform/sky/./contiki-conf.h project-conf.h :
  ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
- project-conf.h ../../apps/er-coap/er-coap-engine.h ../../core/sys/pt.h :
+ ../../apps/er-coap/er-coap-engine.h ../../core/sys/pt.h :
  ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
  ../../apps/er-coap/er-coap.h ../../core/./contiki-net.h :
  ../../core/./contiki.h ../../core/./contiki-version.h :

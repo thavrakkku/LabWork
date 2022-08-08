@@ -1,8 +1,9 @@
 obj_sky/contikimac.o: ../../core/net/mac/contikimac/contikimac.c \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h ../../core/./dev/leds.h \
- ../../core/./dev/radio.h ../../core/./dev/watchdog.h \
- ../../core/./lib/random.h ../../core/./net/mac/mac-sequence.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
+ ../../core/./dev/leds.h ../../core/./dev/radio.h \
+ ../../core/./dev/watchdog.h ../../core/./lib/random.h \
+ ../../core/./net/mac/mac-sequence.h \
  ../../core/./net/mac/contikimac/contikimac.h ../../core/./sys/rtimer.h \
  ../../cpu/msp430/./rtimer-arch.h ../../core/./net/mac/rdc.h \
  ../../core/./net/mac/mac.h ../../core/./net/netstack.h \
@@ -40,10 +41,11 @@ obj_sky/contikimac.o: ../../core/net/mac/contikimac/contikimac.c \
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h \
  ../../core/./net/rime/trickle.h ../../core/./sys/compower.h
 ../../core/net/mac/contikimac/contikimac.c :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h ../../core/./dev/leds.h :
- ../../core/./dev/radio.h ../../core/./dev/watchdog.h :
- ../../core/./lib/random.h ../../core/./net/mac/mac-sequence.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
+ ../../core/./dev/leds.h ../../core/./dev/radio.h :
+ ../../core/./dev/watchdog.h ../../core/./lib/random.h :
+ ../../core/./net/mac/mac-sequence.h :
  ../../core/./net/mac/contikimac/contikimac.h ../../core/./sys/rtimer.h :
  ../../cpu/msp430/./rtimer-arch.h ../../core/./net/mac/rdc.h :
  ../../core/./net/mac/mac.h ../../core/./net/netstack.h :

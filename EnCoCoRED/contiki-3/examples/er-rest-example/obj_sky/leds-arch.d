@@ -1,7 +1,7 @@
 obj_sky/leds-arch.o: ../../cpu/msp430/./leds-arch.c \
  ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
+ ../../platform/sky/./contiki-conf.h project-conf.h \
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h \
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
  ../../core/./sys/cc.h ../../core/./sys/autostart.h \
@@ -15,8 +15,8 @@ obj_sky/leds-arch.o: ../../cpu/msp430/./leds-arch.c \
  ../../core/./sys/energest.h ../../core/./dev/leds.h
 ../../cpu/msp430/./leds-arch.c :
  ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../platform/sky/./contiki-conf.h ../../platform/sky/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
+ ../../platform/sky/./contiki-conf.h project-conf.h :
+ ../../platform/sky/./platform-conf.h ../../cpu/msp430/./msp430def.h :
  ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
  ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
  ../../core/./sys/cc.h ../../core/./sys/autostart.h :
