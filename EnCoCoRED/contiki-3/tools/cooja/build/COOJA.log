@@ -1,57 +1,113 @@
-[16:29:36 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[16:29:36 - main] [Cooja.java:1324] [INFO] - > Starting Cooja
-[16:29:36 - main] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
-[16:29:36 - main] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[16:29:36 - main] [Simulation.java:420] [INFO] - Simulation random seed: -5637823174929939142
-[16:29:36 - main] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[16:29:36 - main] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
-[16:29:37 - main] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[16:29:37 - main] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[16:29:37 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
-[16:29:37 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client.z1
-[16:29:37 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[16:29:37 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:29:38 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.SimControl
-[16:29:38 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Visualizer
-[16:29:38 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.LogListener
-[16:29:38 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.TimeLine
-[16:29:38 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Notes
-[16:29:38 - main] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[16:29:38 - main] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[16:29:39 - main] [LogScriptEngine.java:265] [INFO] - Script timeout in 500000 ms
-[16:29:39 - main] [ScriptRunner.java:386] [INFO] - Test script activated
-[16:29:39 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1659605379397
-[16:29:39 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.SimControl
-[16:29:39 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.RadioLogger
-[16:29:44 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 5.00%, done in 91.1 sec
-[16:29:44 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 10.00%, done in 49.3 sec
-[16:29:45 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 15.00%, done in 35.1 sec
-[16:29:46 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 20.00%, done in 27.5 sec
-[16:29:51 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 25.00%, done in 35.9 sec
-[16:29:57 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 30.00%, done in 42.3 sec
-[16:30:01 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 35.00%, done in 40.6 sec
-[16:30:04 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 40.00%, done in 38.3 sec
-[16:30:09 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 45.00%, done in 36.8 sec
-[16:30:13 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 50.00%, done in 33.9 sec
-[16:30:17 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 55.00%, done in 30.8 sec
-[16:30:20 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 60.00%, done in 27.6 sec
-[16:30:25 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 65.00%, done in 24.9 sec
-[16:30:29 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 70.00%, done in 21.4 sec
-[16:30:33 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 75.00%, done in 17.9 sec
-[16:30:36 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 80.00%, done in 14.3 sec
-[16:30:41 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 85.00%, done in 10.9 sec
-[16:30:45 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 90.00%, done in 7.3 sec
-[16:30:48 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 95.00%, done in 3.6 sec
-[16:30:52 - Thread-2] [LogScriptEngine.java:375] [INFO] - Timeout event @ 500000000
-[16:30:52 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
-[16:30:52 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659605452447	Duration: 73050 ms	Simulated time 500000 ms	Ratio 6.844626967830253
-[16:30:52 - Thread-0] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[16:30:52 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:09:41 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:09:41 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:09:41 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[16:09:53 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: -6418402623459966820
+[16:09:53 - Thread-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:09:54 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[16:09:54 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[16:09:54 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:09:54 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[16:09:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[16:09:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[16:09:54 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:09:55 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[16:09:55 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:09:56 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:09:56 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 1800000 ms
+[16:09:56 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[16:09:58 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1659949798458
+[16:10:02 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1659949802100.pcap
+[16:10:07 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 5.00%, done in 196.7 sec
+[16:10:11 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 10.00%, done in 133.2 sec
+[16:10:16 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 15.00%, done in 109.8 sec
+[16:10:20 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 20.00%, done in 92.4 sec
+[16:10:23 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 25.00%, done in 80.2 sec
+[16:10:27 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 30.00%, done in 71.5 sec
+[16:10:31 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 35.00%, done in 63.9 sec
+[16:10:35 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 40.00%, done in 57.4 sec
+[16:10:39 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 45.00%, done in 51.5 sec
+[16:10:42 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 50.00%, done in 45.9 sec
+[16:10:47 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 55.00%, done in 41.0 sec
+[16:10:50 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 60.00%, done in 36.0 sec
+[16:10:54 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 65.00%, done in 31.2 sec
+[16:10:58 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 70.00%, done in 26.4 sec
+[16:11:02 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 75.00%, done in 21.9 sec
+[16:11:06 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 80.00%, done in 17.5 sec
+[16:11:10 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 85.00%, done in 13.0 sec
+[16:11:14 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 90.00%, done in 8.6 sec
+[16:11:18 - Thread-2] [LogScriptEngine.java:389] [INFO] - Test script at 95.00%, done in 4.3 sec
+[16:11:22 - Thread-2] [LogScriptEngine.java:375] [INFO] - Timeout event @ 1800000000
+[16:11:22 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659949882219	Duration: 83761 ms	Simulated time 1800000 ms	Ratio 21.489714783729898
+[16:11:22 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
+[16:12:19 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1659949939241
+[16:12:21 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659949941025	Duration: 1784 ms	Simulated time 1844058 ms	Ratio 1033.664798206278
+[16:12:22 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:12:22 - Thread-4] [Simulation.java:420] [INFO] - Simulation random seed: -6418402623459966820
+[16:12:22 - Thread-4] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:12:22 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[16:12:23 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[16:12:23 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:12:23 - Thread-4] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[16:12:23 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[16:12:23 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[16:12:23 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:12:24 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:12:24 - Thread-4] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:12:24 - Thread-4] [LogScriptEngine.java:265] [INFO] - Script timeout in 1800000 ms
+[16:12:24 - Thread-4] [ScriptRunner.java:386] [INFO] - Test script activated
+[16:12:25 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1659949945969
+[16:12:28 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1659949948583.pcap
+[16:12:33 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 5.00%, done in 154.9 sec
+[16:12:37 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 10.00%, done in 112.8 sec
+[16:12:41 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 15.00%, done in 96.4 sec
+[16:12:45 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 20.00%, done in 83.0 sec
+[16:12:49 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 25.00%, done in 73.1 sec
+[16:12:53 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 30.00%, done in 66.0 sec
+[16:12:56 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 35.00%, done in 59.7 sec
+[16:13:00 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 40.00%, done in 54.2 sec
+[16:13:04 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 45.00%, done in 48.8 sec
+[16:13:08 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 50.00%, done in 43.7 sec
+[16:13:12 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 55.00%, done in 39.0 sec
+[16:13:16 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 60.00%, done in 34.3 sec
+[16:13:19 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 65.00%, done in 29.7 sec
+[16:13:23 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 70.00%, done in 25.1 sec
+[16:13:27 - Thread-6] [LogScriptEngine.java:389] [INFO] - Test script at 75.00%, done in 20.8 sec
+[16:13:29 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1659950009448	Duration: 63479 ms	Simulated time 1403181 ms	Ratio 22.10464878148679
+[16:13:30 - Thread-5] [LogScriptEngine.java:309] [INFO] - Test script finished
+[16:13:30 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:13:30 - Thread-7] [Simulation.java:420] [INFO] - Simulation random seed: -6418402623459966820
+[16:13:30 - Thread-7] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:13:30 - Thread-7] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[16:13:30 - Thread-7] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[16:13:30 - Thread-7] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:13:30 - Thread-7] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[16:13:30 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:13:31 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:13:32 - Thread-7] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[16:13:32 - Thread-7] [LogScriptEngine.java:265] [INFO] - Script timeout in 1800000 ms
+[16:13:32 - Thread-7] [ScriptRunner.java:386] [INFO] - Test script activated
+[16:13:39 - Thread-8] [LogScriptEngine.java:309] [INFO] - Test script finished
+[16:13:39 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated

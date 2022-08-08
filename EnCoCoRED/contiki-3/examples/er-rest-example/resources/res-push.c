@@ -72,7 +72,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                 PERIOD*CLOCK_SECOND,
+                 1*CLOCK_SECOND,
                   res_periodic_handler);
 // RANDWAIT *CLOCK_SECOND,
 //random_rand() % (CLOCK_SECOND * RANDWAIT)

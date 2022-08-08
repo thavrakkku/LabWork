@@ -387,7 +387,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_Normal_9+1_1s_log_"; //save file name     &#xD;
+sf=sl+date+"_Test_EnCoCoRED_8+0_5s_log_"; //save file name     &#xD;
 i=1; //file index&#xD;
 checkfile= new File(sf+i+".txt"); //define check file name&#xD;
     while(checkfile.exists()){//check if file is exist&#xD;
