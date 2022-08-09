@@ -6,7 +6,7 @@ today = new Date(); // get current date
 
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
 sl="/home/"+username+"/LabWork/"; //save location
-sf=sl+date+"_Test_Normal_Circle_12+0_1s_log_"; //save file name     
+sf=sl+date+"_Test_EnCoCoRED_Circle_8+0_1s_log_"; //save file name     
 i=1; //file index
 checkfile= new File(sf+i+".txt"); //define check file name
     while(checkfile.exists()){//check if file is exist
@@ -87,7 +87,7 @@ YIELD();
         start_calculate = start_calculate+1; 
         start_measure();   
     }
-    if(start_calculate >= 1){
+   // if(start_calculate >= 1){
     if(msgArray[0].equals("CTR")){
     //log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]+"\n");    
     savefile.write(msgs);
@@ -389,6 +389,6 @@ YIELD();
     //log.log("m2_receive_from_3: "+m2_receive_from_3+"\n"+"m2_receive_from_4: "+m2_receive_from_4+"\n"+"m2_receive_from_5: "+m2_receive_from_5+"\n"+"m2_receive_from_6: "+m2_receive_from_6+"\n"+"m2_receive_from_7: "+m2_receive_from_7+"\n"+"m2_receive_from_8: "+m2_receive_from_8+"\n"+"m2_receive_from_9: "+m2_receive_from_9+"\n"+"m2_receive_from_10: "+m2_receive_from_10+"\n"+"m2_receive_from_11: "+m2_receive_from_11+"\n"+"m2_receive_from_12: "+m2_receive_from_12+"\n"+"m2_receive_from_13: "+m2_receive_from_13+"\n"+"m2_receive_from_14: "+m2_receive_from_14+"\n"+"m2_receive_from_15: "+m2_receive_from_15+"\n"+"m2_receive_from_16: "+m2_receive_from_16+"\n"+"m2_receive_from_17: "+m2_receive_from_17+"\n"+"m2_receive_from_18: "+m2_receive_from_18+"\n"+"m2_receive_from_19: "+m2_receive_from_19+"\n"+"m2_receive_from_20: "+m2_receive_from_20+"\n");
     //log.log("\n"+"m20_sending :"+m20_sending+"\n"+"m19_sending :"+m19_sending+"\n"+"m18_sending :"+m18_sending+"\n"+"m17_sending :"+m17_sending+"\n"+"m16_sending :"+m16_sending+"\n"+"m15_sending :"+m15_sending+"\n"+"m14_sending :"+m14_sending+"\n"+"m13_sending :"+m13_sending+"\n"+"m12_sending :"+m12_sending+"\n"+"m11_sending :"+m11_sending+"\n"+"m10_sending :"+m10_sending+"\n"+"m9_sending :"+m9_sending+"\n"+"m8_sending :"+m8_sending+"\n"+"m7_sending :"+m7_sending+"\n"+"m6_sending :"+m6_sending+"\n"+"m5_sending :"+m5_sending+"\n"+"m4_sending :"+m4_sending+"\n"+"m3_sending :"+m3_sending+"\n");
     //log.log("Total_Packet_Sent_to_2 : "+Total_Packet_Sent_to_2 +"\n"+"Total_m2_Packet_recieving: "+Total_m2_Packet_recieving+"\n"+"Total_Packet_loss: "+Total_Packet_loss+"\n"+"Packet_delivery_ratio: "+Packet_delivery_ratio+"\n"+"loss_ratio: "+loss_ratio+"\n");
-}
+//}
     
 }
