@@ -337,7 +337,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			}
     
 	switch(con){	
-		case 20:			
+		case 50:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
 			printf("--Start Calculation--\n");
 			break;
