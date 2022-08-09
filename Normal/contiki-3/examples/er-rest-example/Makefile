@@ -1,4 +1,4 @@
-all: er-example-server er-example-client
+all: er-example-server er-example-client er-example-observe-client-block-wise er-example-observe-client er-example-server_observe_blockwise
 # use target "er-plugtest-server" explicitly when requried 
 
 #APPS = powertrace collect-view
