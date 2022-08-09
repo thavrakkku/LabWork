@@ -6,7 +6,7 @@ today = new Date(); // get current date
 
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
 sl="/home/"+username+"/LabWork/"; //save location
-sf=sl+date+"_Test_EnCoCoRED_square_8+0_1s_log_"; //save file name     
+sf=sl+date+"_Test_Normal_Circle_12+0_1s_log_"; //save file name     
 i=1; //file index
 checkfile= new File(sf+i+".txt"); //define check file name
     while(checkfile.exists()){//check if file is exist

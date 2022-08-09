@@ -90,8 +90,8 @@
 	#define SERVER_NODE14(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00010)
 	#define SERVER_NODE15(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00011)
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00012)
-	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00013) 
-	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)   
+	/*#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00013) 
+	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)  */ 
 #else
 	#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
 	#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x4)
@@ -109,8 +109,8 @@
 	#define SERVER_NODE14(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x10)
 	#define SERVER_NODE15(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x11)
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x12)
-	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x13)
-	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)
+	/*#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x13)
+	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)*/
 #endif
 
 
@@ -150,8 +150,8 @@ uip_ipaddr_t	server_ipaddr13;
 uip_ipaddr_t	server_ipaddr14;
 uip_ipaddr_t	server_ipaddr15;
 uip_ipaddr_t	server_ipaddr16;
-uip_ipaddr_t	server_ipaddr17;
-uip_ipaddr_t	server_ipaddr18;
+/*uip_ipaddr_t	server_ipaddr17;
+uip_ipaddr_t	server_ipaddr18;*/
 /*----------------------------------------------------------------------------*/
 /*
  * Handle the response to the observe request and the following notifications
@@ -219,7 +219,39 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
 		printf("Observe OK form 10\n");
-		increase_conn(20);
+		increase_conn(9);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
+		printf("Observe OK form 11\n");
+		increase_conn(10);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr10)){
+		printf("Observe OK form 12\n");
+		increase_conn(11);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr11)){
+		printf("Observe OK form 13\n");
+		increase_conn(12);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr12)){
+		printf("Observe OK form 14\n");
+		increase_conn(13);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr13)){
+		printf("Observe OK form 15\n");
+		increase_conn(14);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr14)){
+		printf("Observe OK form 16\n");
+		increase_conn(15);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr15)){
+		printf("Observe OK form 17\n");
+		increase_conn(16);
+	}
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr16)){
+		printf("Observe OK form 18\n");
+		increase_conn(50);
 	}
 /* End of CTR Note */
 
@@ -283,8 +315,8 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	SERVER_NODE14(&server_ipaddr14);
 	SERVER_NODE15(&server_ipaddr15);
 	SERVER_NODE16(&server_ipaddr16);
-	SERVER_NODE17(&server_ipaddr17);
-	SERVER_NODE18(&server_ipaddr18);
+	/*SERVER_NODE17(&server_ipaddr17);
+	SERVER_NODE18(&server_ipaddr18);*/
 
 
   /* receives all CoAP messages */
@@ -388,14 +420,6 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 		case 16:
 			obs = coap_obs_request_registration(&server_ipaddr16, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 18--\n");
-			break;
-		case 17:
-			obs = coap_obs_request_registration(&server_ipaddr17, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 19--\n");
-			break;
-		case 18:
-			obs = coap_obs_request_registration(&server_ipaddr18, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 20--\n");
 			break;
 	}
 	//if(con>17){con=0;}
