@@ -181,6 +181,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   etimer_set(&periodic, SEND_INTERVAL);
   while(1) {
     PROCESS_YIELD();
+     
     if(ev == tcpip_event) {
       tcpip_handler();
     }

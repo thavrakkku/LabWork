@@ -7,7 +7,7 @@ today = new Date(); // get current date
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
 sl="/home/"+username+"/LabWork/"; //save location
 sf=sl+date+"_Test_Normal_Random_1+0_1s_log_"; //save file name  
-ob_node="Observe OK form 6";   
+ob_node="Observe OK form 12";   
 i=1; //file index
 checkfile= new File(sf+i+".txt"); //define check file name
     while(checkfile.exists()){//check if file is exist
@@ -65,7 +65,7 @@ function start_measure(a){
     stoptime=parseInt(a)+simulate_time;
     log.log("start calcualte.\n");
     log.log(stoptime+"\n");
-    TIMEOUT(3000000000);
+    TIMEOUT(300000000000);
 }
 timeout_function = function () {
     log.log("Script timed out.\n");
