@@ -76,7 +76,7 @@ rest_init_engine(void)
 
   /* Start the RESTful server implementation. */
   REST.init();
-PRINTF("ctr rest init \n");
+PRINTF("rest init \n");
   /*Start REST engine process */
   process_start(&rest_engine_process, NULL);
 }
@@ -95,7 +95,7 @@ rest_activate_resource(resource_t *resource, char *path)
 {
   resource->url = path;
   list_add(restful_services, resource);
-	PRINTF("ctr rest active resource \n");
+	PRINTF("rest active resource \n");
   PRINTF("Activating: %s\n", resource->url);
 
   /* Only add periodic resources with a periodic_handler and a period > 0. */
@@ -121,7 +121,7 @@ rest_invoke_restful_service(void *request, void *response, uint8_t *buffer,
 {
   uint8_t found = 0;
   uint8_t allowed = 1;
-PRINTF("ctr rest invoke_restful_service \n");
+PRINTF("rest invoke_restful_service \n");
   resource_t *resource = NULL;
   const char *url = NULL;
 
