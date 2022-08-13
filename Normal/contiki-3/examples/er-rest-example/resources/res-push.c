@@ -52,13 +52,14 @@
 
 /* End 11:08 08-02-22 */
 /* adde 04-08-22 */
-#ifndef PERIOD
-#define PERIOD 1
-#endif
-
-#define START_INTERVAL		(15 * CLOCK_SECOND)
-#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
-#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+//#ifndef PERIOD
+//#define PERIOD 1
+//#endif
+//
+//#define START_INTERVAL		(15 * CLOCK_SECOND)
+//#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
+//#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+//#define CTR_TEST  srand(clock_time())
 
 /* End adde 04-08-22 */
 
@@ -72,7 +73,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                 SEND_INTERVAL,
+                 1*CLOCK_SECOND,
                   res_periodic_handler);
 // RANDWAIT *CLOCK_SECOND,
 //random_rand() % (CLOCK_SECOND * RANDWAIT)
@@ -100,7 +101,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,SEND_INTERVAL));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu", temperature,oldtemp));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
@@ -132,7 +133,7 @@ static void
 res_periodic_handler()
 {
   /* Do a periodic task here, e.g., sampling a sensor. */
-  
+  //temperature=randomsend(30,25);
  temperature=randomsend(30,25,i);
 	i++;
 	if (i==5){

@@ -191,7 +191,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 /* CTR Note check incoming observe IP for connection condition */
     if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr1)){
 		printf("Observe OK form 3\n");
-		increase_conn(2);
+		increase_conn(50);
 	}
 	if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr2)){
 		printf("Observe OK form 4\n");
@@ -227,7 +227,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr10)){
 		printf("Observe OK form 12\n");
-		increase_conn(50);
+		increase_conn(11);
 	}
 	
 /* End of CTR Note */
@@ -336,7 +336,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			break;
 		case 1:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
-			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/observe", notification_callback, NULL);
 			printf("--Connecting to number 3--\n");
 			break;
 		case 2:
@@ -392,9 +392,9 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	if(etimer_expired(&et)) {
 		//ctr
 		
-		printf("Con: %d\n",con);
+		//printf("Con: %d\n",con);
 
-		printf("R: %d\n",r);
+		//printf("R: %d\n",r);
 		//end
 		//con=0;
       

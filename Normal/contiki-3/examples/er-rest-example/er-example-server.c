@@ -42,6 +42,8 @@
 #include "contiki.h"
 #include "contiki-net.h"
 #include "rest-engine.h"
+#define _GNU_SOURCE 
+#include "math.h"
 
 #if PLATFORM_HAS_BUTTON
 #include "dev/button-sensor.h"
@@ -59,14 +61,16 @@
 #define PRINTLLADDR(addr)
 #endif
 
-#ifndef PERIOD
-#define PERIOD 1
-#endif
-
-#define START_INTERVAL		(15 * CLOCK_SECOND)
-#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
-#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
-
+//#ifndef PERIOD
+//#define PERIOD 1
+//#endif
+//
+//#define START_INTERVAL		(15 * CLOCK_SECOND)
+//#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
+//#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+//
+//
+//#define CTR_TEST  randomsend(6,3)
 
 /*
  * Resources to be activated need to be imported through the extern keyword.
@@ -107,8 +111,12 @@ extern resource_t res_radio;
 extern resource_t res_sht11;
 #endif
 */
+
 // Wait Event
-// static struct etimer timer;
+static struct etimer timer;
+//static clock_time_t send_time;
+//clock_time_t now;
+//now=clock_time();
 
 PROCESS(er_example_server, "Erbium Example Server");
 AUTOSTART_PROCESSES(&er_example_server);
@@ -118,7 +126,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   PROCESS_BEGIN();
   PROCESS_PAUSE();
 
-  PRINTF("Starting Erbium Example Server\n");
+ // PRINTF("Starting Erbium Example Server\n");
 
 #ifdef RF_CHANNEL
   PRINTF("RF channel: %u\n", RF_CHANNEL);
@@ -127,14 +135,32 @@ PROCESS_THREAD(er_example_server, ev, data)
   PRINTF("PAN ID: 0x%04X\n", IEEE802154_PANID);
 #endif
 
-  PRINTF("uIP buffer: %u\n", UIP_BUFSIZE);
-  PRINTF("LL header: %u\n", UIP_LLH_LEN);
-  PRINTF("IP+UDP header: %u\n", UIP_IPUDPH_LEN);
-  PRINTF("REST max chunk: %u\n", REST_MAX_CHUNK_SIZE);
+  //PRINTF("uIP buffer: %u\n", UIP_BUFSIZE);
+  //PRINTF("LL header: %u\n", UIP_LLH_LEN);
+  //PRINTF("IP+UDP header: %u\n", UIP_IPUDPH_LEN);
+  //PRINTF("REST max chunk: %u\n", REST_MAX_CHUNK_SIZE);
 
   /* Initialize the REST engine. */
   rest_init_engine();
 
+////Wait Events 
+//    PRINTF("Wait %lu seconde\n",CTR_TEST);
+//    etimer_set(&timer,SEND_TIME);
+//    PRINTF("Wait %lu seconde\n",CTR_TEST);
+//    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+//    PRINTF("Done\n");
+  //void random_init(unsigned seed);
+  //unsigned short random_rand();
+ // unsigned long cur_expo_dist;
+  unsigned long ran_expo(unsigned long lambda){
+
+    return -lambda*log(1-(random_rand()/(RAND_MAX + 1.0)));
+}
+PRINTF("Wait %lu seconde\n",ran_expo(1));
+    etimer_set(&timer,ran_expo(1));
+    //PRINTF("Wait %lu seconde\n",ran_expo(1));
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+  //  PRINTF("Done\n");
   /*
    * Bind the resources to their Uri-Path.
    * WARNING: Activating twice only means alternate path, not two instances!
@@ -147,7 +173,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   rest_activate_resource(&res_push, "test/push");
 
   /*ctr note add test observe*/
-rest_activate_resource(&res_observe, "test/observe");
+//rest_activate_resource(&res_observe, "test/observe");
   /*end ctr note*/
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
@@ -177,12 +203,7 @@ rest_activate_resource(&res_observe, "test/observe");
 
   /* Define application-specific events here. */
   while(1) {
-  /* //Wait Events 
-    PRINTF("Wait %lu seconde\n",SEND_TIME);
-    etimer_set(&timer,SEND_TIME);
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-    PRINTF("Done\n");
-  */
+  
 
     PROCESS_WAIT_EVENT();
 #if PLATFORM_HAS_BUTTON

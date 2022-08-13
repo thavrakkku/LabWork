@@ -1,3 +1,5 @@
+CFLAGS += -g
+LDLIBS += -lm
 all: er-example-server er-example-client er-example-observe-client-block-wise er-example-observe-client er-example-server_observe_blockwise
 # use target "er-plugtest-server" explicitly when requried 
 
@@ -72,3 +74,4 @@ connect-router-native:	$(CONTIKI)/examples/ipv6/native-border-router/border-rout
 
 connect-minimal:
 	sudo ip address add fdfd::1/64 dev tap0 
+
