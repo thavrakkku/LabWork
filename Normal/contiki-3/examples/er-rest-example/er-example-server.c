@@ -152,14 +152,14 @@ PROCESS_THREAD(er_example_server, ev, data)
   //void random_init(unsigned seed);
   //unsigned short random_rand();
  // unsigned long cur_expo_dist;
-  unsigned long ran_expo(unsigned long lambda){
-
-    return -lambda*log(1-(random_rand()/(RAND_MAX + 1.0)));
-}
-PRINTF("Wait %lu seconde\n",ran_expo(1));
-    etimer_set(&timer,ran_expo(1));
+//  unsigned long ran_expo(unsigned long lambda){
+//
+//    return -lambda*log(1-(random_rand()/(RAND_MAX + 1.0)));
+//}
+//PRINTF("Wait %lu seconde\n",ran_expo(1));
+  //  etimer_set(&timer,ran_expo(1));
     //PRINTF("Wait %lu seconde\n",ran_expo(1));
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+//    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
   //  PRINTF("Done\n");
   /*
    * Bind the resources to their Uri-Path.
@@ -173,7 +173,7 @@ PRINTF("Wait %lu seconde\n",ran_expo(1));
   rest_activate_resource(&res_push, "test/push");
 
   /*ctr note add test observe*/
-//rest_activate_resource(&res_observe, "test/observe");
+rest_activate_resource(&res_observe, "test/observe");
   /*end ctr note*/
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
