@@ -1,29 +1,55 @@
-[16:11:33 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[16:11:33 - main] [Cooja.java:1324] [INFO] - > Starting Cooja
-[16:11:33 - main] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
-[16:11:33 - main] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[16:11:33 - main] [Simulation.java:420] [INFO] - Simulation random seed: -6273895192829349108
-[16:11:33 - main] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[16:11:33 - main] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-1.z1 TARGET=z1 
-[16:11:33 - main] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[16:11:33 - main] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[16:11:33 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client-4-1.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:11:34 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[16:11:34 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.SimControl
-[16:11:34 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Visualizer
-[16:11:34 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.LogListener
-[16:11:34 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.TimeLine
-[16:11:34 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Notes
-[16:11:35 - main] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[16:11:35 - main] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[16:11:35 - main] [ScriptRunner.java:386] [INFO] - Test script activated
-[16:11:35 - Thread-1] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1660554695738
-[16:11:35 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.RadioLogger
-[16:12:53 - Thread-0] [LogScriptEngine.java:309] [INFO] - Test script finished
-[16:12:53 - Thread-1] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1660554773105	Duration: 77367 ms	Simulated time 1006327 ms	Ratio 13.00718652655525
-[16:12:53 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[21:46:56 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[21:46:56 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[21:46:56 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
+[21:47:37 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 1067260281547245420
+[21:47:37 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[21:47:55 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:47:55 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[21:48:12 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[21:48:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:48:34 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-2.z1 TARGET=z1 
+[21:48:47 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client-4-2.z1
+[21:49:19 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:49:20 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:49:35 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:49:35 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:49:35 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:49:35 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:50:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:50:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[21:50:13 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[21:50:13 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[21:50:54 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[21:50:54 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[21:50:55 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[21:50:58 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1660575058581
+[21:51:04 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1660575064682.pcap
+[21:55:41 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1660575341284	Duration: 282703 ms	Simulated time 926716 ms	Ratio 3.2780550613187693
+[21:55:41 - Thread-4] [LogScriptEngine.java:309] [INFO] - Test script finished
+[21:59:00 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 1067260281547245421
+[21:59:00 - Thread-6] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-4-2.z1 with /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client-4-2.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[21:59:00 - Thread-6] [Cooja.java:4146] [WARN] - Path is not portable: '/home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client-4-2.z1
+[21:59:00 - Thread-6] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-server.z1 with /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[21:59:00 - Thread-6] [Cooja.java:4146] [WARN] - Path is not portable: '/home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:59:01 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[21:59:01 - Thread-6] [Simulation.java:420] [INFO] - Simulation random seed: 1067260281547245421
+[21:59:01 - Thread-6] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[21:59:01 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-2.z1 TARGET=z1 
+[21:59:03 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:59:03 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[21:59:03 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[21:59:04 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-observe-client-4-2.z1
+[21:59:05 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:59:06 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:59:06 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:59:06 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:59:06 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[21:59:07 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/EnCoCoRED/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[21:59:07 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:59:09 - Thread-6] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[21:59:09 - Thread-6] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[21:59:09 - Thread-6] [ScriptRunner.java:386] [INFO] - Test script activated
+[21:59:11 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1660575551512
+[21:59:16 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1660575556257.pcap
+[22:03:51 - Thread-7] [LogScriptEngine.java:309] [INFO] - Test script finished
+[22:03:51 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1660575831291	Duration: 279779 ms	Simulated time 921340 ms	Ratio 3.293099196151248
