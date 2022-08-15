@@ -91,7 +91,7 @@ void
 coap_send_transaction(coap_transaction_t *t)
 {
   //ctr++;
-	PRINTF("CTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
+	PRINTF("\nCTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
   
   //PRINTF("Sending transaction %u\n", t->mid);
 

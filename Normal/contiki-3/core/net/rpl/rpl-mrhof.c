@@ -49,7 +49,7 @@
 #include "net/rpl/rpl-private.h"
 #include "net/nbr-table.h"
 
-#define DEBUG DEBUG_NONE
+#define DEBUG DEBUG_PRINT
 #include "net/ip/uip-debug.h"
 
 static void reset(rpl_dag_t *);
@@ -175,6 +175,7 @@ calculate_rank(rpl_parent_t *p, rpl_rank_t base_rank)
     rank_increase = nbr->link_metric;
     if(base_rank == 0) {
       base_rank = p->rank;
+      
     }
   }
 
@@ -186,7 +187,7 @@ calculate_rank(rpl_parent_t *p, rpl_rank_t base_rank)
       stored otherwise. */
     new_rank = base_rank + rank_increase;
   }
-
+PRINTF("RPL: RANK changed from %u \n",new_rank);
   return new_rank;
 }
 

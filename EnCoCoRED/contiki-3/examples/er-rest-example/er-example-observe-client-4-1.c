@@ -191,6 +191,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 /* CTR Note check incoming observe IP for connection condition */
     if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr1)){
 		printf("Observe OK form 3\n");
+		
 		increase_conn(2);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr2)){
@@ -207,19 +208,8 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr5)){
 		printf("Observe OK form 7\n");
-		increase_conn(6);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr6)){
-		printf("Observe OK form 8\n");
-		increase_conn(7);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr7)){
-		printf("Observe OK form 9\n");
-		increase_conn(8);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
-		printf("Observe OK form 10\n");
-		increase_conn(20);
+		r=1;
+		increase_conn(50);
 	}
 /* End of CTR Note */
 
@@ -310,17 +300,17 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 
 		     	coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
 
-		     	PRINT6ADDR(&server_ipaddr1);
+		     	PRINT6ADDR(&server_ipaddr5);
 		     	PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
-		     	COAP_BLOCKING_REQUEST(&server_ipaddr1, REMOTE_PORT, request,client_chunk_handler);
+		     	COAP_BLOCKING_REQUEST(&server_ipaddr5, REMOTE_PORT, request,client_chunk_handler);
 	
 			r=0;
 
 			}
     
 	switch(con){	
-		case 20:			
+		case 50:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
 			printf("--Start Calculation--\n");
 			break;
@@ -342,61 +332,11 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 6--\n");
 			break;
 		case 5:
-			obs = coap_obs_request_registration(&server_ipaddr5, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr5, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
+			//obs = coap_obs_request_registration(&server_ipaddr5, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 7--\n");
 			break;
-		case 6:
-			obs = coap_obs_request_registration(&server_ipaddr6, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 8--\n");
-			break;
-		case 7:
-			obs = coap_obs_request_registration(&server_ipaddr7, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 9--\n");
-			break;
-		case 8:
-			obs = coap_obs_request_registration(&server_ipaddr8, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 10--\n");
-			break;
-		case 9:
-			obs = coap_obs_request_registration(&server_ipaddr9, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 11--\n");
-			break;
-		case 10:
-			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 12--\n");
-			break;
-		case 11:
-			obs = coap_obs_request_registration(&server_ipaddr11, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 13--\n");
-			break;
-		case 12:
-			obs = coap_obs_request_registration(&server_ipaddr12, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 14--\n");
-			break;
-		case 13:
-			obs = coap_obs_request_registration(&server_ipaddr13, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 15--\n");
-			break;
-		case 14:
-			obs = coap_obs_request_registration(&server_ipaddr14, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 16--\n");
-			break;
-		case 15:
-			obs = coap_obs_request_registration(&server_ipaddr15, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 17--\n");
-			break;
-		case 16:
-			obs = coap_obs_request_registration(&server_ipaddr16, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 18--\n");
-			break;
-		case 17:
-			obs = coap_obs_request_registration(&server_ipaddr17, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 19--\n");
-			break;
-		case 18:
-			obs = coap_obs_request_registration(&server_ipaddr18, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 20--\n");
-			break;
+		
 	}
 	//if(con>17){con=0;}
 
