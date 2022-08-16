@@ -6,7 +6,7 @@
 
     date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
     sl="/home/"+username+"/LabWork/"; //save location
-    sf=sl+date+"_Test_Normal_Circle_4+2_1s_log_"; //save file name  
+    sf=sl+date+"_Test_En_Circle_4+2_1s_log_"; //save file name  
     ob_node="Observe OK form 8";   
     i=1; //file index
     checkfile= new File(sf+i+".txt"); //define check file name
