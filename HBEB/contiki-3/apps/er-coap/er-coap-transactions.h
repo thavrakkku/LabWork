@@ -46,7 +46,7 @@
  * retransmission time between COAP_RESPONSE_TIMEOUT and COAP_RESPONSE_TIMEOUT*COAP_RESPONSE_RANDOM_FACTOR.
  */
 #define COAP_RESPONSE_TIMEOUT_TICKS         (CLOCK_SECOND * COAP_RESPONSE_TIMEOUT)
-#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 0.5) + 1
+#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 2.0) + 1
 
 /* container for transactions with message buffer and retransmission info */
 typedef struct coap_transaction {
@@ -55,6 +55,9 @@ typedef struct coap_transaction {
   uint16_t mid;
   struct etimer retrans_timer;
   uint8_t retrans_counter;
+
+  uint8_t fpb_counter;
+  uint8_t hbeb_counter;
 
   uip_ipaddr_t addr;
   uint16_t port;
@@ -65,6 +68,7 @@ typedef struct coap_transaction {
   uint16_t packet_len;
   uint8_t packet[COAP_MAX_PACKET_SIZE + 1];     /* +1 for the terminating '\0' which will not be sent
                                                  * Use snprintf(buf, len+1, "", ...) to completely fill payload */
+  clock_time_t start_rto;
 } coap_transaction_t;
 
 void coap_register_as_transaction_handler(void);

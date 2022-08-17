@@ -170,22 +170,26 @@ coap_send_transaction(coap_transaction_t *t)
         t->start_rto = storedRto;
         //printf("CTR_StartRTO=%lu\n",t->start_rto );
         t->retrans_timer.timer.interval = storedRto;
-         //printf("CTR_StoreRTO=%lu\n",t->retrans_timer.timer.interval );
+         printf("CTR_StoreRTO=%lu_IP=",t->retrans_timer.timer.interval/CLOCK_SECOND );PRINT6ADDR(&t->addr);printf("\n");
       }
 
 #if ENCOCORED
       else {
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
+        printf("CTR_RTO_retran_1=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto/CLOCK_SECOND);
        } 
          if(t->retrans_counter == 2 && C_FPB == 1) {
           t->retrans_timer.timer.interval = t->start_rto + t->start_rto;  /* FPB(2) */
+          printf("CTR_RTO_retran_2=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto/CLOCK_SECOND );
          } 
            if(t->retrans_counter == 3 && C_FPB == 1) {
             t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto;  /* FPB(3) */
+            printf("CTR_RTO_retran_3=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto /CLOCK_SECOND);
            } 
              if(t->retrans_counter == 4 && C_FPB == 1) {
               t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto + t->start_rto + t->start_rto;  /* FPB(4) */  
+              printf("CTR_RTO_retran_4=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto /CLOCK_SECOND);           
              } 
                if(C_HBEB == 1) {
                 t->retrans_timer.timer.interval = (t->retrans_timer.timer.interval << 1)/2;  //HBEB
@@ -215,8 +219,8 @@ coap_send_transaction(coap_transaction_t *t)
 #if BEB
        else {
         t->retrans_timer.timer.interval <<= 1;  //double 
-        PRINTF("Doubled (%u) interval %f\n", t->retrans_counter,
-               (float)t->retrans_timer.timer.interval / CLOCK_SECOND);
+       PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
+              t->retrans_timer.timer.interval / CLOCK_SECOND);
       }
 #endif
 
@@ -281,7 +285,8 @@ coap_check_transactions()
       ++(t->retrans_counter);
 	ctr_lose++;
 	PRINTF("\nCTR_Lose_%d_In_",ctr_lose);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
-	PRINTF("\nRetransmitting %u (%u)\n", t->mid, t->retrans_counter);
+	PRINTF("\nCTR_Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
+  
       coap_send_transaction(t);
     }
   }

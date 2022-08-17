@@ -6,8 +6,9 @@
 
     date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
     sl="/home/"+username+"/LabWork/"; //save location
-    sf=sl+date+"_Test_En_Circle_4+2_1s_log_"; //save file name  
-    ob_node="Observe OK form 8";   
+    sf=sl+date+"_Test_En_grid_4+1_30s_log_"; //save file name  
+    ob_node="Observe OK form 8"; 
+    simulate_time=12000000; //simulate time after start measure  
     i=1; //file index
     checkfile= new File(sf+i+".txt"); //define check file name
         while(checkfile.exists()){//check if file is exist
@@ -57,7 +58,7 @@
     m15_sending =0;m15_receiving =0;m16_sending =0;m16_receiving =0;m17_sending =0;m17_receiving =0;m18_sending =0;m18_receiving =0;
     m19_sending =0;m19_receiving =0;m20_sending =0;m20_receiving =0;
     stoptime=0;
-    simulate_time=300000;
+  
     function start_measure(a){
         if(start_calculate>1){
             return 0;
@@ -91,16 +92,16 @@
             start_measure(msgArray[3].split(':')[1]); 
             //log.log(msgArray[3]+"\n") ;
         }
-        if(parseInt(msgArray[3].split(':')[1]) >= stoptime && start_calculate>1){
-            log.log(msgArray[3].split(':')[1]+" | "+stoptime+"\n");
-            SCRIPT_TIMEOUT();
-            //SCRIPT_KILL()
-        }
+       
         if(start_calculate >= 1){
         if(msgArray[0].equals("CTR")){
         //log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]+"\n");    
         savefile.write(msgs);
-
+            if(parseInt(msgArray[3].split(':')[1]) >= stoptime && start_calculate>1){
+                log.log(msgArray[3].split(':')[1]+" | "+stoptime+"\n");
+                SCRIPT_TIMEOUT();
+                //SCRIPT_KILL()
+        }
         
         
         }

@@ -58,8 +58,8 @@ MEMB(transactions_memb, coap_transaction_t, COAP_MAX_OPEN_TRANSACTIONS);
 LIST(transactions_list);
 
 static struct process *transaction_handler_process = NULL;
-//static  int ctr_lose=0;
-//static  int ctr=0;
+static  int ctr_lose=0;
+static  int ctr=0;
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -109,12 +109,14 @@ coap_send_transaction(coap_transaction_t *t)
                                          %
                                          (clock_time_t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
-     //   PRINTF("Initial interval %f\n",
-       //        (float)t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("Initial interval %u\n",
+               t->retrans_timer.timer.interval / CLOCK_SECOND);
+                printf("CTR_FirstRTO=%lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
       } else {
         t->retrans_timer.timer.interval <<= 1;  /* double */
-     //   PRINTF("Doubled (%u) interval %f\n", t->retrans_counter,
-       //        (float)t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
+               t->retrans_timer.timer.interval / CLOCK_SECOND);
+               printf("CTR_RTO_retran_%u=%lu\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND);
       }
 
       PROCESS_CONTEXT_BEGIN(transaction_handler_process);
@@ -176,10 +178,9 @@ coap_check_transactions()
     if(etimer_expired(&t->retrans_timer)) {
       ++(t->retrans_counter);
       
-    //  ctr_lose++;
-	    PRINTF("CTR_Lose_a_In_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
-	
-    //  PRINTF("Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
+     ctr_lose++;
+	    PRINTF("\nCTR_Lose_%d_In_",ctr_lose);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
+	    PRINTF("\nCTR_Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
       coap_send_transaction(t);
     }
   }
