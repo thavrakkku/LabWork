@@ -133,7 +133,7 @@ coap_send_transaction(coap_transaction_t *t)
 
   if(COAP_TYPE_CON ==
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
-    if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
+    if(t->retrans_counter <= COAP_MAX_RETRANSMIT) {
       /* not timed out yet */
       PRINTF("Keeping transaction %u\n", t->mid);
 
@@ -170,6 +170,25 @@ coap_send_transaction(coap_transaction_t *t)
                }
         }
       #endif
+
+      #if COCORED
+      else {
+       if(t->retrans_counter == 1) {
+        t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
+       } 
+         if(t->retrans_counter == 2) {
+          t->retrans_timer.timer.interval = t->start_rto + t->start_rto;  /* FPB(2) */
+         } 
+           if(t->retrans_counter == 3) {
+            t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto ;  /* FPB(3) */
+           } 
+             if(t->retrans_counter == 4) {
+              t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto + t->start_rto + t->start_rto;  /* FPB(4) */  
+             } 
+      }
+
+      #endif
+
       #if BEB
       else {
         t->retrans_timer.timer.interval <<= 1;  /* double */
