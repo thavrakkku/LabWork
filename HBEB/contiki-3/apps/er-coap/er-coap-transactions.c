@@ -43,6 +43,7 @@
 
 #define FUNCTIONEN 1
 #define ENCOCORED 1
+#define COCORED 0
 #define BEB 0
 
 #define DEBUG 1
@@ -95,7 +96,7 @@ void
 coap_send_transaction(coap_transaction_t *t)
 {
   ctr++;
-	PRINTF("\nCTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
+	PRINTF("\nCTR_Sending_HBEB_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
   
   #if FUNCTIONEN 
    uint16_t i, C_FPB = 0, C_HBEB = 0;
@@ -133,9 +134,9 @@ coap_send_transaction(coap_transaction_t *t)
 
   if(COAP_TYPE_CON ==
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
-    if(t->retrans_counter <= COAP_MAX_RETRANSMIT) {
+    if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
       /* not timed out yet */
-      PRINTF("Keeping transaction %u\n", t->mid);
+      PRINTF("CTR_Keeping transaction %u\n", t->mid);
 
       if(t->retrans_counter == 0) {
         clock_time_t backoffRto = COAP_RESPONSE_TIMEOUT_TICKS + (random_rand()
@@ -144,7 +145,7 @@ coap_send_transaction(coap_transaction_t *t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
         t->start_rto=backoffRto;
         t->retrans_timer.timer.interval=backoffRto;
-        PRINTF("Initial interval %u\n",t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("CTR_Initial interval %u\n",t->retrans_timer.timer.interval / CLOCK_SECOND);
       } 
       
       #if ENCOCORED
@@ -202,7 +203,7 @@ coap_send_transaction(coap_transaction_t *t)
       t = NULL;
     } else {
       /* timed out */
-      PRINTF("Timeout\n");
+      PRINTF("CTR_Timeout\n");
       restful_response_handler callback = t->callback;
       void *callback_data = t->callback_data;
 
