@@ -116,7 +116,7 @@
 
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 /* Toggle interval in seconds */
-#define TOGGLE_INTERVAL 100
+#define TOGGLE_INTERVAL 10
 /* The path of the resource to observe */
 #define OBS_RESOURCE_URI "test/push"
 
