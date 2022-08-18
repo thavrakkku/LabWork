@@ -60,6 +60,7 @@ LIST(transactions_list);
 static struct process *transaction_handler_process = NULL;
 static  int ctr_lose=0;
 static  int ctr=0;
+static int ctr_retrans=0;
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -91,7 +92,7 @@ void
 coap_send_transaction(coap_transaction_t *t)
 {
   //ctr++;
-	PRINTF("\nCTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
+	PRINTF("\nCTR_Sending_HBEB_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
   
   //PRINTF("Sending transaction %u\n", t->mid);
 
@@ -101,7 +102,7 @@ coap_send_transaction(coap_transaction_t *t)
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
     if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
       /* not timed out yet */
-      PRINTF("CTR_Keeping transaction %u\n", t->mid);
+      PRINTF("CTR_Keeping transaction %u|Random_ran=%u\n", t->mid,((random_rand()%(uint8_t)193.5)+384)/128);
 
       if(t->retrans_counter == 0) {
         t->retrans_timer.timer.interval =
@@ -111,12 +112,15 @@ coap_send_transaction(coap_transaction_t *t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
         PRINTF("Initial interval %u\n",
                t->retrans_timer.timer.interval / CLOCK_SECOND);
-                printf("CTR_FirstRTO=%lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
+                printf("CTR_mid_%u_RTO[0]=%lu\n",t->mid,t->retrans_timer.timer.interval/CLOCK_SECOND);
+                ctr_retrans=0;
       } else {
+        ctr_retrans++;
         t->retrans_timer.timer.interval <<= 1;  /* double */
         PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
                t->retrans_timer.timer.interval / CLOCK_SECOND);
-               printf("CTR_RTO_retran_%u=%lu\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND);
+               printf("CTR_mid_%lu_RTO[%d]_retran_%u=%lu\n",t->mid,ctr_retrans,t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND);
+                
       }
 
       PROCESS_CONTEXT_BEGIN(transaction_handler_process);
