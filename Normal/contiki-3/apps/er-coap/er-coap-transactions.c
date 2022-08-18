@@ -101,7 +101,7 @@ coap_send_transaction(coap_transaction_t *t)
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
     if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
       /* not timed out yet */
-   //   PRINTF("Keeping transaction %u\n", t->mid);
+      PRINTF("CTR_Keeping transaction %u\n", t->mid);
 
       if(t->retrans_counter == 0) {
         t->retrans_timer.timer.interval =
