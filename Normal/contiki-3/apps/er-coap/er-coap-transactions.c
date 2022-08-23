@@ -111,7 +111,7 @@ coap_send_transaction(coap_transaction_t *t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
         PRINTF("Initial interval %u\n",
                t->retrans_timer.timer.interval / CLOCK_SECOND);
-                printf("CTR_FirstRTO=%lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
+                printf("CTR_FirstRTO=%u\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
       } else {
         t->retrans_timer.timer.interval <<= 1;  /* double */
         PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,

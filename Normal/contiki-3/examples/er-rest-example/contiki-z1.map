@@ -2,7 +2,7 @@ Archive member included because of file (symbol)
 
 contiki-z1.a(er-coap.o)       obj_z1/res-b1-sep-b2.o (coap_serialize_message)
 contiki-z1.a(er-coap-engine.)
-                              obj_z1/res-push.o (coap_rest_implementation)
+                              obj_z1/res-radio.o (coap_rest_implementation)
 contiki-z1.a(er-coap-transac)
                               contiki-z1.a(er-coap-engine.) (coap_register_as_transaction_handler)
 contiki-z1.a(er-coap-observe)
@@ -114,13 +114,13 @@ contiki-z1.a(mac.o)           contiki-z1.a(nullrdc.o) (mac_call_sent_callback)
 /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(printf.o)
                               er-example-server.co (printf)
 /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(sprintf.o)
-                              obj_z1/res-push.o (snprintf)
+                              obj_z1/res-radio.o (snprintf)
 /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o)
                               /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(printf.o) (vuprintf)
 /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(puts.o)
                               er-example-server.co (puts)
 /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(rand.o)
-                              obj_z1/res-push.o (rand)
+                              obj_z1/res-push_copy.o (rand)
 /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a(_udivmod64.o)
                               /usr/lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(vuprintf.o) (__udivdi3)
 /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a(_reset_vector__.o)
@@ -219,14 +219,21 @@ Discarded input sections
  .text.crt0     0x0000000000000000        0x0 /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl32.o
  .text          0x0000000000000000        0x0 er-example-server.co
  .bss           0x0000000000000000        0x0 er-example-server.co
- .text          0x0000000000000000        0x0 obj_z1/res-push.o
- .text          0x0000000000000000        0x0 obj_z1/res-b1-sep-b2.o
- .data          0x0000000000000000       0x12 obj_z1/res-b1-sep-b2.o
- .bss           0x0000000000000000      0x12e obj_z1/res-b1-sep-b2.o
- .rodata        0x0000000000000000       0x3f obj_z1/res-b1-sep-b2.o
- .text.res_post_handler
-                0x0000000000000000      0x168 obj_z1/res-b1-sep-b2.o
- .text          0x0000000000000000        0x0 obj_z1/res-separate.o
+ .text          0x0000000000000000        0x0 obj_z1/res-sht11.o
+ .data          0x0000000000000000        0x0 obj_z1/res-sht11.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-sht11.o
+ .text          0x0000000000000000        0x0 obj_z1/res-radio.o
+ .data          0x0000000000000000       0x12 obj_z1/res-radio.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-radio.o
+ .rodata        0x0000000000000000       0x8a obj_z1/res-radio.o
+ .text.res_get_handler
+                0x0000000000000000      0x106 obj_z1/res-radio.o
+ .text          0x0000000000000000        0x0 obj_z1/res-sub.o
+ .data          0x0000000000000000       0x12 obj_z1/res-sub.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-sub.o
+ .rodata        0x0000000000000000       0x40 obj_z1/res-sub.o
+ .text.res_get_handler
+                0x0000000000000000       0x86 obj_z1/res-sub.o
  .text          0x0000000000000000        0x0 obj_z1/res-push_copy.o
  .data          0x0000000000000000       0x28 obj_z1/res-push_copy.o
  .bss           0x0000000000000000        0xc obj_z1/res-push_copy.o
@@ -235,42 +242,48 @@ Discarded input sections
                 0x0000000000000000       0x64 obj_z1/res-push_copy.o
  .text.res_periodic_handler
                 0x0000000000000000       0x72 obj_z1/res-push_copy.o
- .text          0x0000000000000000        0x0 obj_z1/res-mirror.o
- .data          0x0000000000000000       0x20 obj_z1/res-mirror.o
- .bss           0x0000000000000000        0x0 obj_z1/res-mirror.o
- .rodata        0x0000000000000000       0xc9 obj_z1/res-mirror.o
- .text.res_any_handler
-                0x0000000000000000      0x516 obj_z1/res-mirror.o
- .text          0x0000000000000000        0x0 obj_z1/res-sht11.o
- .data          0x0000000000000000        0x0 obj_z1/res-sht11.o
- .bss           0x0000000000000000        0x0 obj_z1/res-sht11.o
- .text          0x0000000000000000        0x0 obj_z1/res-battery.o
- .data          0x0000000000000000       0x12 obj_z1/res-battery.o
- .bss           0x0000000000000000        0x0 obj_z1/res-battery.o
- .rodata        0x0000000000000000       0x6f obj_z1/res-battery.o
- .text.res_get_handler
-                0x0000000000000000       0xa2 obj_z1/res-battery.o
- .text          0x0000000000000000        0x0 obj_z1/res-light.o
- .data          0x0000000000000000        0x0 obj_z1/res-light.o
- .bss           0x0000000000000000        0x0 obj_z1/res-light.o
  .text          0x0000000000000000        0x0 obj_z1/res-toggle.o
  .data          0x0000000000000000       0x12 obj_z1/res-toggle.o
  .bss           0x0000000000000000        0x0 obj_z1/res-toggle.o
  .text.res_post_handler
                 0x0000000000000000        0x8 obj_z1/res-toggle.o
  .rodata        0x0000000000000000       0x1d obj_z1/res-toggle.o
+ .text          0x0000000000000000        0x0 obj_z1/res-leds.o
+ .data          0x0000000000000000       0x12 obj_z1/res-leds.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-leds.o
+ .rodata        0x0000000000000000       0x56 obj_z1/res-leds.o
+ .text.res_post_put_handler
+                0x0000000000000000       0xb4 obj_z1/res-leds.o
+ .text          0x0000000000000000        0x0 obj_z1/res-b1-sep-b2.o
+ .data          0x0000000000000000       0x12 obj_z1/res-b1-sep-b2.o
+ .bss           0x0000000000000000      0x12e obj_z1/res-b1-sep-b2.o
+ .rodata        0x0000000000000000       0x3f obj_z1/res-b1-sep-b2.o
+ .text.res_post_handler
+                0x0000000000000000      0x168 obj_z1/res-b1-sep-b2.o
  .text          0x0000000000000000        0x0 obj_z1/res-hello.o
  .data          0x0000000000000000       0x12 obj_z1/res-hello.o
  .bss           0x0000000000000000        0x0 obj_z1/res-hello.o
  .rodata        0x0000000000000000       0x55 obj_z1/res-hello.o
  .text.res_get_handler
                 0x0000000000000000       0x74 obj_z1/res-hello.o
- .text          0x0000000000000000        0x0 obj_z1/res-sub.o
- .data          0x0000000000000000       0x12 obj_z1/res-sub.o
- .bss           0x0000000000000000        0x0 obj_z1/res-sub.o
- .rodata        0x0000000000000000       0x40 obj_z1/res-sub.o
+ .text          0x0000000000000000        0x0 obj_z1/res-chunks.o
+ .data          0x0000000000000000       0x12 obj_z1/res-chunks.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-chunks.o
+ .rodata        0x0000000000000000       0x37 obj_z1/res-chunks.o
  .text.res_get_handler
-                0x0000000000000000       0x86 obj_z1/res-sub.o
+                0x0000000000000000       0xf0 obj_z1/res-chunks.o
+ .text          0x0000000000000000        0x0 obj_z1/res-push.o
+ .text          0x0000000000000000        0x0 obj_z1/res-event.o
+ .text          0x0000000000000000        0x0 obj_z1/res-battery.o
+ .data          0x0000000000000000       0x12 obj_z1/res-battery.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-battery.o
+ .rodata        0x0000000000000000       0x6f obj_z1/res-battery.o
+ .text.res_get_handler
+                0x0000000000000000       0xa2 obj_z1/res-battery.o
+ .text          0x0000000000000000        0x0 obj_z1/res-separate.o
+ .text          0x0000000000000000        0x0 obj_z1/res-light.o
+ .data          0x0000000000000000        0x0 obj_z1/res-light.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-light.o
  .text          0x0000000000000000        0x0 obj_z1/res-push_blockwise.o
  .data          0x0000000000000000       0x28 obj_z1/res-push_blockwise.o
  .bss           0x0000000000000000        0x4 obj_z1/res-push_blockwise.o
@@ -280,25 +293,12 @@ Discarded input sections
  .text.res_get_handler
                 0x0000000000000000       0x54 obj_z1/res-push_blockwise.o
  .text          0x0000000000000000        0x0 obj_z1/res-observe.o
- .text          0x0000000000000000        0x0 obj_z1/res-radio.o
- .data          0x0000000000000000       0x12 obj_z1/res-radio.o
- .bss           0x0000000000000000        0x0 obj_z1/res-radio.o
- .rodata        0x0000000000000000       0x8a obj_z1/res-radio.o
- .text.res_get_handler
-                0x0000000000000000      0x106 obj_z1/res-radio.o
- .text          0x0000000000000000        0x0 obj_z1/res-event.o
- .text          0x0000000000000000        0x0 obj_z1/res-leds.o
- .data          0x0000000000000000       0x12 obj_z1/res-leds.o
- .bss           0x0000000000000000        0x0 obj_z1/res-leds.o
- .rodata        0x0000000000000000       0x56 obj_z1/res-leds.o
- .text.res_post_put_handler
-                0x0000000000000000       0xb4 obj_z1/res-leds.o
- .text          0x0000000000000000        0x0 obj_z1/res-chunks.o
- .data          0x0000000000000000       0x12 obj_z1/res-chunks.o
- .bss           0x0000000000000000        0x0 obj_z1/res-chunks.o
- .rodata        0x0000000000000000       0x37 obj_z1/res-chunks.o
- .text.res_get_handler
-                0x0000000000000000       0xf0 obj_z1/res-chunks.o
+ .text          0x0000000000000000        0x0 obj_z1/res-mirror.o
+ .data          0x0000000000000000       0x20 obj_z1/res-mirror.o
+ .bss           0x0000000000000000        0x0 obj_z1/res-mirror.o
+ .rodata        0x0000000000000000       0xc9 obj_z1/res-mirror.o
+ .text.res_any_handler
+                0x0000000000000000      0x516 obj_z1/res-mirror.o
  .text          0x0000000000000000        0x0 obj_z1/contiki-z1-main.o
  .text.uip_log  0x0000000000000000        0x6 obj_z1/contiki-z1-main.o
  .text          0x0000000000000000        0x0 contiki-z1.a(er-coap.o)
@@ -798,23 +798,23 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/crt0ivtbl32.o
                 0x0000000000000041                __P1SEL2 = 0x41
                 0x0000000000000045                __P5SEL2 = 0x45
 LOAD er-example-server.co
-LOAD obj_z1/res-push.o
-LOAD obj_z1/res-b1-sep-b2.o
-LOAD obj_z1/res-separate.o
-LOAD obj_z1/res-push_copy.o
-LOAD obj_z1/res-mirror.o
 LOAD obj_z1/res-sht11.o
-LOAD obj_z1/res-battery.o
-LOAD obj_z1/res-light.o
-LOAD obj_z1/res-toggle.o
-LOAD obj_z1/res-hello.o
+LOAD obj_z1/res-radio.o
 LOAD obj_z1/res-sub.o
+LOAD obj_z1/res-push_copy.o
+LOAD obj_z1/res-toggle.o
+LOAD obj_z1/res-leds.o
+LOAD obj_z1/res-b1-sep-b2.o
+LOAD obj_z1/res-hello.o
+LOAD obj_z1/res-chunks.o
+LOAD obj_z1/res-push.o
+LOAD obj_z1/res-event.o
+LOAD obj_z1/res-battery.o
+LOAD obj_z1/res-separate.o
+LOAD obj_z1/res-light.o
 LOAD obj_z1/res-push_blockwise.o
 LOAD obj_z1/res-observe.o
-LOAD obj_z1/res-radio.o
-LOAD obj_z1/res-event.o
-LOAD obj_z1/res-leds.o
-LOAD obj_z1/res-chunks.o
+LOAD obj_z1/res-mirror.o
 LOAD obj_z1/contiki-z1-main.o
 LOAD contiki-z1.a
 LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libgcc.a
@@ -1207,18 +1207,18 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
                 0x0000000000003536       0x64 obj_z1/res-push.o
  .text.res_periodic_handler
                 0x000000000000359a       0x72 obj_z1/res-push.o
- .text.res_resume_handler
-                0x000000000000360c       0x84 obj_z1/res-separate.o
- .text.res_get_handler
-                0x0000000000003690       0x32 obj_z1/res-separate.o
- .text.res_get_handler
-                0x00000000000036c2       0x6a obj_z1/res-observe.o
- .text.res_periodic_handler
-                0x000000000000372c       0x72 obj_z1/res-observe.o
  .text.res_event_handler
-                0x000000000000379e       0x12 obj_z1/res-event.o
+                0x000000000000360c       0x12 obj_z1/res-event.o
  .text.res_get_handler
-                0x00000000000037b0       0x3c obj_z1/res-event.o
+                0x000000000000361e       0x3c obj_z1/res-event.o
+ .text.res_resume_handler
+                0x000000000000365a       0x84 obj_z1/res-separate.o
+ .text.res_get_handler
+                0x00000000000036de       0x32 obj_z1/res-separate.o
+ .text.res_get_handler
+                0x0000000000003710       0x6a obj_z1/res-observe.o
+ .text.res_periodic_handler
+                0x000000000000377a       0x72 obj_z1/res-observe.o
  .text.coap_parse_int_option
                 0x00000000000037ec       0x36 contiki-z1.a(er-coap.o)
  .text.coap_set_option_header
@@ -2465,9 +2465,9 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
  .rodata        0x000000000000ea26       0x56 er-example-server.co
                 0x000000000000ea62                autostart_processes
  .rodata        0x000000000000ea7c       0x26 obj_z1/res-push.o
- .rodata        0x000000000000eaa2       0x21 obj_z1/res-separate.o
- .rodata        0x000000000000eac3       0x2a obj_z1/res-observe.o
- .rodata        0x000000000000eaed       0x21 obj_z1/res-event.o
+ .rodata        0x000000000000eaa2       0x21 obj_z1/res-event.o
+ .rodata        0x000000000000eac3       0x21 obj_z1/res-separate.o
+ .rodata        0x000000000000eae4       0x2a obj_z1/res-observe.o
  .rodata        0x000000000000eb0e      0x107 obj_z1/contiki-z1-main.o
  .rodata        0x000000000000ec15       0xaf contiki-z1.a(er-coap.o)
  .rodata        0x000000000000ecc4      0x420 contiki-z1.a(er-coap-engine.)
@@ -2521,13 +2521,13 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
  .data          0x000000000000110a       0x28 obj_z1/res-push.o
                 0x000000000000110a                res_push
                 0x000000000000111c                periodic_res_push
- .data          0x0000000000001132       0x12 obj_z1/res-separate.o
-                0x0000000000001132                res_separate
- .data          0x0000000000001144       0x28 obj_z1/res-observe.o
-                0x0000000000001144                res_observe
-                0x0000000000001156                periodic_res_observe
- .data          0x000000000000116c       0x12 obj_z1/res-event.o
-                0x000000000000116c                res_event
+ .data          0x0000000000001132       0x12 obj_z1/res-event.o
+                0x0000000000001132                res_event
+ .data          0x0000000000001144       0x12 obj_z1/res-separate.o
+                0x0000000000001144                res_separate
+ .data          0x0000000000001156       0x28 obj_z1/res-observe.o
+                0x0000000000001156                res_observe
+                0x0000000000001168                periodic_res_observe
  .data          0x000000000000117e        0x4 obj_z1/contiki-z1-main.o
                 0x000000000000117e                sensors
  .data          0x0000000000001182        0x2 contiki-z1.a(er-coap.o)
@@ -2578,9 +2578,9 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
                 0x00000000000012a0                PROVIDE (__bss_start, .)
  *(.bss .bss.*)
  .bss           0x00000000000012a0        0xc obj_z1/res-push.o
- .bss           0x00000000000012ac       0x7a obj_z1/res-separate.o
- .bss           0x0000000000001326        0xc obj_z1/res-observe.o
- .bss           0x0000000000001332        0x4 obj_z1/res-event.o
+ .bss           0x00000000000012ac        0x4 obj_z1/res-event.o
+ .bss           0x00000000000012b0       0x7a obj_z1/res-separate.o
+ .bss           0x000000000000132a        0xc obj_z1/res-observe.o
  .bss           0x0000000000001336        0x4 obj_z1/contiki-z1-main.o
  .bss           0x000000000000133a        0x6 contiki-z1.a(er-coap.o)
                 0x000000000000133a                erbium_status_code
@@ -2756,40 +2756,40 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
 .stab           0x0000000000000000    0x33f30
  *(.stab)
  .stab          0x0000000000000000     0x19b0 er-example-server.co
- .stab          0x00000000000019b0      0xab0 obj_z1/res-push.o
-                                       0x1950 (size before relaxing)
- .stab          0x0000000000002460      0x774 obj_z1/res-b1-sep-b2.o
-                                       0x1a34 (size before relaxing)
- .stab          0x0000000000002bd4      0x6d8 obj_z1/res-separate.o
-                                       0x19ec (size before relaxing)
- .stab          0x00000000000032ac      0x66c obj_z1/res-push_copy.o
-                                       0x1950 (size before relaxing)
- .stab          0x0000000000003918      0xa14 obj_z1/res-mirror.o
-                                       0x1ce0 (size before relaxing)
- .stab          0x000000000000432c      0x1f8 obj_z1/res-sht11.o
+ .stab          0x00000000000019b0      0x1f8 obj_z1/res-sht11.o
                                         0x510 (size before relaxing)
- .stab          0x0000000000004524      0x5e8 obj_z1/res-battery.o
-                                        0xa38 (size before relaxing)
- .stab          0x0000000000004b0c      0x1bc obj_z1/res-light.o
-                                        0x510 (size before relaxing)
- .stab          0x0000000000004cc8      0x2dc obj_z1/res-toggle.o
-                                        0x930 (size before relaxing)
- .stab          0x0000000000004fa4      0x3a8 obj_z1/res-hello.o
-                                        0xa2c (size before relaxing)
- .stab          0x000000000000534c      0x378 obj_z1/res-sub.o
-                                        0x9e4 (size before relaxing)
- .stab          0x00000000000056c4      0x60c obj_z1/res-push_blockwise.o
-                                       0x18f0 (size before relaxing)
- .stab          0x0000000000005cd0      0x66c obj_z1/res-observe.o
-                                       0x1950 (size before relaxing)
- .stab          0x000000000000633c      0x438 obj_z1/res-radio.o
+ .stab          0x0000000000001ba8      0x660 obj_z1/res-radio.o
                                         0xaa4 (size before relaxing)
- .stab          0x0000000000006774      0x5f4 obj_z1/res-event.o
+ .stab          0x0000000000002208      0x408 obj_z1/res-sub.o
+                                        0x9e4 (size before relaxing)
+ .stab          0x0000000000002610      0xa20 obj_z1/res-push_copy.o
+                                       0x1950 (size before relaxing)
+ .stab          0x0000000000003030      0x2dc obj_z1/res-toggle.o
+                                        0x930 (size before relaxing)
+ .stab          0x000000000000330c      0x3c0 obj_z1/res-leds.o
+                                        0xa14 (size before relaxing)
+ .stab          0x00000000000036cc      0x768 obj_z1/res-b1-sep-b2.o
+                                       0x1a34 (size before relaxing)
+ .stab          0x0000000000003e34      0x3a8 obj_z1/res-hello.o
+                                        0xa2c (size before relaxing)
+ .stab          0x00000000000041dc      0x3a8 obj_z1/res-chunks.o
+                                        0xa14 (size before relaxing)
+ .stab          0x0000000000004584      0x66c obj_z1/res-push.o
+                                       0x1950 (size before relaxing)
+ .stab          0x0000000000004bf0      0x5f4 obj_z1/res-event.o
                                        0x18c0 (size before relaxing)
- .stab          0x0000000000006d68      0x3c0 obj_z1/res-leds.o
-                                        0xa14 (size before relaxing)
- .stab          0x0000000000007128      0x3a8 obj_z1/res-chunks.o
-                                        0xa14 (size before relaxing)
+ .stab          0x00000000000051e4      0x3cc obj_z1/res-battery.o
+                                        0xa38 (size before relaxing)
+ .stab          0x00000000000055b0      0x6d8 obj_z1/res-separate.o
+                                       0x19ec (size before relaxing)
+ .stab          0x0000000000005c88      0x1bc obj_z1/res-light.o
+                                        0x510 (size before relaxing)
+ .stab          0x0000000000005e44      0x60c obj_z1/res-push_blockwise.o
+                                       0x18f0 (size before relaxing)
+ .stab          0x0000000000006450      0x66c obj_z1/res-observe.o
+                                       0x1950 (size before relaxing)
+ .stab          0x0000000000006abc      0xa14 obj_z1/res-mirror.o
+                                       0x1ce0 (size before relaxing)
  .stab          0x00000000000074d0     0x10e0 obj_z1/contiki-z1-main.o
                                        0x1b24 (size before relaxing)
  .stab          0x00000000000085b0     0x3120 contiki-z1.a(er-coap.o)
@@ -2929,9 +2929,9 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
  .stab          0x0000000000033d38      0x1f8 contiki-z1.a(mac.o)
                                         0x4ec (size before relaxing)
 
-.stabstr        0x0000000000000000    0x230e0
+.stabstr        0x0000000000000000    0x2311f
  *(.stabstr)
- .stabstr       0x0000000000000000    0x230e0 er-example-server.co
+ .stabstr       0x0000000000000000    0x2311f er-example-server.co
 
 .stab.excl
  *(.stab.excl)
