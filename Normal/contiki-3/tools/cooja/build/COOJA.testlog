@@ -1,14 +1,14 @@
-Random seed: -1841248051740719985
+Random seed: 3847582140235727808
 start calcualte.
-903192
-903195
- | 903192
+702970
+703013
+ | 702970
 Script timed out.
 m2_send_to_3: 0
 m2_send_to_4: 0
 m2_send_to_5: 0
 m2_send_to_6: 0
-m2_send_to_7: 48
+m2_send_to_7: 0
 m2_send_to_8: 0
 m2_send_to_9: 0
 m2_send_to_10: 0
@@ -24,10 +24,10 @@ m2_send_to_19: 0
 m2_send_to_20: 0
 
 m2_receive_from_3: 240
-m2_receive_from_4: 239
+m2_receive_from_4: 240
 m2_receive_from_5: 0
 m2_receive_from_6: 239
-m2_receive_from_7: 85
+m2_receive_from_7: 0
 m2_receive_from_8: 0
 m2_receive_from_9: 0
 m2_receive_from_10: 0
@@ -55,15 +55,15 @@ m11_sending :0
 m10_sending :0
 m9_sending :0
 m8_sending :0
-m7_sending :86
+m7_sending :0
 m6_sending :240
 m5_sending :240
-m4_sending :240
+m4_sending :242
 m3_sending :240
-Total_Packet_Sent_to_2 : 1046
-Total_m2_Packet_recieving: 803
+Total_Packet_Sent_to_2 : 962
+Total_m2_Packet_recieving: 719
 Total_Packet_loss: 243
-Packet_delivery_ratio: 76.76864244741874
-loss_ratio: 23.23135755258126
+Packet_delivery_ratio: 74.74012474012474
+loss_ratio: 25.25987525987526
 TEST OK
-Test ended at simulation time: 903196010
+Test ended at simulation time: 703021006

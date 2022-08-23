@@ -290,6 +290,7 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
        //DROP = 0;
 
        simple_reply(COAP_TYPE_ACK, addr, port, notification);
+       printf("CTR_CoAP Response ACK from Address");PRINT6ADDR(&UIP_IP_BUF->srcipaddr);printf("\n");
        printf("***--------CoAP Response ACK from Address %02x%02x:%02x%02x:%02x%02x:%02x%02x:" \
                                 "%02x%02x:%02x%02x:%02x%02x:%02x%02x--------***\n", \
                                 ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], \
