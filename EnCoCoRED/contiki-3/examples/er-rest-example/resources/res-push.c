@@ -53,7 +53,7 @@
 /* End 11:08 08-02-22 */
 /* adde 04-08-22 */
 #ifndef PERIOD
-#define PERIOD 30
+#define PERIOD 1
 #endif
 
 #define START_INTERVAL		(15 * CLOCK_SECOND)

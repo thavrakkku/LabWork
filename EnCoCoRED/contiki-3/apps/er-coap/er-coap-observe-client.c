@@ -241,7 +241,7 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   coap_observee_t *obs;
   coap_notification_flag_t flag;
   uint32_t observe;
-  float PROBABILITY_DROP = 1, THRESHOLD_MIN = 25.6, THRESHOLD_MAX = 76.8, MAX_BUFFER = 128, MAX_P = 0.1; /*1 payload length = 24, Tmin20% & Tmax60% */
+  float PROBABILITY_DROP = 1, THRESHOLD_MIN = 25.6, THRESHOLD_MAX = 76.8, MAX_BUFFER = 128, MAX_P = 0.1; /*1 payload length = 24, Tmin20% & Tmax60% RevRED variable*/
   int RANDOM_VARIABLE = random_rand() %100;
   uint16_t AVG_QUEUE, PERCENT_DROP = 0;
 

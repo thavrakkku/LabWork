@@ -43,7 +43,6 @@
 
 /*
  * Modulo mask (thus +1) for a random number to get the tick number for the random
-
  * retransmission time between COAP_RESPONSE_TIMEOUT and COAP_RESPONSE_TIMEOUT*COAP_RESPONSE_RANDOM_FACTOR.
  */
 #define COAP_RESPONSE_TIMEOUT_TICKS         (CLOCK_SECOND * COAP_RESPONSE_TIMEOUT)

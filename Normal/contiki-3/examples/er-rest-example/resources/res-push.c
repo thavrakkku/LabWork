@@ -52,14 +52,14 @@
 
 /* End 11:08 08-02-22 */
 /* adde 04-08-22 */
-//#ifndef PERIOD
-//#define PERIOD 1
-//#endif
-//
-//#define START_INTERVAL		(15 * CLOCK_SECOND)
-//#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
-//#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
-//#define CTR_TEST  srand(clock_time())
+#ifndef PERIOD
+#define PERIOD 1
+#endif
+
+#define START_INTERVAL		(15 * CLOCK_SECOND)
+#define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
+#define SEND_TIME		(random_rand() % (SEND_INTERVAL))
+#define CTR_TEST  srand(clock_time())
 
 /* End adde 04-08-22 */
 
@@ -73,7 +73,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                 30*CLOCK_SECOND,
+                 SEND_INTERVAL,
                   res_periodic_handler);
 // RANDWAIT *CLOCK_SECOND,
 //random_rand() % (CLOCK_SECOND * RANDWAIT)

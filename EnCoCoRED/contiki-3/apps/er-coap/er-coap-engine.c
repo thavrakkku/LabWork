@@ -42,7 +42,7 @@
 #include <string.h>
 #include "er-coap-engine.h"
 
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -60,7 +60,7 @@ PROCESS(coap_engine, "CoAP Engine");
 /*- Variables ---------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 static service_callback_t service_cbk = NULL;
-
+static int ctr=0; //added by me
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -78,11 +78,13 @@ coap_receive(void)
   static coap_transaction_t *transaction = NULL;
 
   if(uip_newdata()) {
-
-    PRINTF("receiving UDP datagram from: ");
-    PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
-    PRINTF(":%u\n  Length: %u\n", uip_ntohs(UIP_UDP_BUF->srcport),
-           uip_datalen());
+    ctr++;
+    PRINTF("CTR_Receiving_%d_From_",ctr);PRINT6ADDR(&UIP_IP_BUF->srcipaddr);PRINTF("_mid_%u_lenght_%u\n",message->mid,uip_datalen());
+ 
+  //  PRINTF("receiving UDP datagram from: ");
+  //  PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
+  //  PRINTF(":%u\n  Length: %u\n", uip_ntohs(UIP_UDP_BUF->srcport),
+  //         uip_datalen());
 
     erbium_status_code =
       coap_parse_message(message, uip_appdata, uip_datalen());
@@ -336,7 +338,6 @@ PROCESS_THREAD(coap_engine, ev, data)
 {
   PROCESS_BEGIN();
   PRINTF("Starting %s receiver...\n", coap_rest_implementation.name);
-
   rest_activate_resource(&res_well_known_core, ".well-known/core");
 
   coap_register_as_transaction_handler();

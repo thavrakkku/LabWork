@@ -192,7 +192,6 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
   /* build notification */
   coap_packet_t notification[1]; /* this way the packet can be treated as pointer as usual */
   coap_packet_t request[1]; /* this way the packet can be treated as pointer as usual */
-  
   coap_observer_t *obs = NULL;
   int url_len, obs_url_len;
   char url[COAP_OBSERVER_URL_LEN];
@@ -205,7 +204,6 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
   /* Ensure url is null terminated because strncpy does not guarantee this */
   url[COAP_OBSERVER_URL_LEN - 1] = '\0';
   /* url now contains the notify URL that needs to match the observer */
-  
   PRINTF("Observe: Notification from %s\n", url);
 
 #if COCONON
@@ -265,7 +263,7 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
         if(notification->code < BAD_REQUEST_4_00) {
           coap_set_header_observe(notification, (obs->obs_counter)++);
           /* mask out to keep the CoAP observe option length <= 3 bytes */
-          obs->obs_counter &= 0xffffff;
+          obs->obs_counter &= 0xffffff; //not sure this use for
         }
         coap_set_token(notification, obs->token, obs->token_len);
 
@@ -273,7 +271,6 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
           coap_serialize_message(notification, transaction->packet);
 
         coap_send_transaction(transaction);
-
       }
     }
   }
@@ -295,7 +292,7 @@ coap_observe_handler(resource_t *resource, void *request, void *response)
         if(obs) {
           coap_set_header_observe(coap_res, (obs->obs_counter)++);
           /* mask out to keep the CoAP observe option length <= 3 bytes */
-          obs->obs_counter &= 0xffffff;
+          obs->obs_counter &= 0xffffff; //not sure this use for
           /*
            * Following payload is for demonstration purposes only.
            * A subscription should return the same representation as a normal GET.

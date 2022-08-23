@@ -135,7 +135,7 @@ typedef struct {
 /* option format serialization */
 #define COAP_SERIALIZE_INT_OPTION(number, field, text) \
   if(IS_OPTION(coap_pkt, number)) { \
-    PRINTF(text " [%u]\n", (unsigned int)coap_pkt->field);		\
+    PRINTF(text " [%u]\n", (unsigned int)coap_pkt->field);\
     option += coap_serialize_int_option(number, current_number, option, coap_pkt->field); \
     current_number = number; \
   }
@@ -167,7 +167,7 @@ typedef struct {
     uint32_t block = coap_pkt->field##_num << 4; \
     if(coap_pkt->field##_more) { block |= 0x8; } \
     block |= 0xF & coap_log_2(coap_pkt->field##_size / 16); \
-    PRINTF(text " encoded: 0x%lX\n", (unsigned long)block);		\
+    PRINTF(text " encoded: 0x%lX\n", (unsigned long)block); \
     option += coap_serialize_int_option(number, current_number, option, block); \
     current_number = number; \
   }

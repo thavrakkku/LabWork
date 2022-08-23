@@ -57,7 +57,8 @@ obj_z1/er-coap-observe-client.o: \
  ../../apps/rest-engine/rest-engine.h \
  ../../apps/rest-engine/rest-constants.h \
  ../../apps/er-coap/er-coap-observe-client.h \
- ../../apps/er-coap/er-coap-transactions.h
+ ../../apps/er-coap/er-coap-transactions.h \
+ ../../apps/er-coap/er-coap-block1.h ../../core/./lib/random.h
  ../../apps/er-coap/er-coap-observe-client.c ../../apps/er-coap/er-coap.h :
  ../../core/./contiki-net.h ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/z1/./contiki-conf.h :
@@ -117,3 +118,4 @@ obj_z1/er-coap-observe-client.o: \
  ../../apps/rest-engine/rest-constants.h :
  ../../apps/er-coap/er-coap-observe-client.h :
  ../../apps/er-coap/er-coap-transactions.h :
+ ../../apps/er-coap/er-coap-block1.h ../../core/./lib/random.h :

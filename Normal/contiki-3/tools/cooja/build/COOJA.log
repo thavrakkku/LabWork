@@ -1,43 +1,430 @@
-[15:37:22 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[15:37:22 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
-[15:37:22 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[15:39:23 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 3073433145390099045
-[15:39:23 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[15:39:23 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-1.z1 TARGET=z1 
-[15:39:23 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[15:39:23 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-1.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[15:39:24 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[15:39:25 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[15:39:25 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:39:26 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[15:39:26 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[15:39:27 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
-[15:39:29 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1660811969592
-[15:39:32 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1660811972254.pcap
-[15:40:22 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
-[15:40:22 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1660812022487	Duration: 52895 ms	Simulated time 451848 ms	Ratio 8.542357500708953
-[16:54:32 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[16:54:32 - Thread-3] [Simulation.java:420] [INFO] - Simulation random seed: 3073433145390099045
-[16:54:32 - Thread-3] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[16:54:32 - Thread-3] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-1.z1 TARGET=z1 
-[16:54:32 - Thread-3] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[16:54:32 - Thread-3] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[16:54:32 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[16:54:32 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-1.z1
-[16:54:33 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:54:33 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:54:33 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:54:33 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
-[16:54:34 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[16:54:34 - Thread-3] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[16:54:35 - Thread-3] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[16:54:35 - Thread-3] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[16:54:35 - Thread-3] [ScriptRunner.java:386] [INFO] - Test script activated
-[19:06:48 - Thread-4] [LogScriptEngine.java:309] [INFO] - Test script finished
-[19:06:48 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[12:51:03 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[12:51:03 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[12:51:03 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[12:51:15 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152826
+[12:51:15 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[12:51:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:51:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[12:51:46 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[12:52:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:52:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-0.z1 TARGET=z1 
+[12:55:28 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1
+[12:56:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:56:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[12:56:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:56:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:56:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:56:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:57:33 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[12:57:33 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[12:57:33 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[12:58:42 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152825
+[12:58:42 - Thread-4] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-4-0.z1 with /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:58:42 - Thread-4] [Cooja.java:4146] [WARN] - Path is not portable: '/home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1
+[12:58:42 - Thread-3] [LogScriptEngine.java:309] [INFO] - Test script finished
+[12:58:42 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[12:58:43 - Thread-4] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152825
+[12:58:43 - Thread-4] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[12:58:43 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-0.z1 TARGET=z1 
+[12:58:43 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:58:44 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[12:58:45 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:58:45 - Thread-4] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[12:58:45 - Thread-4] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[12:58:45 - Thread-4] [ScriptRunner.java:386] [INFO] - Test script activated
+[12:58:57 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661234337074
+[12:58:59 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1661234339212.pcap
+[13:03:55 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661234635371	Duration: 298297 ms	Simulated time 3772086 ms	Ratio 12.645403741908233
+[13:03:58 - Thread-5] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:03:58 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:04:33 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:04:33 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:04:33 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:04:34 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661234674559
+[13:04:49 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661234689906	Duration: 15347 ms	Simulated time 3951094 ms	Ratio 257.4505766599335
+[13:05:53 - Thread-7] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:05:53 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:05:56 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:05:56 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:05:56 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:05:57 - Thread-10] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661234757952
+[13:05:58 - Thread-10] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661234758938	Duration: 986 ms	Simulated time 3957213 ms	Ratio 4013.4006085192696
+[13:08:31 - Thread-9] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:08:31 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:08:51 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:08:51 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:08:51 - AWT-EventQueue-0] [ScriptRunner.java:389] [FATAL] - Test script error: 
+javax.script.ScriptException: <eval>:102:158 Expected , but found _
+        log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]++"_"+msgArray[9]+"_"+msgArray[10]"\n");    
+                                                                                                                                                              ^ in <eval> at line number 102 at column number 158
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:544)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:531)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at org.contikios.cooja.plugins.LogScriptEngine.activateScript(LogScriptEngine.java:268)
+	at org.contikios.cooja.plugins.ScriptRunner.setScriptActive(ScriptRunner.java:375)
+	at org.contikios.cooja.plugins.ScriptRunner$2.actionPerformed(ScriptRunner.java:188)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:401)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6400)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:102:158 Expected , but found _
+        log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]++"_"+msgArray[9]+"_"+msgArray[10]"\n");    
+                                                                                                                                                              ^
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:297)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:282)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expectDontAdvance(AbstractParser.java:353)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expect(AbstractParser.java:340)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.argumentList(Parser.java:3716)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3410)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4440)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4620)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4772)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4711)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4589)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4585)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expressionStatement(Parser.java:1854)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1155)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.ifStatement(Parser.java:1885)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1048)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.ifStatement(Parser.java:1885)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1048)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.whileStatement(Parser.java:2151)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1054)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:909)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4206)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3831)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1099)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:909)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.program(Parser.java:844)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:325)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:285)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compile(Context.java:1500)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:1467)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:750)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:542)
+	... 44 more
+[13:08:51 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:09:02 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:09:02 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:09:02 - AWT-EventQueue-0] [ScriptRunner.java:389] [FATAL] - Test script error: 
+javax.script.ScriptException: <eval>:102:158 Expected , but found _
+        log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]++"_"+msgArray[9]+"_"+msgArray[10]+"\n");    
+                                                                                                                                                              ^ in <eval> at line number 102 at column number 158
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:544)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:531)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at org.contikios.cooja.plugins.LogScriptEngine.activateScript(LogScriptEngine.java:268)
+	at org.contikios.cooja.plugins.ScriptRunner.setScriptActive(ScriptRunner.java:375)
+	at org.contikios.cooja.plugins.ScriptRunner$2.actionPerformed(ScriptRunner.java:188)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:401)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6400)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:102:158 Expected , but found _
+        log.log(msgArray[0]+"_"+msgArray[1]+"_"+msgArray[2]+"_"+msgArray[3]+"_"+msgArray[4]+"_"+msgArray[5]+"_"+msgArray[6]+"_"+msgArray[7]+"_"+msgArray[8]++"_"+msgArray[9]+"_"+msgArray[10]+"\n");    
+                                                                                                                                                              ^
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:297)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:282)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expectDontAdvance(AbstractParser.java:353)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expect(AbstractParser.java:340)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.argumentList(Parser.java:3716)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3410)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4440)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4620)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4772)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4711)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4589)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expression(Parser.java:4585)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.expressionStatement(Parser.java:1854)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1155)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.ifStatement(Parser.java:1885)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1048)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.ifStatement(Parser.java:1885)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1048)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1028)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statementList(Parser.java:1463)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getBlock(Parser.java:612)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:637)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.getStatement(Parser.java:632)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.whileStatement(Parser.java:2151)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1054)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:909)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4206)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3831)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1099)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:909)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.program(Parser.java:844)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:325)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:285)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compile(Context.java:1500)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:1467)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:750)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:542)
+	... 44 more
+[13:09:02 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:09:23 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:09:23 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:09:23 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:09:24 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661234964844
+[13:09:25 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661234965831	Duration: 987 ms	Simulated time 3963438 ms	Ratio 4015.641337386018
+[13:09:37 - Thread-13] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:09:37 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:10:00 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:10:00 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:10:00 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:10:01 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235001492
+[13:10:02 - Thread-15] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:10:02 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235002068	Duration: 576 ms	Simulated time 3965414 ms	Ratio 6884.399305555556
+[13:10:21 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:10:21 - Thread-17] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152825
+[13:10:21 - Thread-17] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[13:10:21 - Thread-17] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-0.z1 TARGET=z1 
+[13:10:21 - Thread-17] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[13:10:21 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[13:10:21 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1
+[13:10:22 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:10:22 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:10:22 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:10:22 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:10:22 - Thread-17] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:10:23 - Thread-17] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:10:23 - Thread-17] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:10:23 - Thread-17] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:10:24 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235024180
+[13:10:25 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1661235025628.pcap
+[13:10:53 - Thread-18] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:10:53 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235053217	Duration: 29037 ms	Simulated time 604414 ms	Ratio 20.815304611357924
+[13:11:14 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:11:59 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:11:59 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:11:59 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:12:02 - Thread-21] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235122363
+[13:12:04 - Thread-20] [LogScriptEngine.java:317] [FATAL] - Script error:
+<eval>:104 TypeError: Cannot read property "split" from undefined
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$204$25$\^eval\_$cu1$restOf.run(<eval>:104)
+	at jdk.nashorn.javaadapters.java_lang_Runnable.run(Unknown Source)
+	at org.contikios.cooja.plugins.LogScriptEngine$4.run(LogScriptEngine.java:300)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[13:12:04 - Thread-21] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235124618	Duration: 2255 ms	Simulated time 625422 ms	Ratio 277.3490022172949
+[13:15:41 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:15:43 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:15:43 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:15:43 - AWT-EventQueue-0] [ScriptRunner.java:389] [FATAL] - Test script error: 
+javax.script.ScriptException: <eval>:423:0 Expected } but found eof
+
+^ in <eval> at line number 423 at column number 0
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:544)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:531)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at org.contikios.cooja.plugins.LogScriptEngine.activateScript(LogScriptEngine.java:268)
+	at org.contikios.cooja.plugins.ScriptRunner.setScriptActive(ScriptRunner.java:375)
+	at org.contikios.cooja.plugins.ScriptRunner$2.actionPerformed(ScriptRunner.java:188)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.JToggleButton$ToggleButtonModel.setPressed(JToggleButton.java:401)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6400)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:423:0 Expected } but found eof
+
+^
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:297)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:282)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expectDontAdvance(AbstractParser.java:353)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.AbstractParser.expect(AbstractParser.java:340)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4233)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3831)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.statement(Parser.java:1099)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:909)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.program(Parser.java:844)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:325)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.parser.Parser.parse(Parser.java:285)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compile(Context.java:1500)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:1467)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.Context.compileScript(Context.java:750)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:542)
+	... 44 more
+[13:15:43 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:16:08 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:16:08 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:16:08 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:16:10 - Thread-25] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235370026
+[13:16:35 - Thread-24] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:16:35 - Thread-25] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235395679	Duration: 25653 ms	Simulated time 926125 ms	Ratio 36.10201535882743
+[13:17:35 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:17:37 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:17:37 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:17:37 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:17:39 - Thread-27] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235459288
+[13:18:04 - Thread-26] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:18:04 - Thread-27] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235484400	Duration: 25112 ms	Simulated time 1228436 ms	Ratio 48.91828607836891
+[13:18:38 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:18:38 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:18:38 - AWT-EventQueue-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:18:38 - AWT-EventQueue-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:18:39 - Thread-29] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235519736
+[13:18:39 - Thread-29] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235519737	Duration: 1 ms	Simulated time 1228436 ms	Ratio 1228436.0
+[13:18:41 - Thread-30] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235521584
+[13:19:07 - Thread-28] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:19:07 - Thread-30] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235547295	Duration: 25711 ms	Simulated time 1529436 ms	Ratio 59.48566761308389
+[13:21:50 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152824
+[13:21:51 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:21:51 - Thread-31] [Simulation.java:420] [INFO] - Simulation random seed: -4637432505281152824
+[13:21:51 - Thread-31] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[13:21:51 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-4-0.z1 TARGET=z1 
+[13:21:51 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[13:21:51 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[13:21:52 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-observe-client-4-0.z1
+[13:21:52 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:21:52 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:21:52 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:21:52 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/Normal/contiki-3/examples/er-rest-example/er-example-server.z1
+[13:21:52 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:21:53 - Thread-31] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[13:21:53 - Thread-31] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[13:21:53 - Thread-31] [ScriptRunner.java:386] [INFO] - Test script activated
+[13:23:01 - Thread-33] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661235781270
+[13:23:02 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1661235782696.pcap
+[13:23:45 - Thread-32] [LogScriptEngine.java:309] [INFO] - Test script finished
+[13:23:45 - Thread-33] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235825759	Duration: 44489 ms	Simulated time 703415 ms	Ratio 15.81098698554699

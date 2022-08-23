@@ -126,7 +126,7 @@ coap_send_transaction(coap_transaction_t *t)
       t = NULL;
     } else {
       /* timed out */
-     // PRINTF("Timeout\n");
+      PRINTF("Timeout\n");
       restful_response_handler callback = t->callback;
       void *callback_data = t->callback_data;
 
