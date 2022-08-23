@@ -428,3 +428,19 @@ Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:423:0 Expected }
 [13:23:02 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1661235782696.pcap
 [13:23:45 - Thread-32] [LogScriptEngine.java:309] [INFO] - Test script finished
 [13:23:45 - Thread-33] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661235825759	Duration: 44489 ms	Simulated time 703415 ms	Ratio 15.81098698554699
+[14:44:55 - Thread-35] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240695202
+[14:44:58 - Thread-35] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240698040	Duration: 2838 ms	Simulated time 739454 ms	Ratio 260.55461592670895
+[14:45:35 - Thread-36] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240735481
+[14:46:00 - Thread-36] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240760044	Duration: 24563 ms	Simulated time 1056584 ms	Ratio 43.015266864796644
+[14:46:19 - Thread-37] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240779785
+[14:46:28 - Thread-37] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240788251	Duration: 8466 ms	Simulated time 1170750 ms	Ratio 138.2884479092842
+[14:47:04 - Thread-38] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240824384
+[14:47:11 - Thread-38] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240831097	Duration: 6713 ms	Simulated time 1258423 ms	Ratio 187.46059883807538
+[14:47:28 - Thread-39] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240848824
+[14:47:55 - Thread-39] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240875212	Duration: 26388 ms	Simulated time 1596056 ms	Ratio 60.48415946642413
+[14:48:03 - Thread-40] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240883632
+[14:48:14 - Thread-40] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240894441	Duration: 10809 ms	Simulated time 1733819 ms	Ratio 160.40512535849754
+[14:48:36 - Thread-41] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240916559
+[14:48:47 - Thread-41] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240927908	Duration: 11349 ms	Simulated time 1879402 ms	Ratio 165.60066966252532
+[14:48:58 - Thread-42] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1661240938287
+[14:49:18 - Thread-42] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1661240958273	Duration: 19986 ms	Simulated time 2138230 ms	Ratio 106.98639047333133
