@@ -42,15 +42,16 @@
 
 #include "er-coap.h"
 #include "er-coap-transactions.h"
+#include <stddef.h> /* for size_t */
 
 #ifndef COAP_OBSERVE_CLIENT
-#define COAP_OBSERVE_CLIENT 0
+#define COAP_OBSERVE_CLIENT 1
 #endif
 
 #ifdef COAP_CONF_MAX_OBSERVEES
 #define COAP_MAX_OBSERVEES COAP_CONF_MAX_OBSERVEES
 #else
-#define COAP_MAX_OBSERVEES      20  //4
+#define COAP_MAX_OBSERVEES      11
 #endif /* COAP_CONF_MAX_OBSERVEES */
 
 #if COAP_MAX_OPEN_TRANSACTIONS < COAP_MAX_OBSERVEES
@@ -107,7 +108,7 @@ int coap_obs_remove_observee_by_token(uip_ipaddr_t *addr, uint16_t port,
 int coap_obs_remove_observee_by_url(uip_ipaddr_t *addr, uint16_t port,
                                     const char *url);
 
-void coap_handle_notification(uip_ipaddr_t *, uint16_t port,
+void coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
                               coap_packet_t *notification);
 
 coap_observee_t *coap_obs_request_registration(uip_ipaddr_t *addr,
@@ -115,6 +116,7 @@ coap_observee_t *coap_obs_request_registration(uip_ipaddr_t *addr,
                                                notification_callback_t
                                                notification_callback,
                                                void *data);
+
 /* TODO: this function may be moved to er-coap.c */
 uint8_t coap_generate_token(uint8_t **token_ptr);
 

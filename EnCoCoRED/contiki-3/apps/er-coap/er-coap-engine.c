@@ -42,7 +42,7 @@
 #include <string.h>
 #include "er-coap-engine.h"
 
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -60,7 +60,7 @@ PROCESS(coap_engine, "CoAP Engine");
 /*- Variables ---------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 static service_callback_t service_cbk = NULL;
-static int ctr=0;
+
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -78,8 +78,7 @@ coap_receive(void)
   static coap_transaction_t *transaction = NULL;
 
   if(uip_newdata()) {
-	ctr++;
-    PRINTF("CTR_Receiving_%d_From_",ctr);PRINT6ADDR(&UIP_IP_BUF->srcipaddr);PRINTF("_mid_%u_lenght_%u\n",message->mid,uip_datalen());
+
     PRINTF("receiving UDP datagram from: ");
     PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
     PRINTF(":%u\n  Length: %u\n", uip_ntohs(UIP_UDP_BUF->srcport),
@@ -257,12 +256,12 @@ coap_receive(void)
         transaction = NULL;
 
 #if COAP_OBSERVE_CLIENT
-	/* if observe notification */
+        /* if observe notification */
         if((message->type == COAP_TYPE_CON || message->type == COAP_TYPE_NON)
-              && IS_OPTION(message, COAP_OPTION_OBSERVE)) {
+           && IS_OPTION(message, COAP_OPTION_OBSERVE)) {
           PRINTF("Observe [%u]\n", message->observe);
           coap_handle_notification(&UIP_IP_BUF->srcipaddr, UIP_UDP_BUF->srcport,
-              message);
+                                   message);
         }
 #endif /* COAP_OBSERVE_CLIENT */
       } /* request or response */
@@ -337,6 +336,7 @@ PROCESS_THREAD(coap_engine, ev, data)
 {
   PROCESS_BEGIN();
   PRINTF("Starting %s receiver...\n", coap_rest_implementation.name);
+
   rest_activate_resource(&res_well_known_core, ".well-known/core");
 
   coap_register_as_transaction_handler();

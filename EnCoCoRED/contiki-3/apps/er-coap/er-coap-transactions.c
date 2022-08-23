@@ -43,13 +43,11 @@
 #include "er-coap-observe.h"
 #include "lib/random.h"
 
-
-
 #define FUNCTIONEN 1
 #define ENCOCORED 1
 #define COCORED 0
 #define BEB 0
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -66,8 +64,6 @@ MEMB(transactions_memb, coap_transaction_t, COAP_MAX_OPEN_TRANSACTIONS);
 LIST(transactions_list);
 
 static struct process *transaction_handler_process = NULL;
-static  int ctr_lose=0;
-static  int ctr=0;
 
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
@@ -91,39 +87,19 @@ coap_new_transaction(uint16_t mid, uip_ipaddr_t *addr, uint16_t port)
     /* save client address */
     uip_ipaddr_copy(&t->addr, addr);
     t->port = port;
+
     list_add(transactions_list, t); /* list itself makes sure same element is not added twice */
-    
   }
- 
+
   return t;
 }
 /*---------------------------------------------------------------------------*/
-
-
-
-
 void
 coap_send_transaction(coap_transaction_t *t)
 {
 
-
-	ctr++;
-	PRINTF("\nCTR_Sending_%d_To_",ctr);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
-  	//PRINTF("\nSending transaction %u\n", t->mid);
-
-
-//COAP_MAX_PACKET_SIZE  	(COAP_MAX_HEADER_SIZE + REST_MAX_CHUNK_SIZE)
-   //COAP_MAX_HEADER_SIZE    /*	Hdr                  CoF  If-Match           Obs Blo strings   */
-   //COAP_MAX_HEADER_SIZE       (4 + COAP_TOKEN_LEN + 3 + 1 + COAP_ETAG_LEN + 4 + 4 + 30)  /* 65 */
-   //REST_MAX_CHUNK_SIZE 	20
-   //UIP_CONF_BUFFER_SIZE	130
-   //UIP_CONF_LLH_LEN           0
-   //IP_IPUDPH_LEN (UIP_UDPH_LEN + UIP_IPH_LEN)    /* Size of IP + *UDP * header */
-   //UIP_IPH_LEN    40   /* Size of IP header */
-   //UIP_UDPH_LEN   8    /* Size of UDP header */
-
 #if FUNCTIONEN 
-   uint16_t i, C_FPB = 0, C_HBEB = 0;
+   uint16_t C_FPB = 0, C_HBEB = 0;
    
     if (t->retrans_counter < 3) {
          C_FPB = 1; //current state
@@ -168,28 +144,22 @@ coap_send_transaction(coap_transaction_t *t)
                                          (clock_time_t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
         t->start_rto = storedRto;
-        //printf("CTR_StartRTO=%lu\n",t->start_rto );
         t->retrans_timer.timer.interval = storedRto;
-         printf("CTR_StoreRTO=%lu_IP=",t->retrans_timer.timer.interval/CLOCK_SECOND );PRINT6ADDR(&t->addr);printf("\n");
       }
 
 #if ENCOCORED
       else {
        if(t->retrans_counter == 1 && C_FPB == 1) {
-        t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
-        printf("CTR_RTO_retran_1=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto/CLOCK_SECOND);
+        t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
        } 
          if(t->retrans_counter == 2 && C_FPB == 1) {
-          t->retrans_timer.timer.interval = t->start_rto + t->start_rto;  /* FPB(2) */
-          printf("CTR_RTO_retran_2=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto/CLOCK_SECOND );
+          t->retrans_timer.timer.interval = t->start_rto + t->start_rto;  /* FPB(State: 2) */
          } 
            if(t->retrans_counter == 3 && C_FPB == 1) {
-            t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto;  /* FPB(3) */
-            printf("CTR_RTO_retran_3=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto /CLOCK_SECOND);
+            t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto;  /* FPB(State: 3) */
            } 
              if(t->retrans_counter == 4 && C_FPB == 1) {
-              t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto + t->start_rto + t->start_rto;  /* FPB(4) */  
-              printf("CTR_RTO_retran_4=%lu | %lu\n",t->retrans_timer.timer.interval/CLOCK_SECOND,t->start_rto /CLOCK_SECOND);           
+              t->retrans_timer.timer.interval = t->start_rto + t->start_rto + t->start_rto + t->start_rto + t->start_rto;  /* FPB(State: 4) */  
              } 
                if(C_HBEB == 1) {
                 t->retrans_timer.timer.interval = (t->retrans_timer.timer.interval << 1)/2;  //HBEB
@@ -219,8 +189,8 @@ coap_send_transaction(coap_transaction_t *t)
 #if BEB
        else {
         t->retrans_timer.timer.interval <<= 1;  //double 
-       PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
-              t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("Doubled (%u) interval %f\n", t->retrans_counter,
+               (float)t->retrans_timer.timer.interval / CLOCK_SECOND);
       }
 #endif
 
@@ -258,7 +228,6 @@ coap_clear_transaction(coap_transaction_t *t)
     etimer_stop(&t->retrans_timer);
     list_remove(transactions_list, t);
     memb_free(&transactions_memb, t);
-    
   }
 }
 coap_transaction_t *
@@ -283,10 +252,7 @@ coap_check_transactions()
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
     if(etimer_expired(&t->retrans_timer)) {
       ++(t->retrans_counter);
-	ctr_lose++;
-	PRINTF("\nCTR_Lose_%d_In_",ctr_lose);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
-	PRINTF("\nCTR_Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
-  
+      PRINTF("Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
       coap_send_transaction(t);
     }
   }

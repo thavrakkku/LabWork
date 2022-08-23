@@ -39,13 +39,17 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 #include "er-coap.h"
 #include "er-coap-observe-client.h"
+#include "er-coap-block1.h"
+#include "lib/random.h"
 
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
 
+#define ENCOCORED 1
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -237,6 +241,10 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   coap_observee_t *obs;
   coap_notification_flag_t flag;
   uint32_t observe;
+  float PROBABILITY_DROP = 1, THRESHOLD_MIN = 25.6, THRESHOLD_MAX = 76.8, MAX_BUFFER = 128, MAX_P = 0.1; /*1 payload length = 24, Tmin20% & Tmax60% */
+  int RANDOM_VARIABLE = random_rand() %100;
+  uint16_t AVG_QUEUE, PERCENT_DROP = 0;
+
 
   PRINTF("coap_handle_notification()\n");
   pkt = (coap_packet_t *)notification;
@@ -256,7 +264,47 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
     return;
   }
   if(notification->type == COAP_TYPE_CON) {
-    simple_reply(COAP_TYPE_ACK, addr, port, notification);
+
+#if ENCOCORED 
+    AVG_QUEUE = 70;
+
+    if (AVG_QUEUE < THRESHOLD_MIN) {
+         PROBABILITY_DROP = 0;
+    }
+    else if (THRESHOLD_MIN <= AVG_QUEUE && AVG_QUEUE < THRESHOLD_MAX) {
+         PROBABILITY_DROP = ((AVG_QUEUE - THRESHOLD_MIN)/(THRESHOLD_MAX - THRESHOLD_MIN))*MAX_P;
+    }
+    else if (THRESHOLD_MAX <= AVG_QUEUE && AVG_QUEUE <= MAX_BUFFER) {
+         PROBABILITY_DROP = ((MAX_P/(pow(exp(log(1/MAX_P)/(MAX_BUFFER-THRESHOLD_MAX)), THRESHOLD_MAX)))*
+         (pow(exp(log(1/MAX_P)/(MAX_BUFFER-THRESHOLD_MAX)), AVG_QUEUE)));
+
+       }
+
+       PERCENT_DROP = PROBABILITY_DROP*100;
+
+       if (RANDOM_VARIABLE <= PERCENT_DROP){
+       printf("***************************** Packet Drop *****************************\n");
+       return;
+       }
+       else {
+       //DROP = 0;
+
+       simple_reply(COAP_TYPE_ACK, addr, port, notification);
+       printf("***--------CoAP Response ACK from Address %02x%02x:%02x%02x:%02x%02x:%02x%02x:" \
+                                "%02x%02x:%02x%02x:%02x%02x:%02x%02x--------***\n", \
+                                ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], \
+                                ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], \
+                                ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], \
+                                ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], \
+                                ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], \
+                                ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], \
+                                ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], \
+                                ((uint8_t *)addr)[14], ((uint8_t *)addr)[15]);
+       } 
+#endif
+
+       //simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
+
   }
   if(obs->notification_callback != NULL) {
     flag = classify_notification(notification, 0);
@@ -335,7 +383,7 @@ coap_obs_request_registration(uip_ipaddr_t *addr, uint16_t port, char *uri,
       coap_clear_transaction(t);
     }
   } else {
-    PRINTF("Could not allocate transaction buffer /n");
+    PRINTF("Could not allocate transaction buffer");
   }
   return obs;
 }
