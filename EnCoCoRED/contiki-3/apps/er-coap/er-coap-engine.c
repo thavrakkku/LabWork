@@ -118,7 +118,7 @@ coap_receive(void)
           } else {
             /* unreliable NON requests are answered with a NON as well */
             coap_init_message(response, COAP_TYPE_NON, CONTENT_2_05,
-                              coap_get_mid());
+                              coap_get_mid()); //COAP_TYPE_NON
             /* mirror token */
           } if(message->token_len) {
             coap_set_token(response, message->token, message->token_len);
