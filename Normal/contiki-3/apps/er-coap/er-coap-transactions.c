@@ -109,14 +109,12 @@ coap_send_transaction(coap_transaction_t *t)
                                          %
                                          (clock_time_t)
                                          COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
-        PRINTF("Initial interval %u\n",
-               t->retrans_timer.timer.interval / CLOCK_SECOND);
-                printf("CTR_FirstRTO=%u\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
+       // PRINTF("Initial interval %u_mid=%u\n",t->retrans_timer.timer.interval / CLOCK_SECOND,t->mid);
+        PRINTF("CTR_FirstRTO=%u\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
       } else {
         t->retrans_timer.timer.interval <<= 1;  /* double */
-        PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
-               t->retrans_timer.timer.interval / CLOCK_SECOND);
-               printf("CTR_RTO_retran_%u=%lu\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND);
+       // PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("CTR_RTO_retran_%u=%lu_mid=%u\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND,t->mid);
       }
 
       PROCESS_CONTEXT_BEGIN(transaction_handler_process);
@@ -148,7 +146,7 @@ void
 coap_clear_transaction(coap_transaction_t *t)
 {
   if(t) {
-   // PRINTF("Freeing transaction %u: %p\n", t->mid, t);
+    PRINTF("Freeing transaction %u: %p\n", t->mid, t);
 
     etimer_stop(&t->retrans_timer);
     list_remove(transactions_list, t);
@@ -162,7 +160,7 @@ coap_get_transaction_by_mid(uint16_t mid)
 
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
     if(t->mid == mid) {
-     // PRINTF("Found transaction for MID %u: %p\n", t->mid, t);
+      PRINTF("Found transaction for MID %u: %p\n", t->mid, t);
       return t;
     }
   }

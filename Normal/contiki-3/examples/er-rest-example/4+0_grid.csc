@@ -8,6 +8,7 @@
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
     <title>test_NR</title>
+    <speedlimit>1.0</speedlimit>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -120,8 +121,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>39.562171251014966</x>
-        <y>90.21857128491595</y>
+        <x>40.13616159993639</x>
+        <y>90.05457404236701</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -192,7 +193,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>2</z>
+    <z>1</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -205,10 +206,10 @@
       <skin>org.contikios.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>12.19532700010299 0.0 0.0 12.19532700010299 -436.3694696299121 -980.9071020093234</viewport>
+      <viewport>12.19532700010299 0.0 0.0 12.19532700010299 -375.3694696299121 -948.9071020093232</viewport>
     </plugin_config>
     <width>400</width>
-    <z>4</z>
+    <z>0</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -216,12 +217,12 @@
   <plugin>
     org.contikios.cooja.plugins.LogListener
     <plugin_config>
-      <filter />
+      <filter>ID:3</filter>
       <formatted_time />
       <coloring />
     </plugin_config>
     <width>1246</width>
-    <z>1</z>
+    <z>2</z>
     <height>535</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -241,7 +242,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1646</width>
-    <z>7</z>
+    <z>5</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>827</location_y>
@@ -686,7 +687,7 @@ YIELD();&#xD;
       <analyzers name="6lowpan-pcap" />
     </plugin_config>
     <width>500</width>
-    <z>5</z>
+    <z>4</z>
     <height>300</height>
     <location_x>6</location_x>
     <location_y>460</location_y>
