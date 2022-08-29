@@ -52,6 +52,8 @@
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
 #endif
+#define CTR 1
+#define ORGINAL 0
 
 /*---------------------------------------------------------------------------*/
 MEMB(transactions_memb, coap_transaction_t, COAP_MAX_OPEN_TRANSACTIONS);
@@ -60,6 +62,7 @@ LIST(transactions_list);
 static struct process *transaction_handler_process = NULL;
 static  int ctr_lose=0;
 static  int ctr=0;
+static  int ctr_ack=0;
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -96,13 +99,12 @@ coap_send_transaction(coap_transaction_t *t)
   //PRINTF("Sending transaction %u\n", t->mid);
 
   coap_send_message(&t->addr, t->port, t->packet, t->packet_len);
-
-  if(COAP_TYPE_CON ==
-     ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
+#if ORGINAL
+  if(COAP_TYPE_CON ==((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
     if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
       /* not timed out yet */
-      PRINTF("CTR_Keeping transaction %u\n", t->mid);
-
+      PRINTF("CTR_Keeping_transaction_MID %u\n", t->mid);
+      PRINTF("This is Original \n");
       if(t->retrans_counter == 0) {
         t->retrans_timer.timer.interval =
           COAP_RESPONSE_TIMEOUT_TICKS + (random_rand()
@@ -140,6 +142,51 @@ coap_send_transaction(coap_transaction_t *t)
   } else {
     coap_clear_transaction(t);
   }
+#endif
+#if CTR
+  if(COAP_TYPE_CON ==((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
+    if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
+      /* not timed out yet */
+      PRINTF("CTR_Keeping_transaction_MID %u\n", t->mid);
+      PRINTF("This is CTR \n");
+      if(t->retrans_counter == 0) {
+        t->retrans_timer.timer.interval =
+          COAP_RESPONSE_TIMEOUT_TICKS + (random_rand()
+                                         %
+                                         (clock_time_t)
+                                         COAP_RESPONSE_TIMEOUT_BACKOFF_MASK);
+       // PRINTF("Initial interval %u_mid=%u\n",t->retrans_timer.timer.interval / CLOCK_SECOND,t->mid);
+        PRINTF("CTR_FirstRTO=%u\n",t->retrans_timer.timer.interval/CLOCK_SECOND);
+      } else {
+        t->retrans_timer.timer.interval <<= 1;  /* double */
+       // PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,t->retrans_timer.timer.interval / CLOCK_SECOND);
+        PRINTF("CTR_RTO_retran_%u=%u_mid=%u\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND,t->mid);
+      }
+
+      PROCESS_CONTEXT_BEGIN(transaction_handler_process);
+      etimer_restart(&t->retrans_timer);        /* interval updated above */
+      PROCESS_CONTEXT_END(transaction_handler_process);
+
+      t = NULL;
+    } else {
+      /* timed out */
+      PRINTF("Timeout\n");
+      restful_response_handler callback = t->callback;
+      void *callback_data = t->callback_data;
+
+      /* handle observers */
+      coap_remove_observer_by_client(&t->addr, t->port);
+
+      coap_clear_transaction(t);
+
+      if(callback) {
+        callback(callback_data, NULL);
+      }
+    }
+  } else {
+    coap_clear_transaction(t);
+  }
+#endif
 }
 /*---------------------------------------------------------------------------*/
 void
@@ -160,7 +207,7 @@ coap_get_transaction_by_mid(uint16_t mid)
 
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
     if(t->mid == mid) {
-      PRINTF("Found transaction for MID %u: %p\n", t->mid, t);
+      PRINTF("CTR_Found transaction for MID %u: %p\n", t->mid, t);
       return t;
     }
   }

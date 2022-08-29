@@ -46,6 +46,9 @@
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
 
+#define CTR 1
+#define ORGINAL 0
+
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -190,9 +193,7 @@ coap_obs_remove_observee_by_url(uip_ipaddr_t *addr, uint16_t port,
   return removed;
 }
 /*----------------------------------------------------------------------------*/
-static void
-simple_reply(coap_message_type_t type, uip_ip6addr_t *addr, uint16_t port,
-             coap_packet_t *notification)
+static void simple_reply(coap_message_type_t type, uip_ip6addr_t *addr, uint16_t port,coap_packet_t *notification)
 {
   static coap_packet_t response[1];
   size_t len;

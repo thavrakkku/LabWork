@@ -234,7 +234,7 @@ coap_receive(void)
           erbium_status_code = PING_RESPONSE;
         } else if(message->type == COAP_TYPE_ACK) {
           /* transactions are closed through lookup below */
-          PRINTF("Received ACK\n");
+          PRINTF("Received ACK %u\n",message->type);
         } else if(message->type == COAP_TYPE_RST) {
           PRINTF("Received RST\n");
           /* cancel possible subscriptions */
