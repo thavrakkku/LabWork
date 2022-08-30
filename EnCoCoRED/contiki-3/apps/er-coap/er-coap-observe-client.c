@@ -49,7 +49,7 @@
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
 
-#define ENCOCORED 1
+#define ENCOCORED 0
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -304,7 +304,7 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
        } 
 #endif
 
-       //simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
+       simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
 
   }
   if(obs->notification_callback != NULL) {

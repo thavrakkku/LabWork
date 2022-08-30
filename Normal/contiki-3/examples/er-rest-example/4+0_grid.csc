@@ -8,7 +8,6 @@
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
     <title>test_NR</title>
-    <speedlimit>1.0</speedlimit>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -193,7 +192,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>1</z>
+    <z>0</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -206,10 +205,10 @@
       <skin>org.contikios.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>12.19532700010299 0.0 0.0 12.19532700010299 -375.3694696299121 -948.9071020093232</viewport>
+      <viewport>12.19532700010299 0.0 0.0 12.19532700010299 -425.36946962991226 -1008.9071020093236</viewport>
     </plugin_config>
     <width>400</width>
-    <z>0</z>
+    <z>4</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -217,12 +216,12 @@
   <plugin>
     org.contikios.cooja.plugins.LogListener
     <plugin_config>
-      <filter>ID:3</filter>
+      <filter />
       <formatted_time />
       <coloring />
     </plugin_config>
     <width>1246</width>
-    <z>2</z>
+    <z>3</z>
     <height>535</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -242,7 +241,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1646</width>
-    <z>5</z>
+    <z>6</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>827</location_y>
@@ -254,7 +253,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>6</z>
+    <z>2</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -270,7 +269,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_No_grid_4+0_1s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_No_CON_grid_4+0_1s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 6"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
@@ -671,11 +670,11 @@ YIELD();&#xD;
 }</script>
       <active>true</active>
     </plugin_config>
-    <width>600</width>
-    <z>3</z>
+    <width>548</width>
+    <z>1</z>
     <height>700</height>
-    <location_x>1048</location_x>
-    <location_y>160</location_y>
+    <location_x>1119</location_x>
+    <location_y>162</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.RadioLogger
@@ -687,7 +686,7 @@ YIELD();&#xD;
       <analyzers name="6lowpan-pcap" />
     </plugin_config>
     <width>500</width>
-    <z>4</z>
+    <z>5</z>
     <height>300</height>
     <location_x>6</location_x>
     <location_y>460</location_y>

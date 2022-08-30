@@ -40,6 +40,9 @@
 #include <string.h>
 #include "er-coap-observe.h"
   
+#define SENDNON 0
+#define SENDCON 1
+
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -204,10 +207,18 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
   /* url now contains the notify URL that needs to match the observer */
   PRINTF("Observe: Notification from %s\n", url);
 
+#if SENDNON 
   coap_init_message(notification, COAP_TYPE_NON, CONTENT_2_05, 0);
   /* create a "fake" request for the URI */
   coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
   coap_set_header_uri_path(request, url);
+#endif
+#if SENDCON
+  coap_init_message(notification, COAP_TYPE_CON, CONTENT_2_05, 0);
+  /* create a "fake" request for the URI */
+  //coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+  coap_set_header_uri_path(request, url);
+#endif
 
   /* iterate over observers */
   url_len = strlen(url);

@@ -42,6 +42,7 @@
 
 #define COCONON 0
 #define COCOCON 1
+
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)

@@ -102,8 +102,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>29.182077595337514</x>
-        <y>19.502623365107695</y>
+        <x>29.896409321278444</x>
+        <y>19.85978922807816</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -138,8 +138,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>19.143753389204875</x>
-        <y>30.013540854999214</y>
+        <x>20.036668046631036</x>
+        <y>29.924249389256595</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -174,8 +174,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>41.06493007046455</x>
-        <y>30.11374076251613</y>
+        <x>40.261306878781006</x>
+        <y>29.9351578310309</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -192,7 +192,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>3</z>
+    <z>0</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -205,10 +205,10 @@
       <skin>org.contikios.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>7.777276794248075 0.0 0.0 7.777276794248075 -39.907709483089455 -0.7903299475915557</viewport>
+      <viewport>11.199278583717227 0.0 0.0 11.199278583717227 -149.6271016556488 -105.33807512453185</viewport>
     </plugin_config>
     <width>400</width>
-    <z>1</z>
+    <z>3</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -241,7 +241,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1646</width>
-    <z>7</z>
+    <z>5</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>827</location_y>
@@ -269,7 +269,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_EN_grid_4+0_1s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_EN_CON_grid_4+0_1s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 6"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
@@ -671,7 +671,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>881</width>
-    <z>4</z>
+    <z>1</z>
     <height>700</height>
     <location_x>754</location_x>
     <location_y>168</location_y>
@@ -686,7 +686,7 @@ YIELD();&#xD;
       <analyzers name="6lowpan-pcap" />
     </plugin_config>
     <width>500</width>
-    <z>5</z>
+    <z>4</z>
     <height>300</height>
     <location_x>18</location_x>
     <location_y>419</location_y>
