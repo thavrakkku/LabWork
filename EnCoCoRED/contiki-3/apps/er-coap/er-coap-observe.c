@@ -40,9 +40,8 @@
 #include <string.h>
 #include "er-coap-observe.h"
 
-#define COCONON 0
-#define COCOCON 1
-
+#define COCONON 1
+#define COCOCON 0
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)

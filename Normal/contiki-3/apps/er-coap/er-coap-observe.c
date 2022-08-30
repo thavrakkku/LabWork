@@ -40,8 +40,8 @@
 #include <string.h>
 #include "er-coap-observe.h"
   
-#define SENDNON 0
-#define SENDCON 1
+#define SENDNON 1
+#define SENDCON 0
 
 #define DEBUG 0
 #if DEBUG
