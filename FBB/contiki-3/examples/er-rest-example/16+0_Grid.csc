@@ -84,8 +84,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>37.053110965517845</x>
-        <y>24.76330383288687</y>
+        <x>9.752995636971963</x>
+        <y>10.029770121943873</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -102,8 +102,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>36.92622186067705</x>
-        <y>37.551274359595915</y>
+        <x>20.19978843336905</x>
+        <y>9.911756895948567</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -138,8 +138,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>0.0</x>
-        <y>12.5</y>
+        <x>0.10878273560944328</x>
+        <y>10.106779816592248</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -156,8 +156,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>0.0</x>
-        <y>25.0</y>
+        <x>0.10878273560944324</x>
+        <y>19.99599416196561</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -175,7 +175,7 @@
       <interface_config>
         org.contikios.cooja.interfaces.Position
         <x>0.0</x>
-        <y>37.5</y>
+        <y>29.88520850733897</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -192,8 +192,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>12.5</x>
-        <y>0.0</y>
+        <x>9.780431609763918</x>
+        <y>0.3263482068283298</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -210,8 +210,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>12.5</x>
-        <y>12.5</y>
+        <x>29.848670674994015</x>
+        <y>30.044479599091016</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -228,8 +228,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>12.5</x>
-        <y>25.0</y>
+        <x>9.889214345373361</x>
+        <y>19.887211426356167</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -246,8 +246,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>12.5</x>
-        <y>37.5</y>
+        <x>9.780431609763918</x>
+        <y>29.88520850733897</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -264,8 +264,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>25.0</x>
-        <y>0.0</y>
+        <x>20.32234236879394</x>
+        <y>-0.21756547121888653</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -282,8 +282,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>25.0</x>
-        <y>12.5</y>
+        <x>20.104776897575054</x>
+        <y>19.788443285832702</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -300,8 +300,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>25.0</x>
-        <y>25.0</y>
+        <x>30.299894878892076</x>
+        <y>20.065615112755655</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -318,8 +318,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>25.0</x>
-        <y>37.5</y>
+        <x>20.104776897575054</x>
+        <y>30.102773978557856</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -336,8 +336,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>37.5</x>
-        <y>0.0</y>
+        <x>30.10277397855786</x>
+        <y>0.21756547121888659</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -354,8 +354,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>37.5</x>
-        <y>12.5</y>
+        <x>30.10277397855786</x>
+        <y>10.21556255220169</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -372,7 +372,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>2</z>
+    <z>1</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -386,10 +386,10 @@
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.IDVisualizerSkin</skin>
-      <viewport>6.383774415617479 0.0 0.0 6.383774415617479 71.86616909964579 53.02312727272735</viewport>
+      <viewport>7.6605292987409745 0.0 0.0 7.6605292987409745 70.03940291957483 35.66108606060615</viewport>
     </plugin_config>
     <width>400</width>
-    <z>5</z>
+    <z>2</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -402,7 +402,7 @@
       <coloring />
     </plugin_config>
     <width>1246</width>
-    <z>4</z>
+    <z>3</z>
     <height>656</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -432,7 +432,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1646</width>
-    <z>7</z>
+    <z>5</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>827</location_y>
@@ -444,7 +444,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>6</z>
+    <z>4</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -862,7 +862,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>3</z>
+    <z>6</z>
     <height>700</height>
     <location_x>1007</location_x>
     <location_y>98</location_y>
