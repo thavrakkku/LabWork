@@ -47,16 +47,23 @@ receiveArray=[];
 stopcode=0;
 Total_Packet_recieving      =0;Total_Packet_Sent_to_2      =0;Total_m2_Packet_Sent        =0;
 Total_m2_Packet_recieving   =0;Total_Packet_loss           =0;
+
 m2_send_to_3 =0;m2_send_to_4 =0;m2_send_to_5 =0;m2_send_to_6 =0;m2_send_to_7 =0;m2_send_to_8 =0;m2_send_to_9 =0;m2_send_to_10 =0;m2_send_to_11 =0;m2_send_to_12 =0;
 m2_send_to_13 =0;m2_send_to_14 =0;m2_send_to_15 =0;m2_send_to_16 =0;m2_send_to_17 =0;m2_send_to_18 =0;m2_send_to_19 =0;m2_send_to_20 =0;
+m2_send_to_24 =0;m2_send_to_25 =0;
+
+
 m2_receive_from_3 =0;m2_receive_from_4 =0;m2_receive_from_5 =0;m2_receive_from_6 =0;m2_receive_from_7 =0;m2_receive_from_8 =0;m2_receive_from_9 =0;
 m2_receive_from_10 =0;m2_receive_from_11 =0;m2_receive_from_12 =0;m2_receive_from_13 =0;m2_receive_from_14 =0;m2_receive_from_15 =0;m2_receive_from_16 =0;
-m2_receive_from_17 =0;m2_receive_from_18 =0;m2_receive_from_19 =0;m2_receive_from_20 =0;
+m2_receive_from_17 =0;m2_receive_from_18 =0;m2_receive_from_19 =0;m2_receive_from_20 =0;m2_receive_from_21 =0;m2_receive_from_22 =0;m2_receive_from_23 =0;
+m2_receive_from_24 =0;m2_receive_from_25 =0;
+
 m3_sending =0;m3_receiving =0;m4_sending =0;m4_receiving =0;m5_sending =0;m5_receiving =0;m6_sending =0;m6_receiving =0;
 m7_sending =0;m7_receiving =0;m8_sending =0;m8_receiving =0;m9_sending =0;m9_receiving =0;m10_sending =0;m10_receiving =0;
 m11_sending =0;m11_receiving =0;m12_sending =0;m12_receiving =0;m13_sending =0;m13_receiving =0;m14_sending =0;m14_receiving =0;
 m15_sending =0;m15_receiving =0;m16_sending =0;m16_receiving =0;m17_sending =0;m17_receiving =0;m18_sending =0;m18_receiving =0;
-m19_sending =0;m19_receiving =0;m20_sending =0;m20_receiving =0;
+m19_sending =0;m19_receiving =0;m20_sending =0;m20_receiving =0;m21_sending =0;m21_receiving =0;m22_sending =0;m22_receiving =0;
+m23_sending =0;m23_receiving =0;m24_sending =0;m24_receiving =0;m25_sending =0;m25_receiving =0;
 stoptime=0;
 
 function start_measure(a){
@@ -70,9 +77,9 @@ function start_measure(a){
 }
 timeout_function = function () {
     log.log("Script timed out.\n");
-    log.log("m2_send_to_3: "+m2_send_to_3+"\n"+"m2_send_to_4: "+m2_send_to_4+"\n"+"m2_send_to_5: "+m2_send_to_5+"\n"+"m2_send_to_6: "+m2_send_to_6+"\n"+"m2_send_to_7: "+m2_send_to_7+"\n"+"m2_send_to_8: "+m2_send_to_8+"\n"+"m2_send_to_9: "+m2_send_to_9+"\n"+"m2_send_to_10: "+m2_send_to_10+"\n"+"m2_send_to_11: "+m2_send_to_11+"\n"+"m2_send_to_12: "+m2_send_to_12+"\n"+"m2_send_to_13: "+m2_send_to_13+"\n"+"m2_send_to_14: "+m2_send_to_14+"\n"+"m2_send_to_15: "+m2_send_to_15+"\n"+"m2_send_to_16: "+m2_send_to_16+"\n"+"m2_send_to_17: "+m2_send_to_17+"\n"+"m2_send_to_18: "+m2_send_to_18+"\n"+"m2_send_to_19: "+m2_send_to_19+"\n"+"m2_send_to_20: "+m2_send_to_20+"\n");
-    log.log("\n"+"m2_receive_from_3: "+m2_receive_from_3+"\n"+"m2_receive_from_4: "+m2_receive_from_4+"\n"+"m2_receive_from_5: "+m2_receive_from_5+"\n"+"m2_receive_from_6: "+m2_receive_from_6+"\n"+"m2_receive_from_7: "+m2_receive_from_7+"\n"+"m2_receive_from_8: "+m2_receive_from_8+"\n"+"m2_receive_from_9: "+m2_receive_from_9+"\n"+"m2_receive_from_10: "+m2_receive_from_10+"\n"+"m2_receive_from_11: "+m2_receive_from_11+"\n"+"m2_receive_from_12: "+m2_receive_from_12+"\n"+"m2_receive_from_13: "+m2_receive_from_13+"\n"+"m2_receive_from_14: "+m2_receive_from_14+"\n"+"m2_receive_from_15: "+m2_receive_from_15+"\n"+"m2_receive_from_16: "+m2_receive_from_16+"\n"+"m2_receive_from_17: "+m2_receive_from_17+"\n"+"m2_receive_from_18: "+m2_receive_from_18+"\n"+"m2_receive_from_19: "+m2_receive_from_19+"\n"+"m2_receive_from_20: "+m2_receive_from_20+"\n");
-    log.log("\n"+"m20_sending :"+m20_sending+"\n"+"m19_sending :"+m19_sending+"\n"+"m18_sending :"+m18_sending+"\n"+"m17_sending :"+m17_sending+"\n"+"m16_sending :"+m16_sending+"\n"+"m15_sending :"+m15_sending+"\n"+"m14_sending :"+m14_sending+"\n"+"m13_sending :"+m13_sending+"\n"+"m12_sending :"+m12_sending+"\n"+"m11_sending :"+m11_sending+"\n"+"m10_sending :"+m10_sending+"\n"+"m9_sending :"+m9_sending+"\n"+"m8_sending :"+m8_sending+"\n"+"m7_sending :"+m7_sending+"\n"+"m6_sending :"+m6_sending+"\n"+"m5_sending :"+m5_sending+"\n"+"m4_sending :"+m4_sending+"\n"+"m3_sending :"+m3_sending+"\n");
+    log.log("m2_send_to_3: "+m2_send_to_3+"\n"+"m2_send_to_4: "+m2_send_to_4+"\n"+"m2_send_to_5: "+m2_send_to_5+"\n"+"m2_send_to_6: "+m2_send_to_6+"\n"+"m2_send_to_7: "+m2_send_to_7+"\n"+"m2_send_to_8: "+m2_send_to_8+"\n"+"m2_send_to_9: "+m2_send_to_9+"\n"+"m2_send_to_10: "+m2_send_to_10+"\n"+"m2_send_to_11: "+m2_send_to_11+"\n"+"m2_send_to_12: "+m2_send_to_12+"\n"+"m2_send_to_13: "+m2_send_to_13+"\n"+"m2_send_to_14: "+m2_send_to_14+"\n"+"m2_send_to_15: "+m2_send_to_15+"\n"+"m2_send_to_16: "+m2_send_to_16+"\n"+"m2_send_to_17: "+m2_send_to_17+"\n"+"m2_send_to_18: "+m2_send_to_18+"\n"+"m2_send_to_19: "+m2_send_to_19+"\n"+"m2_send_to_20: "+m2_send_to_20+"\n"+"m2_send_to_21: "+m2_send_to_21+"\n"+"m2_send_to_22: "+m2_send_to_22+"\n"+"m2_send_to_23: "+m2_send_to_23+"\n"+"m2_send_to_24: "+m2_send_to_24+"\n"+"m2_send_to_25: "+m2_send_to_25+"\n");
+    log.log("\n"+"m2_receive_from_3: "+m2_receive_from_3+"\n"+"m2_receive_from_4: "+m2_receive_from_4+"\n"+"m2_receive_from_5: "+m2_receive_from_5+"\n"+"m2_receive_from_6: "+m2_receive_from_6+"\n"+"m2_receive_from_7: "+m2_receive_from_7+"\n"+"m2_receive_from_8: "+m2_receive_from_8+"\n"+"m2_receive_from_9: "+m2_receive_from_9+"\n"+"m2_receive_from_10: "+m2_receive_from_10+"\n"+"m2_receive_from_11: "+m2_receive_from_11+"\n"+"m2_receive_from_12: "+m2_receive_from_12+"\n"+"m2_receive_from_13: "+m2_receive_from_13+"\n"+"m2_receive_from_14: "+m2_receive_from_14+"\n"+"m2_receive_from_15: "+m2_receive_from_15+"\n"+"m2_receive_from_16: "+m2_receive_from_16+"\n"+"m2_receive_from_17: "+m2_receive_from_17+"\n"+"m2_receive_from_18: "+m2_receive_from_18+"\n"+"m2_receive_from_19: "+m2_receive_from_19+"\n"+"m2_receive_from_20: "+m2_receive_from_20+"\n"+"m2_receive_from_21: "+m2_receive_from_21+"\n"+"m2_receive_from_22: "+m2_receive_from_22+"\n"+"m2_receive_from_23: "+m2_receive_from_23+"\n"+"m2_receive_from_24: "+m2_receive_from_24+"\n"+"m2_receive_from_25: "+m2_receive_from_25+"\n");
+    log.log("\n"+"m25_sending :"+m25_sending+"\n"+"m24_sending :"+m24_sending+"\n"+"m23_sending :"+m23_sending+"\n"+"m22_sending :"+m22_sending+"\n"+"m21_sending :"+m21_sending+"\n"+"m20_sending :"+m20_sending+"\n"+"m19_sending :"+m19_sending+"\n"+"m18_sending :"+m18_sending+"\n"+"m17_sending :"+m17_sending+"\n"+"m16_sending :"+m16_sending+"\n"+"m15_sending :"+m15_sending+"\n"+"m14_sending :"+m14_sending+"\n"+"m13_sending :"+m13_sending+"\n"+"m12_sending :"+m12_sending+"\n"+"m11_sending :"+m11_sending+"\n"+"m10_sending :"+m10_sending+"\n"+"m9_sending :"+m9_sending+"\n"+"m8_sending :"+m8_sending+"\n"+"m7_sending :"+m7_sending+"\n"+"m6_sending :"+m6_sending+"\n"+"m5_sending :"+m5_sending+"\n"+"m4_sending :"+m4_sending+"\n"+"m3_sending :"+m3_sending+"\n");
     log.log("Total_Packet_Sent_to_2 : "+Total_Packet_Sent_to_2 +"\n"+"Total_m2_Packet_recieving: "+Total_m2_Packet_recieving+"\n"+"Total_Packet_loss: "+Total_Packet_loss+"\n"+"Packet_delivery_ratio: "+Packet_delivery_ratio+"\n"+"loss_ratio: "+loss_ratio+"\n");
     savefile.close();
     log.testOK();
@@ -171,8 +178,23 @@ YIELD();
                 } 
                 if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0014]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0014]")){
                     m2_send_to_20 ++;
+                }
+                if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0015]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0015]")){
+                    m2_send_to_21 ++;
+                }
+                if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0016]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0016]")){
+                    m2_send_to_22 ++;
+                }
+                if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0017]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0017]")){
+                    m2_send_to_23 ++;
+                }
+                if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0018]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0018]")){
+                    m2_send_to_24 ++;
+                }
+                if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0019]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0019]")){
+                    m2_send_to_25 ++;
                 } 
-                Total_m2_Packet_Sent= m2_send_to_20+m2_send_to_19+m2_send_to_18+m2_send_to_17+m2_send_to_16+m2_send_to_15+m2_send_to_14+m2_send_to_13+m2_send_to_12+m2_send_to_11+m2_send_to_10+m2_send_to_9+m2_send_to_8+m2_send_to_7+m2_send_to_6+m2_send_to_5+m2_send_to_4+m2_send_to_3;
+                Total_m2_Packet_Sent= m2_send_to_25+m2_send_to_24+m2_send_to_23+m2_send_to_22+m2_send_to_21+m2_send_to_20+m2_send_to_19+m2_send_to_18+m2_send_to_17+m2_send_to_16+m2_send_to_15+m2_send_to_14+m2_send_to_13+m2_send_to_12+m2_send_to_11+m2_send_to_10+m2_send_to_9+m2_send_to_8+m2_send_to_7+m2_send_to_6+m2_send_to_5+m2_send_to_4+m2_send_to_3;
             }
         if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")) {
             //log.log(msgArray[4]+"\n");
@@ -246,7 +268,22 @@ YIELD();
                 m2_receive_from_20 ++;
                 //click_on_mote();
             } 
-            Total_m2_Packet_recieving=m2_receive_from_20+m2_receive_from_19+m2_receive_from_18+m2_receive_from_17+m2_receive_from_16+m2_receive_from_15+m2_receive_from_14+m2_receive_from_13+m2_receive_from_12+m2_receive_from_11+m2_receive_from_10+m2_receive_from_9+m2_receive_from_8+m2_receive_from_7+m2_receive_from_6+m2_receive_from_5+m2_receive_from_4+m2_receive_from_3;
+            if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0015]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0015]")){
+                m2_receive_from_21 ++;
+            }
+            if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0016]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0016]")){
+                m2_receive_from_22 ++;
+            }
+            if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0017]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0017]")){
+                m2_receive_from_23 ++;
+            }
+            if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0018]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0018]")){
+                m2_receive_from_24 ++;
+            }  
+            if(msgArray[4].equals("[aaaa:0000:0000:0000:c30c:0000:0000:0019]") || msgArray[4].equals("[fe80:0000:0000:0000:c30c:0000:0000:0019]")){
+                m2_receive_from_25 ++;
+            }
+            Total_m2_Packet_recieving=m2_receive_from_25+m2_receive_from_24+m2_receive_from_23+m2_receive_from_22+m2_receive_from_21+m2_receive_from_20+m2_receive_from_19+m2_receive_from_18+m2_receive_from_17+m2_receive_from_16+m2_receive_from_15+m2_receive_from_14+m2_receive_from_13+m2_receive_from_12+m2_receive_from_11+m2_receive_from_10+m2_receive_from_9+m2_receive_from_8+m2_receive_from_7+m2_receive_from_6+m2_receive_from_5+m2_receive_from_4+m2_receive_from_3;
             }
         }
     if(id==3){
@@ -393,7 +430,48 @@ YIELD();
             m20_receiving ++
             }
     }
-    Total_Packet_Sent_to_2 = m3_sending+m4_sending+m5_sending+m6_sending+m7_sending+m8_sending+m9_sending+m10_sending+m11_sending+m12_sending+m13_sending+m14_sending+m15_sending+m16_sending+m17_sending+m18_sending+m19_sending+m20_sending;
+    if(id==21){
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Sending")) {
+            m21_sending ++;
+            }
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")){
+            m21_receiving ++
+            }
+    }
+    if(id==22){
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Sending")) {
+            m22_sending ++;
+            }
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")){
+            m22_receiving ++
+            }
+    }
+    if(id==23){
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Sending")) {
+            m23_sending ++;
+            }
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")){
+            m23_receiving ++
+            }
+    }
+    if(id==24){
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Sending")) {
+            m24_sending ++;
+            }
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")){
+            m24_receiving ++
+            }
+    }
+    if(id==25){
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Sending")) {
+            m25_sending ++;
+            }
+        if(msgArray[0].equals("CTR") && msgArray[1].equals("Receiving")){
+            m25_receiving ++
+            }
+    }
+
+    Total_Packet_Sent_to_2 = m3_sending+m4_sending+m5_sending+m6_sending+m7_sending+m8_sending+m9_sending+m10_sending+m11_sending+m12_sending+m13_sending+m14_sending+m15_sending+m16_sending+m17_sending+m18_sending+m19_sending+m20_sending+m21_sending+m22_sending+m23_sending+m24_sending+m25_sending;
     Total_Packet_loss=Total_Packet_Sent_to_2 - Total_m2_Packet_recieving;
     //log.log("m2_send_to_3: "+m2_send_to_3+"\n"+"m2_send_to_4: "+m2_send_to_4+"\n"+"m2_send_to_5: "+m2_send_to_5+"\n"+"m2_send_to_6: "+m2_send_to_6+"\n"+"m2_send_to_7: "+m2_send_to_7+"\n"+"m2_send_to_8: "+m2_send_to_8+"\n"+"m2_send_to_9: "+m2_send_to_9+"\n"+"m2_send_to_10: "+m2_send_to_10+"\n"+"m2_send_to_11: "+m2_send_to_11+"\n"+"m2_send_to_12: "+m2_send_to_12+"\n"+"m2_send_to_13: "+m2_send_to_13+"\n"+"m2_send_to_14: "+m2_send_to_14+"\n"+"m2_send_to_15: "+m2_send_to_15+"\n"+"m2_send_to_16: "+m2_send_to_16+"\n"+"m2_send_to_17: "+m2_send_to_17+"\n"+"m2_send_to_18: "+m2_send_to_18+"\n"+"m2_send_to_19: "+m2_send_to_19+"\n"+"m2_send_to_20: "+m2_send_to_20+"\n"+"m2_receive_from_3: "+m2_receive_from_3+"\n"+"m2_receive_from_4: "+m2_receive_from_4+"\n"+"m2_receive_from_5: "+m2_receive_from_5+"\n"+"m2_receive_from_6: "+m2_receive_from_6+"\n"+"m2_receive_from_7: "+m2_receive_from_7+"\n"+"m2_receive_from_8: "+m2_receive_from_8+"\n"+"m2_receive_from_9: "+m2_receive_from_9+"\n"+"m2_receive_from_10: "+m2_receive_from_10+"\n"+"m2_receive_from_11: "+m2_receive_from_11+"\n"+"m2_receive_from_12: "+m2_receive_from_12+"\n"+"m2_receive_from_13: "+m2_receive_from_13+"\n"+"m2_receive_from_14: "+m2_receive_from_14+"\n"+"m2_receive_from_15: "+m2_receive_from_15+"\n"+"m2_receive_from_16: "+m2_receive_from_16+"\n"+"m2_receive_from_17: "+m2_receive_from_17+"\n"+"m2_receive_from_18: "+m2_receive_from_18+"\n"+"m2_receive_from_19: "+m2_receive_from_19+"\n"+"m2_receive_from_20: "+m2_receive_from_20+"\n"+"\n"+"m20_sending :"+m20_sending+"\n"+"m20_sending :"+m19_sending+"\n"+"m19_sending :"+m18_sending+"\n"+"m17_sending :"+m17_sending+"\n"+"m16_sending :"+m16_sending+"\n"+"m15_sending :"+m15_sending+"\n"+"m14_sending :"+m14_sending+"\n"+"m13_sending :"+m13_sending+"\n"+"m12_sending :"+m12_sending+"\n"+"m11_sending :"+m11_sending+"\n"+"m10_sending :"+m10_sending+"\n"+"m9_sending :"+m9_sending+"\n"+"m8_sending :"+m8_sending+"\n"+"m7_sending :"+m7_sending+"\n"+"m6_sending :"+m6_sending+"\n"+"m5_sending :"+m5_sending+"\n"+"m4_sending :"+m4_sending+"\n"+"m3_sending :"+m3_sending+"\n"+"Total_Packet_Sent_to_2 : "+Total_Packet_Sent_to_2 +"\n"+"Total_m2_Packet_recieving: "+Total_m2_Packet_recieving+"\n"+"Total_Packet_loss: "+Total_Packet_loss+"\n");    
     Packet_delivery_ratio= Total_m2_Packet_recieving*100/Total_Packet_Sent_to_2;
