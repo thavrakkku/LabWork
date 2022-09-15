@@ -42,23 +42,10 @@
 #define COAP_DEFAULT_PORT                    5683
 
 #define COAP_DEFAULT_MAX_AGE                 600
-#define COAP_RESPONSE_TIMEOUT                2 //2
-#define COAP_RESPONSE_RANDOM_FACTOR          1.5
-#define COAP_MAX_RETRANSMIT                  4
- /* CTR ADD 14-09-2022 */
-#define COAP_MAX_TRANSMIT_SPAN               45
-#define COAP_MAX_LATENCY                     100
-#define COAP_PROCESSING_DELAY                2
-#define COAP_MAX_RTT                         2 * COAP_RESPONSE_TIMEOUT
-#define COAP_EXCHANGE_LIFETIME               (COAP_MAX_TRANSMIT_SPAN + \
-                                              COAP_MAX_LATENCY + \
-                                              (COAP_PROCESSING_DELAY << \
-                                               COAP_MAX_RETRANSMIT))
-#define COAP_NSTART                          1
-#define COAP_DEFAULT_LEISURE                 5
-#define COAP_PROBING_RATE                    (2 * (COAP_RESPONSE_TIMEOUT + \
-                                                  COAP_PROCESSING_DELAY))
-/* END */
+#define COAP_RESPONSE_TIMEOUT                2    //2  ACK_TIMEOUT
+#define COAP_RESPONSE_RANDOM_FACTOR          1.5  // ACK_RANDOM_FACTOR must not degrease below 1.0
+#define COAP_MAX_RETRANSMIT                  4    //MAX_RETRANSMIT
+
 #define COAP_HEADER_LEN                      4  /* | version:0x03 type:0x0C tkl:0xF0 | code | mid:0x00FF | mid:0xFF00 | */
 #define COAP_TOKEN_LEN                       8  /* The maximum number of bytes for the Token */
 #define COAP_ETAG_LEN                        8  /* The maximum number of bytes for the ETag */
