@@ -43,10 +43,10 @@
 #include "er-coap-observe.h"
 #include "lib/random.h"
 
-#define FUNCTIONEN 0
-#define ENCOCORED 0
+#define FUNCTIONEN 1
+#define ENCOCORED 1
 #define COCORED 0
-#define BEB 1
+#define BEB 0
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>
