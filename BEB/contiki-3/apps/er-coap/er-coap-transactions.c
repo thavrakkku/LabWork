@@ -43,10 +43,10 @@
 #include "er-coap-observe.h"
 #include "lib/random.h"
 
-#define FUNCTIONEN 1
-#define ENCOCORED 1
+#define FUNCTIONEN 0
+#define ENCOCORED 0
 #define COCORED 0
-#define BEB 0
+#define BEB 1
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>
@@ -255,7 +255,7 @@ coap_check_transactions()
   coap_transaction_t *t = NULL;
 
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
-    if(etimer_expired(&t->retrans_timer)) {
+    if(etimer_expired(&t->retrans_timer)) { //fin retrans_timer expired send agian
       ++(t->retrans_counter);
            ctr_lose++;
 	    PRINTF("\nCTR_Lose_%d_In_",ctr_lose);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
