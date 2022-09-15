@@ -102,7 +102,7 @@ coap_send_transaction(coap_transaction_t *t)
  
 #if FUNCTIONEN 
    uint16_t C_FPB = 0, C_HBEB = 0;
-   
+    printf("EN BACKOFF INIT \n");
     if (t->retrans_counter < 3) {
          C_FPB = 1; //current state
          C_HBEB = 0; //current state
@@ -152,6 +152,7 @@ coap_send_transaction(coap_transaction_t *t)
       }
 
 #if ENCOCORED
+ printf("CTR_HBEB Activate \n");
       else {
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
@@ -173,6 +174,7 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if COCORED
+ printf("CTR_FPB Activate\n");
       else {
        if(t->retrans_counter == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
@@ -191,7 +193,9 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if BEB
+
        else {
+        printf("CTR_BEB Activate\n");
         t->retrans_timer.timer.interval <<= 1;  //double 
         PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
                t->retrans_timer.timer.interval / CLOCK_SECOND);

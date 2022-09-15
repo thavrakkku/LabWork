@@ -72,7 +72,7 @@ PERIODIC_RESOURCE(res_push,
                   NULL,
                   NULL,
                   NULL,
-                  SEND_INTERVAL,
+                 SEND_INTERVAL,
                   res_periodic_handler);
 // RANDWAIT *CLOCK_SECOND,
 //random_rand() % (CLOCK_SECOND * RANDWAIT)
@@ -81,7 +81,7 @@ PERIODIC_RESOURCE(res_push,
  */
 static int32_t temperature = 0;
 static int32_t oldtemp =0;
-static int32_t j=0;
+//static int32_t j=0;
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
@@ -100,7 +100,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu", temperature,oldtemp));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,SEND_INTERVAL));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
@@ -145,7 +145,6 @@ res_periodic_handler()
  // if(1) {
   //if(j<1000) {
 
-    
 /* Notify the registered observers which will trigger the res_get_handler to create the response. */
 	
 //make change

@@ -50,12 +50,12 @@
 
 /* The number of concurrent messages that can be stored for retransmission in the transaction layer. */
 #ifndef COAP_MAX_OPEN_TRANSACTIONS
-#define COAP_MAX_OPEN_TRANSACTIONS     30 //11
+#define COAP_MAX_OPEN_TRANSACTIONS     11 //11
 #endif /* COAP_MAX_OPEN_TRANSACTIONS */
 
 /* Maximum number of failed request attempts before action */
 #ifndef COAP_MAX_ATTEMPTS
-#define COAP_MAX_ATTEMPTS              30//4
+#define COAP_MAX_ATTEMPTS              4//4
 #endif /* COAP_MAX_ATTEMPTS */
 
 /* Conservative size limit, as not all options have to be set at the same time. Check when Proxy-Uri option is used */

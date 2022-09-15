@@ -50,7 +50,7 @@ Total_m2_Packet_recieving   =0;Total_Packet_loss           =0;
 
 m2_send_to_3 =0;m2_send_to_4 =0;m2_send_to_5 =0;m2_send_to_6 =0;m2_send_to_7 =0;m2_send_to_8 =0;m2_send_to_9 =0;m2_send_to_10 =0;m2_send_to_11 =0;m2_send_to_12 =0;
 m2_send_to_13 =0;m2_send_to_14 =0;m2_send_to_15 =0;m2_send_to_16 =0;m2_send_to_17 =0;m2_send_to_18 =0;m2_send_to_19 =0;m2_send_to_20 =0;
-m2_send_to_24 =0;m2_send_to_25 =0;
+m2_send_to_21 =0;m2_send_to_22 =0;m2_send_to_23 =0;m2_send_to_24 =0;m2_send_to_25 =0;
 
 
 m2_receive_from_3 =0;m2_receive_from_4 =0;m2_receive_from_5 =0;m2_receive_from_6 =0;m2_receive_from_7 =0;m2_receive_from_8 =0;m2_receive_from_9 =0;

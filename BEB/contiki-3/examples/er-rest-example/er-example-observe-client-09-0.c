@@ -126,8 +126,7 @@ static coap_packet_t request[1];
 
 static	int r=0;
 static 	int con=1;
-static int test_node=7;
-static int i=0;
+//static int i=0;
 
 /*----------------------------------------------------------------------------*/
 PROCESS(er_example_observe_client, "Erbium Coap Observe Client Example");

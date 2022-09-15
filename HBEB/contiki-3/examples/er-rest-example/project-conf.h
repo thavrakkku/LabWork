@@ -50,10 +50,10 @@
 
 /* IP buffer size must match all other hops, in particular the border router. */
  //uncommnet 24-06-2022
-/*
+
    #undef UIP_CONF_BUFFER_SIZE
    #define UIP_CONF_BUFFER_SIZE           256
- */
+ 
 
 /* Disabling RDC and CSMA for demo purposes. Core updates often
    require more memory. */

@@ -91,15 +91,7 @@
 	#define SERVER_NODE15(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00011)
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00012)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00013) 
-	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)
-	#define SERVER_NODE19(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00015)
-	#define SERVER_NODE20(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00016)
-	#define SERVER_NODE21(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00017)
-	#define SERVER_NODE22(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00018)
-	#define SERVER_NODE23(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00019)
-	/*#define SERVER_NODE24(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0001a)
-	#define SERVER_NODE25(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0001b)
-	*/
+	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)   
 #else
 	#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
 	#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x4)
@@ -119,14 +111,6 @@
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x12)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x13)
 	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)
-	#define SERVER_NODE19(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x15)
-	#define SERVER_NODE20(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x16)
-	#define SERVER_NODE21(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x17)
-	#define SERVER_NODE22(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x18)
-	#define SERVER_NODE23(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x19)
-	/*#define SERVER_NODE24(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x1a)
-	#define SERVER_NODE25(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x1b)
-	*/
 #endif
 
 
@@ -168,13 +152,6 @@ uip_ipaddr_t	server_ipaddr15;
 uip_ipaddr_t	server_ipaddr16;
 uip_ipaddr_t	server_ipaddr17;
 uip_ipaddr_t	server_ipaddr18;
-uip_ipaddr_t	server_ipaddr19;
-uip_ipaddr_t	server_ipaddr20;
-uip_ipaddr_t	server_ipaddr21;
-uip_ipaddr_t	server_ipaddr22;
-uip_ipaddr_t	server_ipaddr23;
-//uip_ipaddr_t	server_ipaddr24;
-//uip_ipaddr_t	server_ipaddr25;
 /*----------------------------------------------------------------------------*/
 /*
  * Handle the response to the observe request and the following notifications
@@ -238,75 +215,12 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr7)){
 		printf("Observe OK form 9\n");
-		//r=1;
 		increase_conn(8);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr8)){
 		printf("Observe OK form 10\n");
-		increase_conn(9);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
-		printf("Observe OK form 11\n");
-		increase_conn(10);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr10)){
-		printf("Observe OK form 12\n");
-		increase_conn(11);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr11)){
-		printf("Observe OK form 13\n");
-		increase_conn(12);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr12)){
-		printf("Observe OK form 14\n");
-		increase_conn(13);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr13)){
-		printf("Observe OK form 15\n");
-		increase_conn(14);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr14)){
-		printf("Observe OK form 16\n");
-		increase_conn(15);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr15)){
-		printf("Observe OK form 17\n");
-		increase_conn(16);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr16)){
-		printf("Observe OK form 18\n");
-		increase_conn(17);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr17)){
-		printf("Observe OK form 19\n");
-		increase_conn(18);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr18)){
-		printf("Observe OK form 20\n");
-		increase_conn(19);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr19)){
-		printf("Observe OK form 21\n");
 		increase_conn(20);
 	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr20)){
-		printf("Observe OK form 22\n");
-		increase_conn(21);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr21)){
-		printf("Observe OK form 23\n");
-		increase_conn(22);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr22)){
-		printf("Observe OK form 24\n");
-		increase_conn(23);
-	}
-	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr23)){
-		printf("Observe OK form 25\n");
-		increase_conn(50);
-	}
-
-
 /* End of CTR Note */
 
 	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
@@ -371,14 +285,8 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	SERVER_NODE16(&server_ipaddr16);
 	SERVER_NODE17(&server_ipaddr17);
 	SERVER_NODE18(&server_ipaddr18);
-	SERVER_NODE19(&server_ipaddr19);
-	SERVER_NODE20(&server_ipaddr20);
-	SERVER_NODE21(&server_ipaddr21);
-	SERVER_NODE22(&server_ipaddr22);
-	SERVER_NODE23(&server_ipaddr23);
-	//SERVER_NODE24(&server_ipaddr24);
-	//SERVER_NODE25(&server_ipaddr25);
-	
+
+
   /* receives all CoAP messages */
   coap_init_engine();
   /* init timer and button (if available) */
@@ -412,112 +320,83 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			}
     
 	switch(con){	
-		case 50:			
+		case 20:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
-			//printf("--Start Calculation--\n");
+			printf("--Start Calculation--\n");
 			break;
 		case 1:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 3--\n");
+			printf("--Connecting to number 3--\n");
 			break; 
 		case 2:
 			obs = coap_obs_request_registration(&server_ipaddr2, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 4--\n");
+			printf("--Connecting to number 4--\n");
 			break;
 		case 3:
 			obs = coap_obs_request_registration(&server_ipaddr3, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 5--\n");
+			printf("--Connecting to number 5--\n");
 			break;
 		case 4:
 			obs = coap_obs_request_registration(&server_ipaddr4, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 6--\n");
+			printf("--Connecting to number 6--\n");
 			break;
 		case 5:
 			obs = coap_obs_request_registration(&server_ipaddr5, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 7--\n");
+			printf("--Connecting to number 7--\n");
 			break;
 		case 6:
 			obs = coap_obs_request_registration(&server_ipaddr6, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 8--\n");
+			printf("--Connecting to number 8--\n");
 			break;
 		case 7:
 			obs = coap_obs_request_registration(&server_ipaddr7, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 9--\n");
+			printf("--Connecting to number 9--\n");
 			break;
 		case 8:
 			obs = coap_obs_request_registration(&server_ipaddr8, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 10--\n");
+			printf("--Connecting to number 10--\n");
 			break;
 		case 9:
 			obs = coap_obs_request_registration(&server_ipaddr9, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 11--\n");
+			printf("--Connecting to number 11--\n");
 			break;
 		case 10:
 			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 12--\n");
+			printf("--Connecting to number 12--\n");
 			break;
 		case 11:
 			obs = coap_obs_request_registration(&server_ipaddr11, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 13--\n");
+			printf("--Connecting to number 13--\n");
 			break;
 		case 12:
 			obs = coap_obs_request_registration(&server_ipaddr12, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 14--\n");
+			printf("--Connecting to number 14--\n");
 			break;
 		case 13:
 			obs = coap_obs_request_registration(&server_ipaddr13, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 15--\n");
+			printf("--Connecting to number 15--\n");
 			break;
 		case 14:
 			obs = coap_obs_request_registration(&server_ipaddr14, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 16--\n");
+			printf("--Connecting to number 16--\n");
 			break;
 		case 15:
 			obs = coap_obs_request_registration(&server_ipaddr15, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 17--\n");
+			printf("--Connecting to number 17--\n");
 			break;
 		case 16:
 			obs = coap_obs_request_registration(&server_ipaddr16, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 18--\n");
+			printf("--Connecting to number 18--\n");
 			break;
 		case 17:
 			obs = coap_obs_request_registration(&server_ipaddr17, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 19--\n");
+			printf("--Connecting to number 19--\n");
 			break;
 		case 18:
 			obs = coap_obs_request_registration(&server_ipaddr18, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 20--\n");
+			printf("--Connecting to number 20--\n");
 			break;
-		case 19:
-			obs = coap_obs_request_registration(&server_ipaddr19, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 21--\n");
-			break;
-		case 20:
-			obs = coap_obs_request_registration(&server_ipaddr20, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 22--\n");
-			break;
-		case 21:
-			obs = coap_obs_request_registration(&server_ipaddr21, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 23--\n");
-			break;
-		case 22:
-			obs = coap_obs_request_registration(&server_ipaddr22, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 24--\n");
-			break;
-		case 23:
-			obs = coap_obs_request_registration(&server_ipaddr23, REMOTE_PORT,"test/push", notification_callback, NULL);
-			//printf("--Connecting to number 25--\n");
-			break;
-	/*	case 24:
-			obs = coap_obs_request_registration(&server_ipaddr24, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 26--\n");
-			break;
-		case 25:
-			obs = coap_obs_request_registration(&server_ipaddr25, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 27--\n");
-			break;
-	*/
 	}
 	//if(con>17){con=0;}
 

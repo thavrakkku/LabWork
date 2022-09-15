@@ -126,8 +126,7 @@ static coap_packet_t request[1];
 
 static	int r=0;
 static 	int con=1;
-static int test_node=7;
-static int i=0;
+//static int i=0;
 
 /*----------------------------------------------------------------------------*/
 PROCESS(er_example_observe_client, "Erbium Coap Observe Client Example");
@@ -309,7 +308,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 
 		     	PRINT6ADDR(&server_ipaddr1);
 		     	PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
+				
 		     	COAP_BLOCKING_REQUEST(&server_ipaddr1, REMOTE_PORT, request,client_chunk_handler);
 	
 			r=0;

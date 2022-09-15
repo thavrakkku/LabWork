@@ -80,14 +80,14 @@ coap_receive(void)
   if(uip_newdata()) {
     ctr++;
     PRINTF("CTR_Receiving_%d_From_",ctr);PRINT6ADDR(&UIP_IP_BUF->srcipaddr);PRINTF("_mid_%u_lenght_%u\n",message->mid,uip_datalen());
-    PRINTF("CTR_Buffer_Size %d \n",uip_buf);
-    PRINTF("CTR_Buffer_Size %d \n",UIP_BUFSIZE);
-    PRINTF("CTR_Buffer_UIP_IPH_LEN %d \n",UIP_IPH_LEN);
-    PRINTF("CTR_Buffer_UIP_UDPH_LEN %d \n",UIP_UDPH_LEN);
-    PRINTF("CTR_Buffer_UIP_LLH_LEN %d \n",UIP_LLH_LEN);
+   // PRINTF("CTR_Buffer_Size %d \n",uip_buf);
+    //PRINTF("CTR_Buffer_Size %d \n",UIP_BUFSIZE);
+    //PRINTF("CTR_Buffer_UIP_IPH_LEN %d \n",UIP_IPH_LEN);
+    //PRINTF("CTR_Buffer_UIP_UDPH_LEN %d \n",UIP_UDPH_LEN);
+    //PRINTF("CTR_Buffer_UIP_LLH_LEN %d \n",UIP_LLH_LEN);
 
-    PRINTF("CTR_Buffer_UIP_LLH_LEN %d\n",uip_buf[UIP_LLH_LEN]);
-    PRINTF("CTR_Buffer_UIP_LLH_LEN + UIP_IPH_LEN %d\n",uip_buf[UIP_LLH_LEN + UIP_IPH_LEN]);
+   // PRINTF("CTR_Buffer_UIP_LLH_LEN %d\n",uip_buf[UIP_LLH_LEN]);
+    //PRINTF("CTR_Buffer_UIP_LLH_LEN + UIP_IPH_LEN %d\n",uip_buf[UIP_LLH_LEN + UIP_IPH_LEN]);
 
   //  PRINTF("receiving UDP datagram from: ");
   //  PRINT6ADDR(&UIP_IP_BUF->srcipaddr);
