@@ -47,7 +47,6 @@
  */
 #define COAP_RESPONSE_TIMEOUT_TICKS         (CLOCK_SECOND * COAP_RESPONSE_TIMEOUT)
 //#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 2.0) + 1 //EnCoCo-RED
-
 #define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 0.5) + 1 //Default CoAP
 
 /* container for transactions with message buffer and retransmission info */

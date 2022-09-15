@@ -148,7 +148,7 @@
 #define UIP_CONF_ND6_REACHABLE_TIME     600000
 #define UIP_CONF_ND6_RETRANS_TIMER      10000
 
-#define NETSTACK_CONF_WITH_IPV6         1
+#define NETSTACK_CONF_WITH_IPV6                   1
 #define UIP_CONF_IPV6_QUEUE_PKT         0
 #define UIP_CONF_IPV6_CHECKS            1
 #define UIP_CONF_IPV6_REASSEMBLY        0
@@ -174,8 +174,8 @@
 #define UIP_CONF_RECEIVE_WINDOW  48  //48
 #define UIP_CONF_TCP_MSS         48  //48
 #define UIP_CONF_MAX_CONNECTIONS 4  //4
-#define UIP_CONF_MAX_LISTENPORTS 8     //8
-#define UIP_CONF_UDP_CONNS       12    //12
+#define UIP_CONF_MAX_LISTENPORTS 8
+#define UIP_CONF_UDP_CONNS       12
 #define UIP_CONF_FWCACHE_SIZE    30
 #define UIP_CONF_BROADCAST       1
 #define UIP_ARCH_IPCHKSUM        1
