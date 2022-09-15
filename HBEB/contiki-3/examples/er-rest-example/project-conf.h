@@ -52,7 +52,7 @@
  //uncommnet 24-06-2022
 
    #undef UIP_CONF_BUFFER_SIZE
-   #define UIP_CONF_BUFFER_SIZE           256
+   #define UIP_CONF_BUFFER_SIZE           180
  
 
 /* Disabling RDC and CSMA for demo purposes. Core updates often
@@ -79,8 +79,10 @@
  */
 
 /* Multiplies with chunk size, be aware of memory constraints. */
-#undef COAP_MAX_OPEN_TRANSACTIONS
-#define COAP_MAX_OPEN_TRANSACTIONS     4 //4
+#undef   COAP_MAX_OPEN_TRANSACTIONS
+#define  COAP_MAX_OPEN_TRANSACTIONS     4 //4
+#undef   COAP_MAX_OBSERVEES
+#define  COAP_MAX_OBSERVEES     20//11
 
 /* Must be <= open transactions, default is COAP_MAX_OPEN_TRANSACTIONS-1. */
 /*

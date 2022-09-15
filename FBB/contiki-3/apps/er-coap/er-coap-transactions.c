@@ -43,10 +43,10 @@
 #include "er-coap-observe.h"
 #include "lib/random.h"
 
-#define FUNCTIONEN 0
+#define FUNCTIONEN 1
 #define ENCOCORED 0
-#define COCORED 0
-#define BEB 1
+#define COCORED 1
+#define BEB 0
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>
@@ -152,8 +152,9 @@ coap_send_transaction(coap_transaction_t *t)
       }
 
 #if ENCOCORED
- printf("CTR_HBEB Activate \n");
+ 
       else {
+        printf("CTR_HBEB Activate \n");
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
        } 
@@ -174,8 +175,9 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if COCORED
- printf("CTR_FPB Activate\n");
+ 
       else {
+        printf("CTR_FPB Activate\n");
        if(t->retrans_counter == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
        } 

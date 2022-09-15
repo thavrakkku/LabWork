@@ -49,7 +49,7 @@
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
 
-#define ENCOCORED 0
+#define RAVRED  0
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -241,10 +241,12 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   coap_observee_t *obs;
   coap_notification_flag_t flag;
   uint32_t observe;
+  
+  /* REVRED parameter*/
   float PROBABILITY_DROP = 1, THRESHOLD_MIN = 25.6, THRESHOLD_MAX = 76.8, MAX_BUFFER = 128, MAX_P = 0.1; /*1 payload length = 24, Tmin20% & Tmax60% RevRED variable*/
   int RANDOM_VARIABLE = random_rand() %100;
   uint16_t AVG_QUEUE, PERCENT_DROP = 0;
-
+  /* END REVRED */
 
   PRINTF("coap_handle_notification()\n");
   pkt = (coap_packet_t *)notification;
@@ -265,7 +267,8 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   }
   if(notification->type == COAP_TYPE_CON) {
 
-#if ENCOCORED 
+#if RAVRED 
+printf("RAVRED Activate\n");
     AVG_QUEUE = 70;
 
     if (AVG_QUEUE < THRESHOLD_MIN) {
@@ -304,7 +307,7 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
        } 
 #endif
 
-       simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
+       simple_reply(COAP_TYPE_ACK, addr, port, notification);//if RAVRED  == 1 COMMENT
 
   }
   if(obs->notification_callback != NULL) {
