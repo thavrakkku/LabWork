@@ -152,8 +152,9 @@ coap_send_transaction(coap_transaction_t *t)
       }
 
 #if ENCOCORED
- printf("CTR_HBEB Activate \n");
+ 
       else {
+        printf("CTR_HBEB Activate \n");
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
        } 
@@ -174,8 +175,9 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if COCORED
- printf("CTR_FPB Activate\n");
+ 
       else {
+        printf("CTR_FPB Activate\n");
        if(t->retrans_counter == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
        } 
