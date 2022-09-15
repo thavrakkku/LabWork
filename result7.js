@@ -6,8 +6,8 @@ today = new Date(); // get current date
 
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format
 sl="/home/"+username+"/LabWork/"; //save location
-sf=sl+date+"_Test_No_grid_4+0_1s_log_"; //save file name  
-ob_node="Observe OK form 6"; 
+sf=sl+date+"_Test_BEB_grid_3x3-1_1s5s_log_"; //save file name  
+ob_node="Observe OK form 9"; 
 simulate_time=300000; //simulate time after start measure  
 i=1; //file index
 checkfile= new File(sf+i+".txt"); //define check file name
