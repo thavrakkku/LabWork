@@ -1,34 +1,33 @@
-[07:04:18 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[07:04:18 - main] [Cooja.java:1324] [INFO] - > Starting Cooja
-[07:04:18 - main] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
-[07:04:18 - main] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[07:04:19 - main] [Simulation.java:420] [INFO] - Simulation random seed: -3498234215634411414
-[07:04:19 - main] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[07:04:19 - main] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-16-0.z1 with /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-16-0.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
-[07:04:19 - main] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-16-0.z1 TARGET=z1 
-[07:04:19 - main] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[07:04:19 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[07:04:19 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-16-0.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[07:04:20 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.SimControl
-[07:04:20 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Visualizer
-[07:04:20 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.LogListener
-[07:04:20 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.TimeLine
-[07:04:20 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Notes
-[07:04:21 - main] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[07:04:21 - main] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[07:04:21 - main] [ScriptRunner.java:386] [INFO] - Test script activated
-[07:04:21 - Thread-1] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663545861841
+[07:11:07 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[07:11:07 - main] [Cooja.java:1324] [INFO] - > Starting Cooja
+[07:11:07 - main] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[07:11:07 - main] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[07:11:07 - main] [Simulation.java:420] [INFO] - Simulation random seed: 8733495801978087740
+[07:11:07 - main] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[07:11:07 - main] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-16-0.z1 TARGET=z1 
+[07:11:08 - main] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[07:11:08 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[07:11:08 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-16-0.z1
+[07:11:08 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:08 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:08 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:11:09 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.SimControl
+[07:11:09 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Visualizer
+[07:11:09 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.LogListener
+[07:11:09 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.TimeLine
+[07:11:09 - main] [Cooja.java:1790] [INFO] - Visualized plugin was not started: class org.contikios.cooja.plugins.Notes
+[07:11:09 - main] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:11:10 - main] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[07:11:10 - main] [ScriptRunner.java:386] [INFO] - Test script activated
+[07:11:10 - Thread-1] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663546270391

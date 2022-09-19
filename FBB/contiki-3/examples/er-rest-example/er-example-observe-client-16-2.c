@@ -239,6 +239,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr13)){
 		printf("Observe OK form 15\n");
+		i=1;
 		increase_conn(14);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr14)){
@@ -335,6 +336,24 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
   while(1) {
 
     PROCESS_YIELD();
+	if(i==1) {
+		      printf("--Toggle Block-Wise Transfer--\n");
+
+			coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+		     	//coap_set_header_uri_path(request,"test/push_blockwise");
+			coap_set_header_uri_path(request,"test/chunks");
+		     	const char msg[] = "Toggle!";
+
+		     	coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
+
+		     	PRINT6ADDR(&server_ipaddr13);
+		     	PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+
+		     	COAP_BLOCKING_REQUEST(&server_ipaddr13, REMOTE_PORT, request,client_chunk_handler);
+	
+			i=0;
+
+			}
 	if(r==1) {
 		      printf("--Toggle Block-Wise Transfer--\n");
 
@@ -409,7 +428,8 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 14--\n");
 			break;
 		case 13:
-			obs = coap_obs_request_registration(&server_ipaddr13, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr13, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
+		//	obs = coap_obs_request_registration(&server_ipaddr13, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 15--\n");
 			break;
 		case 14:

@@ -48,6 +48,8 @@
 //#include "collect-view.h"
 
 /*----------------------------------------------------------------------------*/
+#define rogerdebug 0
+
 #define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -243,8 +245,9 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr14)){
 		printf("Observe OK form 16\n");
-		increase_conn(15);
+		increase_conn(50);
 	}
+	/*
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr15)){
 		printf("Observe OK form 17\n");
 		increase_conn(16);
@@ -253,6 +256,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 		printf("Observe OK form 18\n");
 		increase_conn(50);
 	}
+	*/
 /* End of CTR Note */
 
 	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
@@ -352,7 +356,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			}
     
 	switch(con){	
-		case 20:			
+		case 50:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
 			printf("--Start Calculation--\n");
 			break;
