@@ -1,0 +1,671 @@
+[09:16:20 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[09:16:21 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[09:16:21 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
+[09:16:44 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:16:44 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:16:46 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:16:47 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:16:48 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:16:49 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:16:50 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:50 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:16:51 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[09:16:52 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:16:55 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:16:56 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:16:57 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:18:55 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640335311
+[09:19:00 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640340912	Duration: 5601 ms	Simulated time 1281 ms	Ratio 0.22870915907873593
+[09:23:22 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:23:22 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:23:22 - Thread-3] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:23:23 - Thread-3] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:23:23 - Thread-3] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:23:24 - Thread-3] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:23:24 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:23:25 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:23:26 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:26 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:26 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:26 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:26 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:27 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:27 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:23:27 - Thread-3] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:23:29 - Thread-3] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:23:29 - Thread-3] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:23:29 - Thread-3] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:23:31 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640611051
+[09:23:44 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640624585	Duration: 13534 ms	Simulated time 117796 ms	Ratio 8.703709176887838
+[09:26:26 - Thread-4] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:26:26 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:26:26 - Thread-6] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:26:26 - Thread-6] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:26:27 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:26:28 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:26:29 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:26:29 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:26:30 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:30 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:30 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:31 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:31 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:31 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:31 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:26:31 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:26:33 - Thread-6] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:26:33 - Thread-6] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:26:33 - Thread-6] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:26:34 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640794844
+[09:26:37 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640797940	Duration: 3096 ms	Simulated time 1491 ms	Ratio 0.48158914728682173
+[09:26:41 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640801344
+[09:26:53 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640813925	Duration: 12581 ms	Simulated time 166302 ms	Ratio 13.218504093474287
+[09:28:13 - Thread-7] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:28:13 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:28:13 - Thread-10] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:28:13 - Thread-10] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:28:14 - Thread-10] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:28:15 - Thread-10] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:28:15 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:28:16 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:28:16 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:16 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:16 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:17 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:17 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:17 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:17 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:28:17 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:28:18 - Thread-10] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:28:18 - Thread-10] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:28:18 - Thread-10] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:28:24 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640904019
+[09:28:27 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640907147	Duration: 3128 ms	Simulated time 1342 ms	Ratio 0.4290281329923274
+[09:28:31 - Thread-13] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640911244
+[09:28:36 - Thread-13] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640916655	Duration: 5412 ms	Simulated time 53981 ms	Ratio 9.974316334072432
+[09:29:09 - Thread-11] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:29:09 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:29:09 - Thread-14] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:29:09 - Thread-14] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:29:10 - Thread-14] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:29:11 - Thread-14] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:29:11 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:29:12 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:29:12 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:13 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:14 - Thread-14] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:29:15 - Thread-14] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:29:15 - Thread-14] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:29:16 - Thread-14] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:29:17 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663640957219
+[09:29:20 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663640960283	Duration: 3064 ms	Simulated time 1221 ms	Ratio 0.3984986945169713
+[09:29:31 - Thread-15] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:29:31 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:29:31 - Thread-17] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:29:31 - Thread-17] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:29:32 - Thread-17] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:29:32 - Thread-17] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:29:33 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:29:33 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:29:34 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:34 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:34 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:34 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:34 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:35 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:35 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:29:35 - Thread-17] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:29:36 - Thread-17] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:29:36 - Thread-17] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:29:36 - Thread-17] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:49:49 - Thread-18] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:49:49 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:49:49 - Thread-19] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:49:49 - Thread-19] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:49:50 - Thread-19] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:49:50 - Thread-19] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:49:51 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:49:51 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:52 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:53 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:49:53 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:49:54 - Thread-19] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:49:54 - Thread-19] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:49:54 - Thread-19] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:51:03 - Thread-21] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642263644
+[09:51:08 - Thread-21] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642268863	Duration: 5219 ms	Simulated time 12103 ms	Ratio 2.3190266334546847
+[09:51:10 - Thread-20] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:51:10 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:51:10 - Thread-22] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:51:10 - Thread-22] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:51:11 - Thread-22] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:51:11 - Thread-22] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:51:11 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:51:12 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:51:12 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:51:13 - Thread-22] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:51:15 - Thread-22] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:51:15 - Thread-22] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:51:15 - Thread-22] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:51:18 - Thread-24] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642278425
+[09:51:21 - Thread-24] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642281277	Duration: 2852 ms	Simulated time 1209 ms	Ratio 0.42391304347826086
+[09:52:36 - Thread-23] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:52:36 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:52:36 - Thread-25] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:52:36 - Thread-25] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:52:37 - Thread-25] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:52:37 - Thread-25] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:52:38 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:52:38 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:39 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:52:40 - Thread-25] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:52:41 - Thread-25] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:52:41 - Thread-25] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:52:41 - Thread-25] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:52:43 - Thread-27] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642363055
+[09:52:46 - Thread-27] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642366185	Duration: 3130 ms	Simulated time 1513 ms	Ratio 0.4833865814696486
+[09:55:25 - Thread-26] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:55:25 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:55:25 - Thread-28] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:55:25 - Thread-28] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:55:26 - Thread-28] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:55:26 - Thread-28] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:55:27 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:55:27 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:55:28 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:55:29 - Thread-28] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:55:31 - Thread-28] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:55:31 - Thread-28] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:55:31 - Thread-28] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:55:33 - Thread-30] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642533081
+[09:55:36 - Thread-30] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642536075	Duration: 2994 ms	Simulated time 1199 ms	Ratio 0.4004676018704075
+[09:57:54 - Thread-29] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:57:54 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:57:54 - Thread-31] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:57:54 - Thread-31] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:57:55 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:57:55 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:57:56 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:57:57 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:57:57 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:57:58 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:58:00 - Thread-31] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:58:00 - Thread-31] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:58:00 - Thread-31] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:58:02 - Thread-33] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642682970
+[09:58:06 - Thread-33] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642686320	Duration: 3350 ms	Simulated time 5441 ms	Ratio 1.624179104477612
+[09:59:52 - Thread-32] [LogScriptEngine.java:309] [INFO] - Test script finished
+[09:59:52 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:59:52 - Thread-34] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[09:59:52 - Thread-34] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[09:59:53 - Thread-34] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[09:59:53 - Thread-34] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[09:59:54 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[09:59:54 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[09:59:55 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[09:59:56 - Thread-34] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[09:59:58 - Thread-34] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[09:59:58 - Thread-34] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[09:59:58 - Thread-34] [ScriptRunner.java:386] [INFO] - Test script activated
+[09:59:59 - Thread-36] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663642799849
+[10:00:03 - Thread-36] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663642803365	Duration: 3516 ms	Simulated time 5432 ms	Ratio 1.5449374288964732
+[10:13:45 - Thread-35] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:13:45 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:13:45 - Thread-37] [AbstractRadioMedium.java:198] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@2998201d
+[10:13:46 - Thread-37] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:13:46 - Thread-37] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:13:47 - Thread-37] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:13:47 - Thread-37] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:13:48 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:13:48 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:13:49 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:13:50 - Thread-37] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:13:52 - Thread-37] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:13:52 - Thread-37] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:13:52 - Thread-37] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:13:54 - Thread-39] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663643634006
+[10:14:08 - Thread-39] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663643648044	Duration: 14038 ms	Simulated time 153148 ms	Ratio 10.909531272261006
+[10:23:44 - Thread-38] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:23:44 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:23:44 - Thread-40] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:23:44 - Thread-40] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> fatal: not a git repository: '../../../.git'
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        udp-server.z1
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/contiki-z1-main.o: In function `main':
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/../../../platform/z1/./contiki-z1-main.c:171: undefined reference to `clock_delay_usec'
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:281: udp-server.z1] Error 1
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o udp-server.co
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:23:44 - Thread-40] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:32:31 - Thread-40] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:32:31 - Thread-40] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-udp/udp-server.z1 with /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[10:32:31 - Thread-40] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> fatal: not a git repository: '../../../.git'
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        udp-server.z1
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/contiki-z1-main.o: In function `main':
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/../../../platform/z1/./contiki-z1-main.c:171: undefined reference to `clock_delay_usec'
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o udp-server.co
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:281: udp-server.z1] Error 1
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:32:31 - Thread-40] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:33:58 - Thread-40] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:33:58 - Thread-40] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-udp/udp-server.z1 with /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[10:33:58 - Thread-40] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:33:58 - Thread-40] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:33:59 - Thread-40] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:34:00 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:34:01 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:34:01 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:02 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:34:03 - Thread-40] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:34:04 - Thread-40] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:34:04 - Thread-40] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:34:04 - Thread-40] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:34:05 - Thread-44] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663644845922
+[10:34:08 - Thread-44] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663644848237	Duration: 2315 ms	Simulated time 1189 ms	Ratio 0.5136069114470843
+[10:35:34 - Thread-43] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:35:34 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:35:34 - Thread-45] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:35:34 - Thread-45] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:35:35 - Thread-45] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:35:36 - Thread-45] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:35:36 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:35:37 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:35:37 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:38 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:35:39 - Thread-45] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:35:40 - Thread-45] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:35:40 - Thread-45] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:35:40 - Thread-45] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:35:42 - Thread-47] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663644942030
+[10:35:44 - Thread-47] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663644944829	Duration: 2799 ms	Simulated time 1500 ms	Ratio 0.5359056806002144
+[10:36:31 - Thread-46] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:36:31 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:36:31 - Thread-48] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:36:31 - Thread-48] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> fatal: not a git repository: '../../../.git'
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:115:8: error: expected declaration specifiers or ‘...’ before string constant
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c: In function ‘set_rime_addr’:
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:150:3: error: stray ‘\’ in program
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:150:42: error: expected ‘)’ before ‘n’
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> rm udp-server.co
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:241: obj_z1/contiki-z1-main.o] Error 1
+[10:36:32 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:36:50 - Thread-48] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:36:50 - Thread-48] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> > make udp-server.z1 TARGET=z1 
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> fatal: not a git repository: '../../../.git'
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:115:8: error: expected declaration specifiers or ‘...’ before string constant
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:241: obj_z1/contiki-z1-main.o] Error 1
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> rm udp-server.co
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:36:51 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:37:59 - Thread-48] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:37:59 - Thread-48] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:38:00 - Thread-48] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:38:00 - Thread-48] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:38:01 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:38:01 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:38:02 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:02 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:38:03 - Thread-48] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:38:04 - Thread-48] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:38:04 - Thread-48] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:38:05 - Thread-48] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:38:06 - Thread-52] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663645086490
+[10:38:08 - Thread-52] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663645088819	Duration: 2329 ms	Simulated time 1027 ms	Ratio 0.44096178617432374
+[10:39:50 - Thread-51] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:39:50 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:39:51 - Thread-53] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:39:51 - Thread-53] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:39:51 - Thread-53] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:39:52 - Thread-53] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:39:52 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:39:53 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:39:53 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:54 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:39:55 - Thread-53] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:39:56 - Thread-53] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:39:56 - Thread-53] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:39:56 - Thread-53] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:39:58 - Thread-55] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663645198037
+[10:42:44 - Thread-55] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663645364723	Duration: 166686 ms	Simulated time 1280265 ms	Ratio 7.680699038911486
+[10:42:45 - Thread-54] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:42:45 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:42:46 - Thread-56] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:42:46 - Thread-56] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:42:46 - Thread-56] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:42:46 - Thread-56] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:47 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:48 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:48 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:42:48 - Thread-56] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:42:49 - Thread-56] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:42:49 - Thread-56] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:42:49 - Thread-56] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:42:58 - Thread-58] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663645378954
+[10:43:01 - Thread-58] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663645381788	Duration: 2834 ms	Simulated time 1264 ms	Ratio 0.44601270289343686
+[10:43:05 - Thread-59] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663645385508
+[10:43:07 - Thread-59] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663645387379	Duration: 1871 ms	Simulated time 1904 ms	Ratio 1.0176376269374665
+[10:51:06 - Thread-57] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:51:06 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:51:06 - Thread-60] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:51:06 - Thread-60] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:51:07 - Thread-60] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[10:51:07 - Thread-60] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[10:51:08 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[10:51:08 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[10:51:09 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:10 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[10:51:11 - Thread-60] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:51:12 - Thread-60] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:51:12 - Thread-60] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[10:51:12 - Thread-60] [ScriptRunner.java:386] [INFO] - Test script activated
+[10:51:14 - Thread-62] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663645874297
+[10:51:17 - Thread-62] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663645877871	Duration: 3574 ms	Simulated time 1521 ms	Ratio 0.4255735870173475
+[10:52:21 - Thread-61] [LogScriptEngine.java:309] [INFO] - Test script finished
+[10:52:21 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[10:52:21 - Thread-63] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:52:21 - Thread-63] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:214:1: warning: data definition has no type or storage class [enabled by default]
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:214:1: warning: type defaults to ‘int’ in declaration of ‘random_init’ [-Wimplicit-int]
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:214:1: warning: parameter names (without types) in function declaration [enabled by default]
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:214:1: error: conflicting types for ‘random_init’
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../core/./lib/random.h:39:6: note: previous declaration of ‘random_init’ was here
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:241: obj_z1/contiki-z1-main.o] Error 1
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> rm udp-server.co
+[10:52:21 - Thread-63] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:55:10 - Thread-63] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:55:10 - Thread-63] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: data definition has no type or storage class [enabled by default]
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: type defaults to ‘int’ in declaration of ‘random_init’ [-Wimplicit-int]
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: parameter names (without types) in function declaration [enabled by default]
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: error: conflicting types for ‘random_init’
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../core/./lib/random.h:39:6: note: previous declaration of ‘random_init’ was here
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:241: obj_z1/contiki-z1-main.o] Error 1
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> rm udp-server.co
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:55:11 - Thread-63] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[10:59:07 - Thread-63] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[10:59:07 - Thread-63] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        udp-server.c
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: data definition has no type or storage class [enabled by default]
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: type defaults to ‘int’ in declaration of ‘random_init’ [-Wimplicit-int]
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: warning: parameter names (without types) in function declaration [enabled by default]
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:217:1: error: conflicting types for ‘random_init’
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../core/./lib/random.h:39:6: note: previous declaration of ‘random_init’ was here
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:241: obj_z1/contiki-z1-main.o] Error 1
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> rm udp-server.co
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[10:59:08 - Thread-63] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:01:17 - Thread-63] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:01:17 - Thread-63] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:01:18 - Thread-63] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:01:19 - Thread-63] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:01:19 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:01:21 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:22 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:01:23 - Thread-63] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:01:25 - Thread-63] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:01:25 - Thread-63] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:01:25 - Thread-63] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:01:42 - Thread-68] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646502026
+[11:01:46 - Thread-68] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663646506509	Duration: 4483 ms	Simulated time 1098 ms	Ratio 0.24492527325451707
+[11:01:57 - Thread-69] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646517097
+[11:01:59 - Thread-69] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663646519145	Duration: 2048 ms	Simulated time 1457 ms	Ratio 0.71142578125
+[11:04:14 - Thread-67] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:04:14 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:04:15 - Thread-70] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:04:15 - Thread-70] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:04:15 - Thread-70] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:04:17 - Thread-70] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:04:18 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:04:19 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:04:21 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:22 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:22 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:22 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:22 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:23 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:23 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:04:23 - Thread-70] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:04:25 - Thread-70] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:04:25 - Thread-70] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:04:25 - Thread-70] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:04:27 - Thread-72] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646667446
+[11:04:31 - Thread-72] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663646671989	Duration: 4543 ms	Simulated time 1286 ms	Ratio 0.2830728593440458
+[11:04:58 - Thread-71] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:04:58 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:04:58 - Thread-73] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:04:58 - Thread-73] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:04:59 - Thread-73] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:05:00 - Thread-73] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:05:01 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:05:02 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:05:02 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:03 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:03 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:03 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:04 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:04 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:04 - Thread-73] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:05:04 - Thread-73] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:05:06 - Thread-73] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:05:06 - Thread-73] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:05:06 - Thread-73] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:05:08 - Thread-75] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646708026
+[11:05:14 - Thread-75] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663646714400	Duration: 6374 ms	Simulated time 1610 ms	Ratio 0.25258864135550674
+[11:05:15 - Thread-76] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646715983
+[11:05:25 - Thread-76] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663646725305	Duration: 9322 ms	Simulated time 3810 ms	Ratio 0.40871057712937137
+[11:06:16 - Thread-74] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:06:16 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:06:16 - Thread-77] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:06:16 - Thread-77] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:06:17 - Thread-77] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:06:18 - Thread-77] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:06:19 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:06:20 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:06:21 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:22 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:22 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:22 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:22 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:23 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:23 - Thread-77] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:06:23 - Thread-77] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:06:25 - Thread-77] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:06:25 - Thread-77] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:06:25 - Thread-77] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:06:27 - Thread-79] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663646787249
+[11:08:29 - AWT-EventQueue-0] [TimeLine.java:260] [INFO] - Filtering shown log outputs by use of Mote output plugin
+[11:15:30 - Thread-79] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663647330429	Duration: 543180 ms	Simulated time 221587 ms	Ratio 0.4079439596450532
+[11:16:29 - Thread-78] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:16:29 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:16:30 - Thread-80] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:16:30 - Thread-80] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:16:30 - Thread-80] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:16:30 - Thread-80] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:16:30 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:16:30 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:16:31 - Thread-80] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:16:32 - Thread-80] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:16:32 - Thread-80] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:16:32 - Thread-80] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:16:33 - Thread-82] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663647393698
+[11:16:36 - Thread-82] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663647396832	Duration: 3134 ms	Simulated time 1752 ms	Ratio 0.559029993618379
+[11:18:45 - Thread-81] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:18:45 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:18:46 - Thread-83] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:18:46 - Thread-83] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:18:46 - Thread-83] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:18:46 - Thread-83] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:18:46 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:18:47 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:18:47 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:47 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:47 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:47 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:48 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:48 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:48 - Thread-83] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:18:48 - Thread-83] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:18:48 - Thread-83] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:18:48 - Thread-83] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:18:48 - Thread-83] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:18:49 - Thread-85] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663647529259
+[11:18:52 - Thread-85] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663647532198	Duration: 2939 ms	Simulated time 1983 ms	Ratio 0.6747192922762845
+[11:21:27 - Thread-84] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:21:27 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:21:27 - Thread-86] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:21:27 - Thread-86] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:21:28 - Thread-86] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:21:28 - Thread-86] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:21:28 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:21:28 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:29 - Thread-86] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:21:30 - Thread-86] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:21:30 - Thread-86] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:21:30 - Thread-86] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:21:31 - Thread-88] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663647691445
+[11:21:33 - Thread-88] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663647693881	Duration: 2436 ms	Simulated time 1572 ms	Ratio 0.645320197044335
+[11:21:53 - Thread-87] [LogScriptEngine.java:309] [INFO] - Test script finished
+[11:21:53 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:21:53 - Thread-89] [Simulation.java:420] [INFO] - Simulation random seed: 3340344610796333256
+[11:21:53 - Thread-89] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[11:21:53 - Thread-89] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[11:21:54 - Thread-89] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[11:21:54 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[11:21:54 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1
+[11:21:54 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[11:21:55 - Thread-89] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:21:55 - Thread-89] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[11:21:55 - Thread-89] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[11:21:55 - Thread-89] [ScriptRunner.java:386] [INFO] - Test script activated
+[11:21:57 - Thread-91] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1663647717058
+[11:21:59 - Thread-91] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1663647719247	Duration: 2189 ms	Simulated time 1571 ms	Ratio 0.7176793056190041

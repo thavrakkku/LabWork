@@ -47,6 +47,9 @@
 #include "dev/adxl345.h"
 #include "sys/clock.h"
 
+//#include "lib/random.h"
+#include <stdlib.h>
+
 #if NETSTACK_CONF_WITH_IPV6
 #include "net/ipv6/uip-ds6.h"
 #endif /* NETSTACK_CONF_WITH_IPV6 */
@@ -65,6 +68,13 @@
 SENSORS(&button_sensor);
 
 extern unsigned char node_mac[8];
+
+
+#define roger_debug 1
+#if roger_debug
+#include <stdio.h>
+#endif
+
 
 #if DCOSYNCH_CONF_ENABLED
 static struct timer mgt_timer;
@@ -95,7 +105,7 @@ static uint8_t is_gateway;
 #include "experiment-setup.h"
 #endif
 
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -136,6 +146,9 @@ force_inclusion(int d1, int d2)
 static void
 set_rime_addr(void)
 {
+  #if roger_debug
+  printf("contiki-z2.main:set_rime_addr\n");
+  #endif
   linkaddr_t addr;
   int i;
 
@@ -153,7 +166,10 @@ set_rime_addr(void)
   }
 #endif
   linkaddr_set_node_addr(&addr);
-  printf("Rime started with address ");
+  #if roger_debug
+  printf("contiki-z2.main:set_rime_addr:linkaddr_set_node_addr\n");
+  #endif
+  printf("Rime started with address: ");
   for(i = 0; i < sizeof(addr.u8) - 1; i++) {
     printf("%d.", addr.u8[i]);
   }
@@ -163,8 +179,11 @@ set_rime_addr(void)
 static void
 print_processes(struct process *const processes[])
 {
+  #if roger_debug
+  printf("contiki-z2.main:print_processes");
+  #endif
   /*  const struct process * const * p = processes;*/
-  printf("Starting");
+  printf("Starting :");
   while(*processes != NULL) {
     printf(" '%s'", (*processes)->name);
     processes++;
@@ -176,6 +195,9 @@ print_processes(struct process *const processes[])
 static void
 set_gateway(void)
 {
+  #if roger_debug
+  printf("contiki-z2.main:set_gateway");
+  #endif
   if(!is_gateway) {
     leds_on(LEDS_RED);
     printf("%d.%d: making myself the IP network gateway.\n\n",
@@ -188,10 +210,19 @@ set_gateway(void)
   }
 }
 #endif /* NETSTACK_CONF_WITH_IPV4 */
+
+/*---------------------------------------------------------------------------*/
+void clock_init(void);
+clock_time_t tim;
+
+#define RANDOM_RAND_MAX 30U
 /*---------------------------------------------------------------------------*/
 int
 main(int argc, char **argv)
 {
+  #if roger_debug
+  printf("contiki-z2.main:main\n");
+  #endif
   /*
    * Initalize hardware.
    */
@@ -199,8 +230,8 @@ main(int argc, char **argv)
   clock_init();
   leds_init();
   leds_on(LEDS_RED);
-
   clock_wait(100);
+  
 
   uart0_init(BAUD2UBR(115200)); /* Must come before first printf */
 #if NETSTACK_CONF_WITH_IPV4
@@ -210,6 +241,12 @@ main(int argc, char **argv)
   xmem_init();
 
   rtimer_init();
+
+  random_init(node_id);
+  unsigned int umax = -1;
+    unsigned int a=random_rand()*CLOCK_SECOND;
+  printf("wait %d|%d\n",random_rand(),(unsigned int)a);
+  clock_wait((unsigned int)a);
   /*
    * Hardware initialization done!
    */
