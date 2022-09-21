@@ -42,7 +42,7 @@
 #include <string.h>
 #include "er-coap-engine.h"
 
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -53,6 +53,19 @@
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
 #endif
+/*---------------------------------------------------------------------------*/
+//CTR DEBUG
+
+#define roger_debug 1
+#if roger_debug
+#include <stdio.h>
+#define PRINTF(...) printf(__VA_ARGS__)
+#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
+#define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]", (lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3], (lladdr)->addr[4], (lladdr)->addr[5])
+  static int ctr=0; //added by me
+
+#endif
+/*---------------------------------------------------------------------------*/
 
 PROCESS(coap_engine, "CoAP Engine");
 
@@ -60,13 +73,16 @@ PROCESS(coap_engine, "CoAP Engine");
 /*- Variables ---------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 static service_callback_t service_cbk = NULL;
-static int ctr=0; //added by me
+
 /*---------------------------------------------------------------------------*/
 /*- Internal API ------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 static int
 coap_receive(void)
 {
+  #if roger_debug
+    printf("er-coap-engine:coap_receive\n");
+  #endif
   erbium_status_code = NO_ERROR;
 
   PRINTF("handle_incoming_data(): received uip_datalen=%u \n",
@@ -78,8 +94,11 @@ coap_receive(void)
   static coap_transaction_t *transaction = NULL;
 
   if(uip_newdata()) {
+    #if roger_debug
+      printf("er-coap-engine:coap_receive:uip_newdata \n");
     ctr++;
     PRINTF("CTR_Receiving_%d_From_",ctr);PRINT6ADDR(&UIP_IP_BUF->srcipaddr);PRINTF("_mid_%u_lenght_%u\n",message->mid,uip_datalen());
+    #endif
    // PRINTF("CTR_Buffer_Size %d \n",uip_buf);
     //PRINTF("CTR_Buffer_Size %d \n",UIP_BUFSIZE);
     //PRINTF("CTR_Buffer_UIP_IPH_LEN %d \n",UIP_IPH_LEN);
@@ -98,7 +117,9 @@ coap_receive(void)
       coap_parse_message(message, uip_appdata, uip_datalen());
 
     if(erbium_status_code == NO_ERROR) {
-
+      #if roger_debug
+        printf("er-coap-engine:coap_receive:uip_newdata:coap_parse_message \n");
+      #endif
       /*TODO duplicates suppression, if required by application */
 
       PRINTF("  Parsed: v %u, t %u, tkl %u, c %u, mid %u\n", message->version,
@@ -108,7 +129,9 @@ coap_receive(void)
 
       /* handle requests */
       if(message->code >= COAP_GET && message->code <= COAP_DELETE) {
-
+        #if roger_debug
+          printf("er-coap-engine:coap_receive:uip_newdata:coap_parse_message:handle_requests \n");
+        #endif
         /* use transaction buffer for response to confirmable request */
         if((transaction =
               coap_new_transaction(message->mid, &UIP_IP_BUF->srcipaddr,

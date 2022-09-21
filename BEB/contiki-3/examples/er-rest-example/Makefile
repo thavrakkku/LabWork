@@ -9,6 +9,7 @@ CONTIKI=../..
 
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 
+
 # automatically build RESTful resources
 REST_RESOURCES_DIR = ./resources
 ifndef TARGET
@@ -38,7 +39,7 @@ APPS += rest-engine
 
 CONTIKI_WITH_IPV6 = 1
 include $(CONTIKI)/Makefile.include
-
+TARGET_LIBFILES = -lm
 # minimal-net target is currently broken in Contiki
 ifeq ($(TARGET), minimal-net)
 CFLAGS += -DHARD_CODED_ADDRESS=\"fdfd::10\"

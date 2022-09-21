@@ -47,7 +47,7 @@
 #define ENCOCORED 0
 #define COCORED 0
 #define BEB 1
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -57,6 +57,14 @@
 #define PRINTF(...)
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
+#endif
+
+#define roger_debug 1
+#if roger_debug
+#include <stdio.h>
+#define PRINTF(...) printf(__VA_ARGS__)
+#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
+#define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]", (lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3], (lladdr)->addr[4], (lladdr)->addr[5])
 #endif
 
 /*---------------------------------------------------------------------------*/
@@ -72,11 +80,17 @@ static  int ctr=0;
 void
 coap_register_as_transaction_handler()
 {
+  #if rog_debug
+  printf("er-coap-transactions:coap_register_as_transaction_handler\n");
+  #endif
   transaction_handler_process = PROCESS_CURRENT();
 }
 coap_transaction_t *
 coap_new_transaction(uint16_t mid, uip_ipaddr_t *addr, uint16_t port)
 {
+  #if roger_debug
+  printf("er-coap-transactions:coap_new_transaction\n");
+  #endif
   coap_transaction_t *t = memb_alloc(&transactions_memb);
 
   if(t) {
@@ -97,12 +111,17 @@ coap_new_transaction(uint16_t mid, uip_ipaddr_t *addr, uint16_t port)
 void
 coap_send_transaction(coap_transaction_t *t)
 {
+  #if roger_debug
+  printf("er-coap-transactions:coap_send_transaction\n");
+  
   //ctr++;
-	PRINTF("\nCTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
- 
+	printf("\nCTR_Sending_Normal_To_");PRINT6ADDR(&t->addr);printf("_mid_%u_lenght_%u\n", t->mid,t->packet_len);
+  #endif
 #if FUNCTIONEN 
+  #if roger_debug
+  printf("er-coap-transactions:coap_send_transaction:FUNCTIONEN\n");
+  #endif
    uint16_t C_FPB = 0, C_HBEB = 0;
-    printf("EN BACKOFF INIT \n");
     if (t->retrans_counter < 3) {
          C_FPB = 1; //current state
          C_HBEB = 0; //current state
@@ -133,7 +152,10 @@ coap_send_transaction(coap_transaction_t *t)
   PRINTF("Sending transaction %u\n", t->mid);
 
   coap_send_message(&t->addr, t->port, t->packet, t->packet_len);
-
+  #if roger_debug
+  printf("er-coap-transactions:coap_send_transaction:coap_send_message\n");
+  printf("%d|%d\n",sizeof(t->packet),t->packet_len);
+  #endif
   if(COAP_TYPE_CON ==
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
     if(t->retrans_counter <= COAP_MAX_RETRANSMIT) {
@@ -152,8 +174,12 @@ coap_send_transaction(coap_transaction_t *t)
       }
 
 #if ENCOCORED
- printf("CTR_HBEB Activate \n");
+
       else {
+        #if roger_debug
+          printf("er-coap-transactions:coap_send_transaction:ENCOCORED\n");
+          printf("CTR_HBEB Activate \n");
+        #endif
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
        } 
@@ -174,8 +200,11 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if COCORED
- printf("CTR_FPB Activate\n");
       else {
+        #if rog_debug
+        printf("er-coap-transactions:coap_send_transaction:COCORED\n");
+        printf("CTR_FPB Activate\n");
+        #endif
        if(t->retrans_counter == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
        } 
@@ -193,9 +222,11 @@ coap_send_transaction(coap_transaction_t *t)
 #endif
 
 #if BEB
-
        else {
+        #if roger_debug
+        printf("er-coap-transactions:coap_send_transaction:BEB\n");
         printf("CTR_BEB Activate\n");
+        #endif
         t->retrans_timer.timer.interval <<= 1;  //double 
         PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
                t->retrans_timer.timer.interval / CLOCK_SECOND);
@@ -231,6 +262,9 @@ coap_send_transaction(coap_transaction_t *t)
 void
 coap_clear_transaction(coap_transaction_t *t)
 {
+  #if roger_debug
+  printf("er-coap-transactions:coap_clear_transaction\n");
+  #endif
   if(t) {
    // PRINTF("Freeing transaction %u: %p\n", t->mid, t);
 
@@ -242,6 +276,9 @@ coap_clear_transaction(coap_transaction_t *t)
 coap_transaction_t *
 coap_get_transaction_by_mid(uint16_t mid)
 {
+  #if roger_debug
+  printf("er-coap-transactions:coap_get_transaction_by_mid\n");
+  #endif
   coap_transaction_t *t = NULL;
 
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
@@ -256,14 +293,19 @@ coap_get_transaction_by_mid(uint16_t mid)
 void
 coap_check_transactions()
 {
+  #if roger_debug
+  printf("er-coap-transactions:coap_check_transactions\n");
+  #endif
   coap_transaction_t *t = NULL;
 
   for(t = (coap_transaction_t *)list_head(transactions_list); t; t = t->next) {
     if(etimer_expired(&t->retrans_timer)) { //fin retrans_timer expired send agian
       ++(t->retrans_counter);
-           ctr_lose++;
+      #if roger_debug
+      ctr_lose++;
 	    PRINTF("\nCTR_Lose_%d_In_",ctr_lose);PRINT6ADDR(&t->addr);PRINTF("_mid_%u_lenght_%u\n", t->mid,t->packet_len);    
 	    PRINTF("\nCTR_Retransmitting %u (%u)\n", t->mid, t->retrans_counter);
+      #endif
       coap_send_transaction(t);
     }
   }

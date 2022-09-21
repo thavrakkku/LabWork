@@ -232,7 +232,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 	
 /* End of CTR Note */
 
-	printf("NOTIFICATION OK: %*s\n", len, (char *)payload);
+	printf("NOTIFICATION OK1: %*s\n", len, (char *)payload);
 	break;
   case OBSERVE_OK: /* server accepeted observation request */
     printf("OBSERVE_OK: %*s\n", len, (char *)payload);

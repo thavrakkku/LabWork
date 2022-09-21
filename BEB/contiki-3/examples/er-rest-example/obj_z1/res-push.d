@@ -54,7 +54,7 @@ obj_z1/res-push.o: resources/res-push.c \
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h \
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h \
  ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h \
- ../../core/./lib/random.h
+ ../../core/./sys/node-id.h
 resources/res-push.c :
  ../../apps/rest-engine/rest-engine.h ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/z1/./contiki-conf.h :
@@ -111,4 +111,4 @@ resources/res-push.c :
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h :
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h :
  ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h :
- ../../core/./lib/random.h :
+ ../../core/./sys/node-id.h :

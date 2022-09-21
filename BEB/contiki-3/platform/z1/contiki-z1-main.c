@@ -70,7 +70,7 @@ SENSORS(&button_sensor);
 extern unsigned char node_mac[8];
 
 
-#define roger_debug 1
+#define roger_debug 0
 #if roger_debug
 #include <stdio.h>
 #endif
@@ -242,11 +242,6 @@ main(int argc, char **argv)
 
   rtimer_init();
 
-  random_init(node_id);
-  unsigned int umax = -1;
-    unsigned int a=random_rand()*CLOCK_SECOND;
-  printf("wait %d|%d\n",random_rand(),(unsigned int)a);
-  clock_wait((unsigned int)a);
   /*
    * Hardware initialization done!
    */

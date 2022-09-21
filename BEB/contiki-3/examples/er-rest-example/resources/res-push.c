@@ -42,7 +42,9 @@
 #include "rest-engine.h"
 #include "er-coap.h"
 // added 12:02 22-06-22
-#include "lib/random.h"
+
+//#include "lib/random.h"
+#include "sys/node-id.h"
 /* added 11:08 08-02-22 */
 //#include "net/ip/uip.h"
 
@@ -53,7 +55,7 @@
 /* End 11:08 08-02-22 */
 /* adde 04-08-22 */
 #ifndef PERIOD
-#define PERIOD 1
+#define PERIOD 0.1
 #endif
 
 #define START_INTERVAL		(15 * CLOCK_SECOND)
@@ -100,7 +102,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  // REST.set_header_max_age(response, 10 / CLOCK_SECOND);
   REST.set_header_max_age(response, res_push.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"%lu|%lu|%lu", temperature,oldtemp,SEND_INTERVAL));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size,"otmp%lu|ntmp:%lu", oldtemp,temperature));
 
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
@@ -109,35 +111,21 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
  * Additionally, a handler function named [resource name]_handler must be implemented for each PERIODIC_RESOURCE.
  * It will be called by the REST manager process with the defined period.
  */
-static int32_t i=0;
 
-
-static int32_t randomsend(max,min,i){	
-			srand(i);
-	unsigned long 	num =(rand()%(max-min+1))+min;
+static int32_t randomsend(max,min){	
+  random_init(clock_time()+node_id);
+	unsigned long 	num =(random_rand()%(max-min+1))+min;
+ // printf("%d\n",num);
 			return num;
 }
-
-/*static int32_t randomsend1(max,min,i){	
-			srand(i);
-	unsigned long 	num =(rand()%(max-min+1))+min;
-			return num;
-}
-random_rand()
-                                         %
-                                         (clock_time_t)
-*/
 
 static void
 res_periodic_handler()
 {
   /* Do a periodic task here, e.g., sampling a sensor. */
-  
- temperature=randomsend(30,25,i);
-	i++;
-	if (i==50){
-		i=0;	
-	}
+ //clock_init();
+ temperature=randomsend(30,25);
+
 //temperature=randomsend;
 	
   /* Usually a condition is defined under with subscribers are notified, e.g., large enough delta in sensor reading. */
@@ -149,9 +137,11 @@ res_periodic_handler()
 	
 //make change
 //**make it sleep for ....second
-      
+
     	REST.notify_subscribers(&res_push);
 	  oldtemp=temperature;
+    //printf("sleep 1000\n");
+    // clock_wait(100);
 	//j++;
 	  //}
   }

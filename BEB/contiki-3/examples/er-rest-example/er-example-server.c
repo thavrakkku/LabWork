@@ -38,6 +38,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include <string.h>
 #include "contiki.h"
 #include "contiki-net.h"
@@ -46,6 +47,10 @@
 #if PLATFORM_HAS_BUTTON
 #include "dev/button-sensor.h"
 #endif
+
+#include "sys/clock.h"
+#include "sys/node-id.h"
+
 
 #define DEBUG 1
 #if DEBUG
@@ -62,6 +67,7 @@
 #ifndef PERIOD
 #define PERIOD 1
 #endif
+
 
 #define START_INTERVAL		(15 * CLOCK_SECOND)
 #define SEND_INTERVAL		(PERIOD * CLOCK_SECOND)
@@ -103,7 +109,7 @@ extern resource_t res_sht11;
 #endif
 */
 // Wait Event
-// static struct etimer timer;
+ static struct etimer timer;
 
 PROCESS(er_example_server, "Erbium Example Server");
 AUTOSTART_PROCESSES(&er_example_server);
@@ -167,15 +173,20 @@ PROCESS_THREAD(er_example_server, ev, data)
 */
 
   /* Define application-specific events here. */
+  random_init(clock_time()+node_id);
+
   while(1) {
-  /* //Wait Events 
-    PRINTF("Wait %lu seconde\n",SEND_TIME);
-    etimer_set(&timer,SEND_TIME);
+   //Wait Events 
+	  unsigned long 	num =random_rand()%128;
+    PRINTF("Wait %lu seconde\n",num);
+   // int run_expo=-1*log(1-(random_rand()/(RAND_MAX+1.0)));
+
+    etimer_set(&timer,num);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     PRINTF("Done\n");
-  */
+  
 
-    PROCESS_WAIT_EVENT();
+    //PROCESS_WAIT_EVENT();
 #if PLATFORM_HAS_BUTTON
     if(ev == sensors_event && data == &button_sensor) {
       PRINTF("*******BUTTON*******\n");
