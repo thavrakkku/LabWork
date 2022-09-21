@@ -397,8 +397,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>-10.899644378038165</x>
-        <y>0.7379528813498126</y>
+        <x>-10.245980775057944</x>
+        <y>0.6643410509184946</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -409,13 +409,13 @@
         org.contikios.cooja.mspmote.interfaces.MspMoteID
         <id>17</id>
       </interface_config>
-      <motetype_identifier>sky1</motetype_identifier>
+      <motetype_identifier>z11</motetype_identifier>
     </mote>
   </simulation>
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>6</z>
+    <z>0</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -428,10 +428,11 @@
       <skin>org.contikios.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>3.865661735975265 0.0 0.0 3.865661735975265 165.37747371356235 91.42005105634064</viewport>
+      <skin>org.contikios.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
+      <viewport>3.8315478803173044 0.0 0.0 3.8315478803173044 167.25122748978384 91.72727272727272</viewport>
     </plugin_config>
     <width>400</width>
-    <z>2</z>
+    <z>1</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -502,7 +503,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_BEB_grid-sky-br_4x4-1_1s5s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_HBEB_grid_4x4-1_1s5s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 16"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
@@ -982,7 +983,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>1</z>
+    <z>2</z>
     <height>700</height>
     <location_x>866</location_x>
     <location_y>110</location_y>
