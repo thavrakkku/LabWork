@@ -57,36 +57,26 @@
 #endif
 
 /* FIXME: This server address is hard-coded for Cooja and link-local for unconnected border router. */
-/*#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303)   */   /* cooja2 */
-//#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x3)
-#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
-#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x4)
-#define SERVER_NODE3(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x5)
-#define SERVER_NODE4(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x6)
-#define SERVER_NODE5(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x7)
-#define SERVER_NODE6(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0, 0, 0x8)
+//#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202)      /* cooja2 */
+#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
+/* #define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xbbbb, 0, 0, 0, 0, 0, 0, 0x1) */
 
-#define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT + 1)	//coap local port +1
-#define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)		//coap default port
+#define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT + 1)
+#define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
-#define TOGGLE_INTERVAL 1000  //deley interval
+#define TOGGLE_INTERVAL 10
 
-PROCESS(er_example_client, "Erbium Example Client 000");
+PROCESS(er_example_client, "Erbium Example Client");
 AUTOSTART_PROCESSES(&er_example_client);
 
-uip_ipaddr_t 	server_ipaddr;
-uip_ipaddr_t	server_ipaddr1;
-uip_ipaddr_t	server_ipaddr2;
-uip_ipaddr_t	server_ipaddr3;
-uip_ipaddr_t	server_ipaddr4;
-uip_ipaddr_t	server_ipaddr5;
-uip_ipaddr_t	server_ipaddr6;
+uip_ipaddr_t server_ipaddr;
 static struct etimer et;
 
 /* Example URIs that can be queried. */
-#define NUMBER_OF_URLS 1
+#define NUMBER_OF_URLS 4
 /* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
-char *service_urls[NUMBER_OF_URLS] ={"test/chunks"};
+char *service_urls[NUMBER_OF_URLS] =
+{ "test/hello" };
 #if PLATFORM_HAS_BUTTON
 static int uri_switch = 0;
 #endif
@@ -107,13 +97,7 @@ PROCESS_THREAD(er_example_client, ev, data)
 
   static coap_packet_t request[1];      /* This way the packet can be treated as pointer as usual. */
 
-  	SERVER_NODE1(&server_ipaddr1);
-/*	SERVER_NODE2(&server_ipaddr2);
-	SERVER_NODE3(&server_ipaddr3);
-	SERVER_NODE4(&server_ipaddr4);
-	SERVER_NODE5(&server_ipaddr5);
-	SERVER_NODE6(&server_ipaddr6);	*/
-
+  SERVER_NODE(&server_ipaddr);
 
   /* receives all CoAP messages */
   coap_init_engine();
@@ -128,62 +112,31 @@ PROCESS_THREAD(er_example_client, ev, data)
   while(1) {
     PROCESS_YIELD();
 
-    if(etimer_expired(&et)) {
-      printf("--Toggle timer--\n");
+  //  if(etimer_expired(&et)) {
+  //    printf("--Toggle timer--\n");
 
       /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-      coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-      coap_set_header_uri_path(request, service_urls[0]);
+   /*   coap_init_message(request, COAP_TYPE_CON, COAP_POST, 0);
+      coap_set_header_uri_path(request, service_urls[1]);
 
       const char msg[] = "Toggle!";
 
       coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
 
-      PRINT6ADDR(&server_ipaddr1);
+      PRINT6ADDR(&server_ipaddr);
       PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
-      	COAP_BLOCKING_REQUEST(&server_ipaddr1, REMOTE_PORT, request,
-                            client_chunk_handler);
-	
-/*	 PRINT6ADDR(&server_ipaddr2);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      	COAP_BLOCKING_REQUEST(&server_ipaddr2, REMOTE_PORT, request,
+      COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
                             client_chunk_handler);
 
-	 PRINT6ADDR(&server_ipaddr3);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      	COAP_BLOCKING_REQUEST(&server_ipaddr3, REMOTE_PORT, request,
-                            client_chunk_handler);
-
-	 PRINT6ADDR(&server_ipaddr4);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      	COAP_BLOCKING_REQUEST(&server_ipaddr4, REMOTE_PORT, request,
-                            client_chunk_handler);
-
-	 PRINT6ADDR(&server_ipaddr5);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      	COAP_BLOCKING_REQUEST(&server_ipaddr5, REMOTE_PORT, request,
-                            client_chunk_handler);
-
-	 PRINT6ADDR(&server_ipaddr6);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      	COAP_BLOCKING_REQUEST(&server_ipaddr6, REMOTE_PORT, request,
-                            client_chunk_handler);			*/
-	
       printf("\n--Done--\n");
+*/
+   //   etimer_reset(&et);
 
-
-      etimer_reset(&et);
-/*
 #if PLATFORM_HAS_BUTTON
-    } else if(ev == sensors_event && data == &button_sensor) {
-
-      // send a request to notify the end of the process 
+   // } else if(ev == sensors_event && data == &button_sensor) {
+ if(ev == sensors_event && data == &button_sensor) {
+      /* send a request to notify the end of the process */
 
       coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
       coap_set_header_uri_path(request, service_urls[uri_switch]);
@@ -198,9 +151,8 @@ PROCESS_THREAD(er_example_client, ev, data)
 
       printf("\n--Done--\n");
 
-      uri_switch = (uri_switch + 1) % NUMBER_OF_URLS;
-#endif 
-*/
+     // uri_switch = (uri_switch + 1) % NUMBER_OF_URLS;
+#endif
     }
   }
 

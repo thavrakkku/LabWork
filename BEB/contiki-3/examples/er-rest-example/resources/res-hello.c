@@ -71,7 +71,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
 {
   const char *len = NULL;
   /* Some data that has the length up to REST_MAX_CHUNK_SIZE. For more, see the chunk resource. */
-  char const *const message = "Hello World ! abcdefghijklmnopqrstuvwxyz";
+  char const *const message = "Hello World ! abcdefghijklmnopqrstuvwxy1234567890";
   int length = 40; /*          |<----13--->| -----25---|------40------| max 48*/
 
 

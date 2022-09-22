@@ -141,11 +141,11 @@ PROCESS_THREAD(er_example_server, ev, data)
    * WARNING: Activating twice only means alternate path, not two instances!
    * All static variables are the same for each URI path.
    */
-/*  rest_activate_resource(&res_hello, "test/hello");  */
+  rest_activate_resource(&res_hello, "test/hello");  
 /*  rest_activate_resource(&res_mirror, "debug/mirror"); */
 /*  rest_activate_resource(&res_chunks, "test/chunks"); */
 /*  rest_activate_resource(&res_separate, "test/separate"); */
-  rest_activate_resource(&res_push, "test/push");
+ // rest_activate_resource(&res_push, "test/push");
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
  /* rest_activate_resource(&res_b1_sep_b2, "test/b1sepb2");*/
@@ -178,12 +178,12 @@ PROCESS_THREAD(er_example_server, ev, data)
   while(1) {
    //Wait Events 
 	  unsigned long 	num =random_rand()%128;
-    PRINTF("Wait %lu seconde\n",num);
+  //  PRINTF("Wait %lu seconde\n",num);
    // int run_expo=-1*log(1-(random_rand()/(RAND_MAX+1.0)));
 
     etimer_set(&timer,num);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-    PRINTF("Done\n");
+   // PRINTF("Done\n");
   
 
     //PROCESS_WAIT_EVENT();

@@ -71,6 +71,7 @@ CONTIKI_CPU=$(CONTIKI)/cpu/x86
 
 ### Compiler arguments
 #CC = gcc
+gcc -I/usr/lib/jvm/java-1.11.0-openjdk-amd64/include
 CFLAGSNO = $(EXTRA_CC_ARGS) -Wall -g -I/usr/local/include -DCLASSNAME=$(CLASSNAME)
 CFLAGS   += $(CFLAGSNO)
 
