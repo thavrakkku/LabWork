@@ -135,7 +135,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Initialize the REST engine. */
   rest_init_engine();
-
+  
   /*
    * Bind the resources to their Uri-Path.
    * WARNING: Activating twice only means alternate path, not two instances!
@@ -145,7 +145,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 /*  rest_activate_resource(&res_mirror, "debug/mirror"); */
 /*  rest_activate_resource(&res_chunks, "test/chunks"); */
 /*  rest_activate_resource(&res_separate, "test/separate"); */
- // rest_activate_resource(&res_push, "test/push");
+  rest_activate_resource(&res_push, "test/push");
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
  /* rest_activate_resource(&res_b1_sep_b2, "test/b1sepb2");*/
@@ -177,16 +177,23 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   while(1) {
    //Wait Events 
-	  unsigned long 	num =random_rand()%128;
-  //  PRINTF("Wait %lu seconde\n",num);
+	 // unsigned long 	num =random_rand()%128;
+    	unsigned long 	num =10*CLOCK_SECOND; 
+    PRINTF("Wait %lu seconde\n",num);
    // int run_expo=-1*log(1-(random_rand()/(RAND_MAX+1.0)));
-
+    //unsigned long 	num =10*CLOCK_SECOND;
+    //etimer_set(&timer,num);
+    //PROCESS_WAIT_UNTIL(etimer_expired(&timer));
+    //etimer_set(&et, 120 * CLOCK_SECOND);
+   
+   // PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+    
     etimer_set(&timer,num);
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-   // PRINTF("Done\n");
+    PROCESS_WAIT_UNTIL(etimer_expired(&timer));
+    PRINTF("Done\n");
   
 
-    //PROCESS_WAIT_EVENT();
+    PROCESS_WAIT_EVENT();
 #if PLATFORM_HAS_BUTTON
     if(ev == sensors_event && data == &button_sensor) {
       PRINTF("*******BUTTON*******\n");

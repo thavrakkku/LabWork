@@ -253,6 +253,9 @@ coap_receive(void)
             coap_error_message = "NoServiceCallbck"; /* no 'a' to fit into 16 bytes */
           } /* if(service callback) */
         } else {
+          #if roger_debug
+            printf("%d \n", sizeof(transaction));
+          #endif
           erbium_status_code = SERVICE_UNAVAILABLE_5_03;
           coap_error_message = "NoFreeTraBuffer";
         } /* if(transaction buffer) */

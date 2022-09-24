@@ -40,9 +40,9 @@
 #include <string.h>
 #include "er-coap-observe.h"
 
-#define COCONON 0
-#define COCOCON 1
-#define DEBUG 0
+#define COCONON 1
+#define COCOCON 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
@@ -52,6 +52,8 @@
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
 #endif
+#define roger_debug 1
+
 
 /*---------------------------------------------------------------------------*/
 MEMB(observers_memb, coap_observer_t, COAP_MAX_OBSERVERS);
@@ -63,6 +65,10 @@ static coap_observer_t *
 add_observer(uip_ipaddr_t *addr, uint16_t port, const uint8_t *token,
              size_t token_len, const char *uri, int uri_len)
 {
+  #if roger_debug
+  PRINTF("add_observer\n");
+  #endif
+
   /* Remove existing observe relationship, if any. */
   coap_remove_observer_by_uri(addr, port, uri);
 
@@ -95,6 +101,9 @@ add_observer(uip_ipaddr_t *addr, uint16_t port, const uint8_t *token,
 void
 coap_remove_observer(coap_observer_t *o)
 {
+  #if roger_debug
+  PRINTF("coap_remove_observer\n");
+  #endif
   PRINTF("Removing observer for /%s [0x%02X%02X]\n", o->url, o->token[0],
          o->token[1]);
 
@@ -105,6 +114,10 @@ coap_remove_observer(coap_observer_t *o)
 int
 coap_remove_observer_by_client(uip_ipaddr_t *addr, uint16_t port)
 {
+  #if roger_debug
+  PRINTF("coap_remove_observer_by_client\n");
+  #endif
+
   int removed = 0;
   coap_observer_t *obs = NULL;
 
@@ -125,6 +138,10 @@ int
 coap_remove_observer_by_token(uip_ipaddr_t *addr, uint16_t port,
                               uint8_t *token, size_t token_len)
 {
+  #if roger_debug
+  PRINTF("coap_remove_observer_by_token\n");
+  #endif
+
   int removed = 0;
   coap_observer_t *obs = NULL;
 
@@ -145,6 +162,9 @@ int
 coap_remove_observer_by_uri(uip_ipaddr_t *addr, uint16_t port,
                             const char *uri)
 {
+  #if roger_debug
+  printf("coap_remove_observer_by_uri\n");
+  #endif
   int removed = 0;
   coap_observer_t *obs = NULL;
 
@@ -164,6 +184,9 @@ coap_remove_observer_by_uri(uip_ipaddr_t *addr, uint16_t port,
 int
 coap_remove_observer_by_mid(uip_ipaddr_t *addr, uint16_t port, uint16_t mid)
 {
+  #if roger_debug
+  printf("coap_remove_observer_by_mid\n");
+  #endif
   int removed = 0;
   coap_observer_t *obs = NULL;
 
@@ -184,11 +207,17 @@ coap_remove_observer_by_mid(uip_ipaddr_t *addr, uint16_t port, uint16_t mid)
 void
 coap_notify_observers(resource_t *resource)
 {
+  #if roger_debug
+  PRINTF("coap_notify_observers\n");
+  #endif
   coap_notify_observers_sub(resource, NULL);
 }
 void
 coap_notify_observers_sub(resource_t *resource, const char *subpath)
 {
+  #if roger_debug
+  PRINTF("coap_notify_observers_sub\n");
+  #endif
   /* build notification */
   coap_packet_t notification[1]; /* this way the packet can be treated as pointer as usual */
   coap_packet_t request[1]; /* this way the packet can be treated as pointer as usual */
@@ -279,6 +308,9 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
 void
 coap_observe_handler(resource_t *resource, void *request, void *response)
 {
+  #if roger_debug
+  printf("coap_observe_handler\n");
+  #endif
   coap_packet_t *const coap_req = (coap_packet_t *)request;
   coap_packet_t *const coap_res = (coap_packet_t *)response;
   coap_observer_t *obs;

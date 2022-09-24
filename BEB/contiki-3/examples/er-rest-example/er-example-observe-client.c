@@ -268,7 +268,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 
 
   	SERVER_NODE1(&server_ipaddr1);
-	SERVER_NODE2(&server_ipaddr2);
+	/*SERVER_NODE2(&server_ipaddr2);
 	SERVER_NODE3(&server_ipaddr3);
 	SERVER_NODE4(&server_ipaddr4);
 	SERVER_NODE5(&server_ipaddr5);
@@ -284,7 +284,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	SERVER_NODE15(&server_ipaddr15);
 	SERVER_NODE16(&server_ipaddr16);
 	SERVER_NODE17(&server_ipaddr17);
-	SERVER_NODE18(&server_ipaddr18);
+	SERVER_NODE18(&server_ipaddr18);*/
 
 
   /* receives all CoAP messages */
@@ -300,7 +300,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
   while(1) {
 
     PROCESS_YIELD();
-	if(r==1) {
+	/*if(r==1) {
 		      printf("--Toggle Block-Wise Transfer--\n");
 
 			coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
@@ -397,7 +397,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			obs = coap_obs_request_registration(&server_ipaddr18, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 20--\n");
 			break;
-	}
+	}*/
 	//if(con>17){con=0;}
 
 	if(etimer_expired(&et)) {
@@ -420,6 +420,8 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	//con=50;
 	//con++;
 	//etimer_reset(&et);
+	obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push", notification_callback, NULL);
+			printf("--Connecting to number 3--\n");
 		
 #endif
     }

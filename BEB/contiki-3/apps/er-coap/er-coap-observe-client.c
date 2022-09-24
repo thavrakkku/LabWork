@@ -50,7 +50,7 @@
 #if COAP_OBSERVE_CLIENT
 
 #define RAVRED  0
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:" \
