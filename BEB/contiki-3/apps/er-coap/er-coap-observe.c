@@ -52,7 +52,7 @@
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
 #endif
-#define roger_debug 1
+#define roger_debug 0
 
 
 /*---------------------------------------------------------------------------*/
