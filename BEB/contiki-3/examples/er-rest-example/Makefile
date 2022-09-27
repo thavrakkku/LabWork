@@ -73,3 +73,8 @@ connect-router-native:	$(CONTIKI)/examples/ipv6/native-border-router/border-rout
 
 connect-minimal:
 	sudo ip address add fdfd::1/64 dev tap0 
+
+connect-border-router:
+	sudo $(CONTIKI)/examples/ipv6/rpl-broder-router/
+	make connect-router-cooja
+	
