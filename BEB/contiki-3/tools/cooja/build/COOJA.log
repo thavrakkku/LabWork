@@ -31,3 +31,48 @@
 [13:29:38 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../Makefile.include:281: er-example-observe-client-09-0.z1] Error 1
 [13:29:38 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o er-example-observe-client-09-0.co
 [13:29:38 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[13:39:28 - Thread-2] [Simulation.java:420] [INFO] - Simulation random seed: 2635922449326377382
+[13:39:28 - Thread-2] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[13:39:28 - Thread-2] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-09-0.z1 with /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[13:39:28 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../platform/z1/./contiki-z1-main.c:356: relocation truncated to fit: R_MSP430_16 against symbol `nullmac_driver' defined in .rodata section in contiki-z1.a(nullmac.o)
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> er-example-observe-client-09-0.co: In function `notification_callback':
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.c:243: relocation truncated to fit: R_MSP430_16 against symbol `button_sensor' defined in .rodata section in contiki-z1.a(button-sensor.o)
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(er-coap-res-wel): In function `well_known_core_get_handler':
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../apps/er-coap/er-coap-res-well-known-core.c:82: relocation truncated to fit: R_MSP430_16_BYTE against `no symbol'
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(er-coap-observe): In function `coap_obs_request_registration':
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../apps/er-coap/er-coap-observe-client.c:363: additional relocation overflows omitted from the output
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../Makefile.include:281: er-example-observe-client-09-0.z1] Error 1
+[13:39:29 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[13:40:36 - Thread-2] [Simulation.java:420] [INFO] - Simulation random seed: -2185459372390903461
+[13:40:36 - Thread-2] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[13:40:36 - Thread-2] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-09-0.z1 with /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[13:40:36 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../dev/cc2420/cc2420.c:567: relocation truncated to fit: R_MSP430_16 against symbol `nullrdc_driver' defined in .rodata section in contiki-z1.a(nullrdc.o)
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(sicslowpan.o): In function `sicslowpan_get_last_rssi':
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against `no symbol'
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against symbol `unc_ctxconf' defined in .rodata section in contiki-z1.a(sicslowpan.o)
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against symbol `unc_llconf' defined in .rodata section in contiki-z1.a(sicslowpan.o)
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: additional relocation overflows omitted from the output
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o er-example-observe-client-09-0.co
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../Makefile.include:281: er-example-observe-client-09-0.z1] Error 1
+[13:40:52 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[13:54:48 - Thread-2] [Simulation.java:420] [INFO] - Simulation random seed: 8869059392623823389
+[13:54:48 - Thread-2] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[13:54:48 - Thread-2] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-09-0.z1 with /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-09-0.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[13:54:48 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-09-0.z1 TARGET=z1 
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../dev/cc2420/cc2420.c:567: relocation truncated to fit: R_MSP430_16 against symbol `nullrdc_driver' defined in .rodata section in contiki-z1.a(nullrdc.o)
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(sicslowpan.o): In function `sicslowpan_get_last_rssi':
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against `no symbol'
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against symbol `unc_ctxconf' defined in .rodata section in contiki-z1.a(sicslowpan.o)
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: relocation truncated to fit: R_MSP430_16_BYTE against symbol `unc_llconf' defined in .rodata section in contiki-z1.a(sicslowpan.o)
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/../../core/net/ipv6/sicslowpan.c:1918: additional relocation overflows omitted from the output
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o er-example-observe-client-09-0.co
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../Makefile.include:281: er-example-observe-client-09-0.z1] Error 1
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[13:54:48 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value

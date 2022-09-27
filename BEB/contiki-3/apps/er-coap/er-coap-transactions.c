@@ -59,7 +59,7 @@
 #define PRINTLLADDR(addr)
 #endif
 
-#define roger_debug 1
+#define roger_debug 0
 #if roger_debug
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
