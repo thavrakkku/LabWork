@@ -385,11 +385,11 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 10--\n");
 			break;
 		case 9:
-			obs = coap_obs_request_registration(&server_ipaddr9, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr9, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			printf("--Connecting to number 11--\n");
 			break;
 		case 10:
-			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			printf("--Connecting to number 12--\n");
 			break;
 		case 11:

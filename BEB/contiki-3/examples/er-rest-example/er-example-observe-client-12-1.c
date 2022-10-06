@@ -126,6 +126,7 @@ static coap_packet_t request[1];
 
 static	int r=0;
 static 	int con=1;
+static int test_node=7;
 static int i=0;
 
 /*----------------------------------------------------------------------------*/
@@ -220,7 +221,7 @@ notification_callback(coap_observee_t *obs, void *notification,
 		printf("Observe OK form 10\n");
 		increase_conn(9);
 	}
-	if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
 		printf("Observe OK form 11\n");
 		increase_conn(10);
 	}
@@ -370,7 +371,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			printf("--Connecting to number 11--\n");
 			break;
 		case 10:
-			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push", notification_callback, NULL);
+			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			printf("--Connecting to number 12--\n");
 			break;
 		case 11:
