@@ -227,11 +227,11 @@ notification_callback(coap_observee_t *obs, void *notification,
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr10)){
 		printf("Observe OK form 12\n");
-		increase_conn(11);
+		increase_conn(50);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr11)){
 		printf("Observe OK form 13\n");
-		increase_conn(12);
+		increase_conn(50);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr12)){
 		printf("Observe OK form 14\n");
