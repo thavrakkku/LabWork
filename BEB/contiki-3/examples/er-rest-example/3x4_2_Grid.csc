@@ -46,7 +46,7 @@
       <description>CN</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.c</source>
       <commands EXPORT="discard">make er-example-observe-client-12-2.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -66,7 +66,7 @@
       <description>nob</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.c</source>
       <commands EXPORT="discard">make er-example-server.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>

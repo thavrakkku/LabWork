@@ -46,7 +46,7 @@
       <description>CN</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.c</source>
       <commands EXPORT="discard">make er-example-observe-client-12-2.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -66,7 +66,7 @@
       <description>nob</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.c</source>
       <commands EXPORT="discard">make er-example-server.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -404,7 +404,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_BEB_grid_3x4-2_1s5s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_FPB_grid_3x4-2_1s5s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 12"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
