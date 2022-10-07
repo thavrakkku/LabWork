@@ -46,7 +46,7 @@
       <description>CN</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.c</source>
       <commands EXPORT="discard">make er-example-observe-client-12-2.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
+      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-12-2.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -63,10 +63,10 @@
     <motetype>
       org.contikios.cooja.mspmote.Z1MoteType
       <identifier>z13</identifier>
-      <description>obs</description>
+      <description>nob</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.c</source>
       <commands EXPORT="discard">make er-example-server.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-server.z1</firmware>
+      <firmware EXPORT="copy">/home/user/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -83,10 +83,10 @@
     <motetype>
       org.contikios.cooja.mspmote.Z1MoteType
       <identifier>z14</identifier>
-      <description>BOB</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-block-wise.c</source>
-      <commands EXPORT="discard">make er-example-observe-client-block-wise.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-observe-client-block-wise.z1</firmware>
+      <description>bob</description>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example/er-example-server_observe_blockwise.c</source>
+      <commands EXPORT="discard">make er-example-server_observe_blockwise.z1 TARGET=z1</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example/er-example-server_observe_blockwise.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
@@ -104,8 +104,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>39.806593220363034</x>
-        <y>60.091309652579916</y>
+        <x>40.10579260281588</x>
+        <y>20.30348458141459</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -122,8 +122,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>50.10091701353305</x>
-        <y>60.12534405021095</y>
+        <x>49.408626575300055</x>
+        <y>20.26943609667822</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -140,8 +140,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>59.958554311178816</x>
-        <y>59.98197243254406</y>
+        <x>59.980703785015145</x>
+        <y>20.37506322462766</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -158,8 +158,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>60.16219508573137</x>
-        <y>70.04738749096242</y>
+        <x>60.23741595614649</x>
+        <y>30.502271569510782</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -176,8 +176,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>49.9148670091263</x>
-        <y>70.19744173924569</y>
+        <x>49.783633586359734</x>
+        <y>30.237726973244904</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -194,8 +194,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>40.06879490747754</x>
-        <y>70.02844695865834</y>
+        <x>39.841134528161085</x>
+        <y>30.06632084332544</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -212,8 +212,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>39.75682245310085</x>
-        <y>80.00459880047784</y>
+        <x>39.70514760097556</x>
+        <y>40.039691875682095</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -230,8 +230,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>49.8538011521365</x>
-        <y>80.27594989927195</y>
+        <x>49.69583617931982</x>
+        <y>40.16611962176078</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -248,8 +248,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>60.09820105661971</x>
-        <y>80.0544516335121</y>
+        <x>60.55758332502474</x>
+        <y>39.96679972183899</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -266,8 +266,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>60.14729471651592</x>
-        <y>89.89234617793133</y>
+        <x>60.028765404145425</x>
+        <y>50.28721240593759</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -284,8 +284,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>49.92963036969289</x>
-        <y>90.19366217161301</y>
+        <x>49.8779638381307</x>
+        <y>49.9439855020814</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -302,8 +302,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>39.95336201927385</x>
-        <y>89.98485080569118</y>
+        <x>39.4893721661428</x>
+        <y>50.09036514296088</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -320,7 +320,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>9</z>
+    <z>4</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -334,10 +334,10 @@
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
-      <viewport>7.917251601289367 0.0 0.0 7.917251601289367 -223.593674021247 -417.1053101937494</viewport>
+      <viewport>8.456687251881892 0.0 0.0 8.456687251881892 -239.11290654587575 -133.96647367261957</viewport>
     </plugin_config>
     <width>400</width>
-    <z>4</z>
+    <z>1</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -349,9 +349,9 @@
       <formatted_time />
       <coloring />
     </plugin_config>
-    <width>1040</width>
-    <z>8</z>
-    <height>240</height>
+    <width>1246</width>
+    <z>3</z>
+    <height>581</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
   </plugin>
@@ -375,11 +375,11 @@
       <showLEDs />
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
-    <width>1440</width>
-    <z>7</z>
+    <width>1646</width>
+    <z>6</z>
     <height>166</height>
     <location_x>0</location_x>
-    <location_y>663</location_y>
+    <location_y>827</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.Notes
@@ -387,8 +387,8 @@
       <notes>Enter notes here</notes>
       <decorations>true</decorations>
     </plugin_config>
-    <width>760</width>
-    <z>6</z>
+    <width>966</width>
+    <z>5</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -884,10 +884,10 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>5</z>
+    <z>2</z>
     <height>700</height>
-    <location_x>763</location_x>
-    <location_y>39</location_y>
+    <location_x>919</location_x>
+    <location_y>30</location_y>
   </plugin>
 </simconf>
 

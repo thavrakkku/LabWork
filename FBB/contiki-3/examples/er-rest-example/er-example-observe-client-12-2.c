@@ -126,6 +126,7 @@ static coap_packet_t request[1];
 
 static	int r=0;
 static 	int con=1;
+static int test_node=7;
 static int i=0;
 
 /*----------------------------------------------------------------------------*/
@@ -220,14 +221,14 @@ notification_callback(coap_observee_t *obs, void *notification,
 		printf("Observe OK form 10\n");
 		increase_conn(9);
 	}
-	if(uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
+	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr9)){
 		printf("Observe OK form 11\n");
-		r=1;
+		i=1;
 		increase_conn(10);
 	}
 	if (uip_ipaddr_cmp(&obs->addr,&server_ipaddr10)){
 		printf("Observe OK form 12\n");
-		i=1;
+		r=1;
 		increase_conn(50);
 	}
 /* End of CTR Note */
@@ -294,7 +295,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 //	SERVER_NODE16(&server_ipaddr16);
 //	SERVER_NODE17(&server_ipaddr17);
 //	SERVER_NODE18(&server_ipaddr18);
-
+//
 
   /* receives all CoAP messages */
   coap_init_engine();
@@ -319,32 +320,32 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 
 		     	coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
 
+		     	PRINT6ADDR(&server_ipaddr10);
+		     	PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+
+		     	COAP_BLOCKING_REQUEST(&server_ipaddr10, REMOTE_PORT, request,client_chunk_handler);
+	
+			r=0;
+
+			}
+		if(i==1) {
+		      printf("--Toggle Block-Wise Transfer--\n");
+
+			coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+		     	//coap_set_header_uri_path(request,"test/push_blockwise");
+			coap_set_header_uri_path(request,"test/chunks");
+		     	const char msg[] = "Toggle!";
+
+		     	coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
+
 		     	PRINT6ADDR(&server_ipaddr9);
 		     	PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
 		     	COAP_BLOCKING_REQUEST(&server_ipaddr9, REMOTE_PORT, request,client_chunk_handler);
 	
-			r=0;
+			i=0;
 
 			}
-	if(i==1) {
-			printf("--Toggle Block-Wise Transfer--\n");
-
-		coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-			//coap_set_header_uri_path(request,"test/push_blockwise");
-		coap_set_header_uri_path(request,"test/chunks");
-			const char msg[] = "Toggle!";
-
-			coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
-
-			PRINT6ADDR(&server_ipaddr10);
-			PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-			COAP_BLOCKING_REQUEST(&server_ipaddr10, REMOTE_PORT, request,client_chunk_handler);
-
-		i=0;
-
-		}
     
 	switch(con){	
 		case 50:			
@@ -408,9 +409,9 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 //			obs = coap_obs_request_registration(&server_ipaddr14, REMOTE_PORT,"test/push", notification_callback, NULL);
 //			printf("--Connecting to number 16--\n");
 //			break;
-//		case 15:
-//			obs = coap_obs_request_registration(&server_ipaddr15, REMOTE_PORT,"test/push", notification_callback, NULL);
-//			printf("--Connecting to number 17--\n");
+//////		case 15:
+	//		obs = coap_obs_request_registration(&server_ipaddr15, REMOTE_PORT,"test/push", notification_callback, NULL);
+	//		printf("--Connecting to number 17--\n");
 //			break;
 //		case 16:
 //			obs = coap_obs_request_registration(&server_ipaddr16, REMOTE_PORT,"test/push", notification_callback, NULL);

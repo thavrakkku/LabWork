@@ -1573,9 +1573,9 @@ LOAD /usr/lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0.a
  .stab          0x0000000000028338      0x660 contiki-z1.a(mac-sequence.o)
                                        0x1788 (size before relaxing)
 
-.stabstr        0x0000000000000000    0x1bd05
+.stabstr        0x0000000000000000    0x1bd04
  *(.stabstr)
- .stabstr       0x0000000000000000    0x1bd05 udp-server.co
+ .stabstr       0x0000000000000000    0x1bd04 udp-server.co
 
 .stab.excl
  *(.stab.excl)
