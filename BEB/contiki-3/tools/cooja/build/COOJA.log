@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [13:18:06 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
 [13:18:07 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
 [13:18:07 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
@@ -212,3 +213,35 @@
 [13:10:49 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client.z1
 [13:10:49 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client.z1
 [13:10:49 - Thread-30] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+=======
+[19:42:24 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[19:42:24 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[19:42:24 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[19:43:57 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 2085893442112801434
+[19:43:57 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   AR        contiki-z1.a
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:218:0: warning: "RANDOM_RAND_MAX" redefined [enabled by default]
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../core/./lib/random.h:50:0: note: this is the location of the previous definition
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        udp-server.z1
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> udp-server.co: file not recognized: File format not recognized
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:281: udp-server.z1] Error 1
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:44:01 - Thread-0] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:46:53 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: -8036107604265495613
+[19:46:53 - Thread-0] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-udp/udp-server.z1 with /home/user/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[19:46:53 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> fatal: not a git repository: '../../../.git'
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../platform/z1/./contiki-z1-main.c:218:0: warning: "RANDOM_RAND_MAX" redefined [enabled by default]
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../core/./lib/random.h:50:0: note: this is the location of the previous definition
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        udp-server.z1
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> udp-server.co: file not recognized: File format not recognized
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: ld returned 1 exit status
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [../../../Makefile.include:281: udp-server.z1] Error 1
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:46:53 - Thread-0] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+>>>>>>> b7694e2a (fix_udp_server)
