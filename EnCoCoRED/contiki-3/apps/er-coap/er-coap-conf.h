@@ -50,7 +50,7 @@
 
 /* The number of concurrent messages that can be stored for retransmission in the transaction layer. */
 #ifndef COAP_MAX_OPEN_TRANSACTIONS
-#define COAP_MAX_OPEN_TRANSACTIONS     8 //11
+#define COAP_MAX_OPEN_TRANSACTIONS     9 //11
 #endif /* COAP_MAX_OPEN_TRANSACTIONS */
 
 /* Maximum number of failed request attempts before action */
@@ -69,6 +69,6 @@
 #endif /* COAP_MAX_OBSERVERS */
 
 /* Interval in notifies in which NON notifies are changed to CON notifies to check client. */
-#define COAP_OBSERVE_REFRESH_INTERVAL  20
+#define COAP_OBSERVE_REFRESH_INTERVAL  200
 
 #endif /* ER_COAP_CONF_H_ */

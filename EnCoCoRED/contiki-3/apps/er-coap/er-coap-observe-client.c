@@ -41,15 +41,28 @@
 #include <string.h>
 #include <math.h>
 
+#include "contiki.h"
+#include "dev/watchdog.h"
+#include "net/ip/tcpip.h"
+#include "net/ip/uip.h"
+#include "net/ipv6/uip-ds6.h"
+#include "net/rime/rime.h"
+#include "net/ipv6/sicslowpan.h"
+#include "net/netstack.h"
+#include "sys/clock.h"
+
 #include "er-coap.h"
 #include "er-coap-observe-client.h"
 #include "er-coap-block1.h"
+#include "er-coap-transactions.h"
 #include "lib/random.h"
 
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
 
-#define ENCOCORED 0
+#define TOGGLE_INTERVAL2 1
+#define ENCOCORED 1
+#define ONTIMER 1
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -231,22 +244,26 @@ classify_notification(void *response, int first)
   return NOTIFICATION_OK;
 }
 /*----------------------------------------------------------------------------*/
+
 void
 coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
                          coap_packet_t *notification)
 {
+  coap_transaction_t *t = NULL;
   coap_packet_t *pkt;
   const uint8_t *token;
   int token_len;
   coap_observee_t *obs;
   coap_notification_flag_t flag;
   uint32_t observe;
-  float PROBABILITY_DROP = 1, THRESHOLD_MIN = 25.6, THRESHOLD_MAX = 76.8, MAX_BUFFER = 128, MAX_P = 0.1; /*1 payload length = 24, Tmin20% & Tmax60% RevRED variable*/
-  int RANDOM_VARIABLE = random_rand() %100;
-  uint16_t AVG_QUEUE, PERCENT_DROP = 0;
+  float MAX_BUFFER = 5, PROBABILITY_DROP = 1, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
+  int RANDOM_VARIABLE = random_rand() %100, PERCENT_DROP = 0, numbuff = queuebuf_numfree();
 
+  t->rx_buff += 1;
+  if (t->rx_buff >= numbuff){
+      t->rx_buff = numbuff;      
+  }
 
-  PRINTF("coap_handle_notification()\n");
   pkt = (coap_packet_t *)notification;
   token_len = get_token(pkt, &token);
   PRINTF("Getting token\n");
@@ -266,47 +283,43 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   if(notification->type == COAP_TYPE_CON) {
 
 #if ENCOCORED 
-    AVG_QUEUE = 70;
-
-    if (AVG_QUEUE < THRESHOLD_MIN) {
+    
+    if (t->rx_buff <= THRESHOLD_MIN) {
          PROBABILITY_DROP = 0;
     }
-    else if (THRESHOLD_MIN <= AVG_QUEUE && AVG_QUEUE < THRESHOLD_MAX) {
-         PROBABILITY_DROP = ((AVG_QUEUE - THRESHOLD_MIN)/(THRESHOLD_MAX - THRESHOLD_MIN))*MAX_P;
+    if (THRESHOLD_MIN < t->rx_buff && t->rx_buff < THRESHOLD_MAX) {
+         PROBABILITY_DROP = ((t->rx_buff - 1)/(THRESHOLD_MAX - THRESHOLD_MIN))*MAX_P;
     }
-    else if (THRESHOLD_MAX <= AVG_QUEUE && AVG_QUEUE <= MAX_BUFFER) {
+    else if (THRESHOLD_MAX <= t->rx_buff && t->rx_buff <= MAX_BUFFER) {
          PROBABILITY_DROP = ((MAX_P/(pow(exp(log(1/MAX_P)/(MAX_BUFFER-THRESHOLD_MAX)), THRESHOLD_MAX)))*
-         (pow(exp(log(1/MAX_P)/(MAX_BUFFER-THRESHOLD_MAX)), AVG_QUEUE)));
-
+         (pow(exp(log(1/MAX_P)/(MAX_BUFFER-THRESHOLD_MAX)), 4)));
        }
 
        PERCENT_DROP = PROBABILITY_DROP*100;
 
        if (RANDOM_VARIABLE <= PERCENT_DROP){
-       printf("***************************** Packet Drop *****************************\n");
+       //printf("PERCENT_DROP = %d\n", PERCENT_DROP);
+       //printf("RANDOM_VARIABLE = %d\n", RANDOM_VARIABLE);
+
+       t->rx_buff -= 1;
+       if (t->rx_buff >= numbuff-3){
+                 t->rx_buff -= 1;   
+       }
+       
        return;
        }
        else {
-       //DROP = 0;
+       //PROBABILITY DROP = 0;
 
        simple_reply(COAP_TYPE_ACK, addr, port, notification);
-       printf("CTR_CoAP Response ACK from Address");PRINT6ADDR(&UIP_IP_BUF->srcipaddr);printf("\n");
-       printf("***--------CoAP Response ACK from Address %02x%02x:%02x%02x:%02x%02x:%02x%02x:" \
-                                "%02x%02x:%02x%02x:%02x%02x:%02x%02x--------***\n", \
-                                ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], \
-                                ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], \
-                                ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], \
-                                ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], \
-                                ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], \
-                                ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], \
-                                ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], \
-                                ((uint8_t *)addr)[14], ((uint8_t *)addr)[15]);
+
        } 
 #endif
 
-       simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
+       //simple_reply(COAP_TYPE_ACK, addr, port, notification);//if ENCOCORED == 1 COMMENT
 
   }
+
   if(obs->notification_callback != NULL) {
     flag = classify_notification(notification, 0);
     /* TODO: the following mechanism for discarding duplicates is too trivial */
@@ -321,6 +334,9 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
     }
     obs->notification_callback(obs, notification, flag);
   }
+  
+  t->rx_buff = t->rx_buff - 1;
+
 }
 /*----------------------------------------------------------------------------*/
 static void

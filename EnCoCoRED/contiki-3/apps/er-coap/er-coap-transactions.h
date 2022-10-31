@@ -43,6 +43,7 @@
 
 /*
  * Modulo mask (thus +1) for a random number to get the tick number for the random
+
  * retransmission time between COAP_RESPONSE_TIMEOUT and COAP_RESPONSE_TIMEOUT*COAP_RESPONSE_RANDOM_FACTOR.
  */
 #define COAP_RESPONSE_TIMEOUT_TICKS         (CLOCK_SECOND * COAP_RESPONSE_TIMEOUT)
@@ -60,6 +61,8 @@ typedef struct coap_transaction {
   
   uint8_t fpb_counter;
   uint8_t hbeb_counter;
+
+  int rx_buff;
 
   uip_ipaddr_t addr;
   uint16_t port;

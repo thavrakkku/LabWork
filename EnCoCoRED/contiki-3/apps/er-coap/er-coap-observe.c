@@ -40,8 +40,8 @@
 #include <string.h>
 #include "er-coap-observe.h"
 
-#define COCONON 1
-#define COCOCON 0
+#define COCONON 0
+#define COCOCON 1
 #define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -263,7 +263,7 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
         if(notification->code < BAD_REQUEST_4_00) {
           coap_set_header_observe(notification, (obs->obs_counter)++);
           /* mask out to keep the CoAP observe option length <= 3 bytes */
-          obs->obs_counter &= 0xffffff; //not sure this use for
+          obs->obs_counter &= 0xffffff;
         }
         coap_set_token(notification, obs->token, obs->token_len);
 
@@ -271,6 +271,7 @@ coap_notify_observers_sub(resource_t *resource, const char *subpath)
           coap_serialize_message(notification, transaction->packet);
 
         coap_send_transaction(transaction);
+
       }
     }
   }
@@ -292,7 +293,7 @@ coap_observe_handler(resource_t *resource, void *request, void *response)
         if(obs) {
           coap_set_header_observe(coap_res, (obs->obs_counter)++);
           /* mask out to keep the CoAP observe option length <= 3 bytes */
-          obs->obs_counter &= 0xffffff; //not sure this use for
+          obs->obs_counter &= 0xffffff;
           /*
            * Following payload is for demonstration purposes only.
            * A subscription should return the same representation as a normal GET.

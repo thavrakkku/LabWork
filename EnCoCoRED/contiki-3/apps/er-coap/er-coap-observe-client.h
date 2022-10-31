@@ -51,7 +51,7 @@
 #ifdef COAP_CONF_MAX_OBSERVEES
 #define COAP_MAX_OBSERVEES COAP_CONF_MAX_OBSERVEES
 #else
-#define COAP_MAX_OBSERVEES      11
+#define COAP_MAX_OBSERVEES      4
 #endif /* COAP_CONF_MAX_OBSERVEES */
 
 #if COAP_MAX_OPEN_TRANSACTIONS < COAP_MAX_OBSERVEES
@@ -116,6 +116,8 @@ coap_observee_t *coap_obs_request_registration(uip_ipaddr_t *addr,
                                                notification_callback_t
                                                notification_callback,
                                                void *data);
+
+uint16_t coap_check_buffer(void *packet, uint8_t *buffer);
 /* TODO: this function may be moved to er-coap.c */
 uint8_t coap_generate_token(uint8_t **token_ptr);
 
