@@ -81,7 +81,7 @@ PERIODIC_RESOURCE(res_push,
  */
 static int32_t temperature = 0;
 static int32_t oldtemp =0;
-static int32_t j=0;
+//static int32_t j=0;
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
