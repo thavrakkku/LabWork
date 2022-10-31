@@ -48,7 +48,7 @@
 //#include "collect-view.h"
 
 /*----------------------------------------------------------------------------*/
-#define DEBUG 1
+#define DEBUG 0
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #define PRINTFLN(format, ...) printf(format "\n", ##__VA_ARGS__)
@@ -83,7 +83,7 @@
 	#define SERVER_NODE7(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x0009)
 	#define SERVER_NODE8(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000a)
 	#define SERVER_NODE9(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000b)
-	#define SERVER_NODE10(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000c)
+/*	#define SERVER_NODE10(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000c)
 	#define SERVER_NODE11(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000d)
 	#define SERVER_NODE12(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000e)
 	#define SERVER_NODE13(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x000f)
@@ -91,7 +91,7 @@
 	#define SERVER_NODE15(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00011)
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00012)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00013) 
-	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)   
+	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c,0, 0, 0x00014)   */
 #else
 	#define SERVER_NODE1(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x3)
 	#define SERVER_NODE2(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x4)
@@ -102,7 +102,7 @@
 	#define SERVER_NODE7(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x9)
 	#define SERVER_NODE8(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xa)
 	#define SERVER_NODE9(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xb)
-	#define SERVER_NODE10(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xc)
+/*	#define SERVER_NODE10(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xc)
 	#define SERVER_NODE11(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xd)
 	#define SERVER_NODE12(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xe)
 	#define SERVER_NODE13(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0xf)
@@ -110,7 +110,7 @@
 	#define SERVER_NODE15(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x11)
 	#define SERVER_NODE16(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x12)
 	#define SERVER_NODE17(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x13)
-	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)
+	#define SERVER_NODE18(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0xc30c, 0, 0, 0x14)*/
 #endif
 
 
@@ -142,7 +142,7 @@ uip_ipaddr_t	server_ipaddr6;
 uip_ipaddr_t	server_ipaddr7;
 uip_ipaddr_t	server_ipaddr8;
 uip_ipaddr_t	server_ipaddr9;
-uip_ipaddr_t	server_ipaddr10;
+/*uip_ipaddr_t	server_ipaddr10;
 uip_ipaddr_t	server_ipaddr11;
 uip_ipaddr_t	server_ipaddr12;
 uip_ipaddr_t	server_ipaddr13;
@@ -150,7 +150,7 @@ uip_ipaddr_t	server_ipaddr14;
 uip_ipaddr_t	server_ipaddr15;
 uip_ipaddr_t	server_ipaddr16;
 uip_ipaddr_t	server_ipaddr17;
-uip_ipaddr_t	server_ipaddr18;
+uip_ipaddr_t	server_ipaddr18;*/
 /*----------------------------------------------------------------------------*/
 /*
  * Handle the response to the observe request and the following notifications
@@ -272,7 +272,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	SERVER_NODE7(&server_ipaddr7);
 	SERVER_NODE8(&server_ipaddr8);
 	SERVER_NODE9(&server_ipaddr9);
-	SERVER_NODE10(&server_ipaddr10);
+/*	SERVER_NODE10(&server_ipaddr10);
 	SERVER_NODE11(&server_ipaddr11);
 	SERVER_NODE12(&server_ipaddr12);
 	SERVER_NODE13(&server_ipaddr13);
@@ -280,7 +280,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	SERVER_NODE15(&server_ipaddr15);
 	SERVER_NODE16(&server_ipaddr16);
 	SERVER_NODE17(&server_ipaddr17);
-	SERVER_NODE18(&server_ipaddr18);
+	SERVER_NODE18(&server_ipaddr18);*/
 
 
   /* receives all CoAP messages */
@@ -318,36 +318,36 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 	switch(con){	
 		case 50:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback1, NULL);
-			printf("--Start Calculation--\n");
+		//	printf("--Start Calculation--\n");
 			break;
 		case 1:			
 			//obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push_blockwise", notification_callback, NULL);
 			obs = coap_obs_request_registration(&server_ipaddr1, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 3--\n");
+		//	printf("--Connecting to number 3--\n");
 			break; 
 		case 2:
 			obs = coap_obs_request_registration(&server_ipaddr2, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 4--\n");
+			//printf("--Connecting to number 4--\n");
 			break;
 		case 3:
 			obs = coap_obs_request_registration(&server_ipaddr3, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 5--\n");
+		//	printf("--Connecting to number 5--\n");
 			break;
 		case 4:
 			obs = coap_obs_request_registration(&server_ipaddr4, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 6--\n");
+		//	printf("--Connecting to number 6--\n");
 			break;
 		case 5:
 			obs = coap_obs_request_registration(&server_ipaddr5, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 7--\n");
+		//	printf("--Connecting to number 7--\n");
 			break;
 		case 6:
 			obs = coap_obs_request_registration(&server_ipaddr6, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 8--\n");
+		//	printf("--Connecting to number 8--\n");
 			break;
 		case 7:
 			obs = coap_obs_request_registration(&server_ipaddr7, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 9--\n");
+		//	printf("--Connecting to number 9--\n");
 			break;
 		case 8:
 			obs = coap_obs_request_registration(&server_ipaddr8, REMOTE_PORT,"test/push", notification_callback, NULL);
@@ -355,9 +355,9 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			break;
 		case 9:
 			obs = coap_obs_request_registration(&server_ipaddr9, REMOTE_PORT,"test/push", notification_callback, NULL);
-			printf("--Connecting to number 11--\n");
+		//	printf("--Connecting to number 11--\n");
 			break;
-		case 10:
+/*		case 10:
 			obs = coap_obs_request_registration(&server_ipaddr10, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 12--\n");
 			break;
@@ -393,6 +393,7 @@ PROCESS_THREAD(er_example_observe_client, ev, data)
 			obs = coap_obs_request_registration(&server_ipaddr18, REMOTE_PORT,"test/push", notification_callback, NULL);
 			printf("--Connecting to number 20--\n");
 			break;
+			*/
 	}
 	//if(con>17){con=0;}
 

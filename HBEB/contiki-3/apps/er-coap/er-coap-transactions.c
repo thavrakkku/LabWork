@@ -102,7 +102,7 @@ coap_send_transaction(coap_transaction_t *t)
  
 #if FUNCTIONEN 
    uint16_t C_FPB = 0, C_HBEB = 0;
-    printf("EN BACKOFF INIT \n");
+ //   printf("EN BACKOFF INIT \n");
     if (t->retrans_counter < 3) {
          C_FPB = 1; //current state
          C_HBEB = 0; //current state
@@ -130,7 +130,7 @@ coap_send_transaction(coap_transaction_t *t)
    
 #endif
 
-  PRINTF("Sending transaction %u\n", t->mid);
+ // PRINTF("Sending transaction %u\n", t->mid);
 
   coap_send_message(&t->addr, t->port, t->packet, t->packet_len);
 
@@ -154,7 +154,7 @@ coap_send_transaction(coap_transaction_t *t)
 #if ENCOCORED
  
       else {
-        printf("CTR_HBEB Activate \n");
+   //     printf("CTR_HBEB Activate \n");
        if(t->retrans_counter == 1 && C_FPB == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(State: 1) */ 
        } 
@@ -177,7 +177,7 @@ coap_send_transaction(coap_transaction_t *t)
 #if COCORED
  
       else {
-        printf("CTR_FPB Activate\n");
+   //     printf("CTR_FPB Activate\n");
        if(t->retrans_counter == 1) {
         t->retrans_timer.timer.interval = t->start_rto;  /* FPB(1) */ 
        } 
@@ -197,10 +197,10 @@ coap_send_transaction(coap_transaction_t *t)
 #if BEB
 
        else {
-        printf("CTR_BEB Activate\n");
+    //    printf("CTR_BEB Activate\n");
         t->retrans_timer.timer.interval <<= 1;  //double 
-        PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
-               t->retrans_timer.timer.interval / CLOCK_SECOND);
+   //     PRINTF("Doubled (%u) interval %u\n", t->retrans_counter,
+   //            t->retrans_timer.timer.interval / CLOCK_SECOND);
                printf("CTR_RTO_retran_%u=%lu\n",t->retrans_counter,t->retrans_timer.timer.interval/CLOCK_SECOND);
       }
 #endif
