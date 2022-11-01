@@ -43,7 +43,7 @@
  */
 
 #include "contiki-net.h"
-
+#include <stdio.h>
 #if WITH_SWAP
 #include "cfs/cfs.h"
 #endif
