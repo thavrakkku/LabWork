@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>3x3_Grid</title>
+    <title>3x3_Circle</title>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -276,10 +276,10 @@
       <coloring />
     </plugin_config>
     <width>1246</width>
-    <z>5</z>
+    <z>3</z>
     <height>602</height>
-    <location_x>400</location_x>
-    <location_y>160</location_y>
+    <location_x>-14</location_x>
+    <location_y>323</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.TimeLine
@@ -311,7 +311,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>3</z>
+    <z>5</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -804,13 +804,13 @@ YIELD();&#xD;
 }&#xD;
     &#xD;
 }</script>
-      <active>false</active>
+      <active>true</active>
     </plugin_config>
     <width>600</width>
     <z>2</z>
     <height>700</height>
-    <location_x>867</location_x>
-    <location_y>183</location_y>
+    <location_x>543</location_x>
+    <location_y>252</location_y>
   </plugin>
 </simconf>
 
