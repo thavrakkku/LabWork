@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>circle_3x3_1</title>
+    <title>grid_3x3_1</title>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -266,7 +266,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>3</z>
+    <z>0</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -283,7 +283,7 @@
       <viewport>5.67362832875621 0.0 0.0 5.67362832875621 -107.8696078471645 -0.235575747366779</viewport>
     </plugin_config>
     <width>400</width>
-    <z>0</z>
+    <z>2</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -331,7 +331,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>2</z>
+    <z>3</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
