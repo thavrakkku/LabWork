@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>3x4 Grid</title>
+    <title>3x4-0_Random</title>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -102,8 +102,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>80.98574202873732</x>
-        <y>8.958874381442646</y>
+        <x>79.83259930230486</x>
+        <y>9.28834373185192</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -120,8 +120,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>93.05893946799623</x>
-        <y>0.3699321580533256</y>
+        <x>59.94726975186406</x>
+        <y>19.643889156995932</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -174,8 +174,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>60.38933072053195</x>
-        <y>-11.329183006944291</y>
+        <x>59.89512669491804</x>
+        <y>-10.01130560530719</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -192,8 +192,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>65.2247536092579</x>
-        <y>9.42345299684696</y>
+        <x>70.66099789101095</x>
+        <y>9.917657022460872</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -210,8 +210,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>69.55357665694402</x>
-        <y>-16.521150570511807</y>
+        <x>69.8830460073533</x>
+        <y>-19.486374724195283</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -228,8 +228,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>90.18355968662677</x>
-        <y>-10.046004791443302</y>
+        <x>99.73817084849576</x>
+        <y>-0.3266589543696803</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -246,8 +246,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>81.87225498712267</x>
-        <y>0.03156465946007092</y>
+        <x>80.38964291028093</x>
+        <y>0.36103400986934625</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -264,8 +264,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>74.41369443946745</x>
-        <y>15.453036982088982</y>
+        <x>99.78283442098164</x>
+        <y>19.900873212614197</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -282,8 +282,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>78.17774131564524</x>
-        <y>-10.45603710085368</y>
+        <x>90.03863793037915</x>
+        <y>-9.632363724830492</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -300,7 +300,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>2</z>
+    <z>3</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -317,7 +317,7 @@
       <viewport>6.070367387787509 0.0 0.0 6.070367387787509 -282.42933501026357 181.66204679139466</viewport>
     </plugin_config>
     <width>400</width>
-    <z>1</z>
+    <z>0</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -330,7 +330,7 @@
       <coloring />
     </plugin_config>
     <width>984</width>
-    <z>3</z>
+    <z>1</z>
     <height>539</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -864,7 +864,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>0</z>
+    <z>2</z>
     <height>700</height>
     <location_x>740</location_x>
     <location_y>97</location_y>

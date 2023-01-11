@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>3x4_0_Cross</title>
+    <title>3x4-0_Cross</title>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -102,8 +102,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>39.274922266923056</x>
-        <y>9.986818754719586</y>
+        <x>49.7125112878889</x>
+        <y>10.224036687014264</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -192,7 +192,7 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>49.24549011440805</x>
+        <x>40.231208687210284</x>
         <y>10.576595723279421</y>
         <z>0.0</z>
       </interface_config>
@@ -246,8 +246,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>80.69275471265748</x>
-        <y>9.309421566985264</y>
+        <x>79.98110091577345</x>
+        <y>10.258293296163979</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -317,7 +317,7 @@
       <viewport>4.21553290818577 0.0 0.0 4.21553290818577 -55.71481597934959 121.40419916069072</viewport>
     </plugin_config>
     <width>400</width>
-    <z>1</z>
+    <z>0</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -864,7 +864,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>0</z>
+    <z>1</z>
     <height>700</height>
     <location_x>740</location_x>
     <location_y>97</location_y>
