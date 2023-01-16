@@ -1,0 +1,1661 @@
+[16:26:08 - main] [Cooja.java:1324] [INFO] - > Starting Cooja
+[16:26:08 - main] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux.config
+[16:26:08 - main] [Cooja.java:2895] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[16:26:09 - main] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[16:26:09 - main] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.sky with /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.sky (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:26:09 - main] [CompileContiki.java:140] [INFO] - > make border-router.sky TARGET=sky 
+[16:26:14 - main] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-server.sky with /home/user/contiki-3/examples/er-rest-example/er-example-server.sky (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:26:14 - main] [CompileContiki.java:140] [INFO] - > make er-example-server.sky TARGET=sky 
+[16:26:19 - main] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-client.sky with /home/user/contiki-3/examples/er-rest-example/er-example-client.sky (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:26:19 - main] [CompileContiki.java:140] [INFO] - > make er-example-client.sky TARGET=sky 
+[16:26:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.sky
+[16:26:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.sky
+[16:26:20 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.sky
+[16:26:21 - main] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[16:26:21 - main] [Cooja.java:3677] [FATAL] - Could not load plugin class: SerialSocketServer
+[16:26:29 - Thread-0] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636817189635
+[16:29:24 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:29:44 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:29:44 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:29:57 - Thread-0] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636817397218	Duration: 207583 ms	Simulated time 1946859 ms	Ratio 9.378701531435619
+[16:30:02 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636817402653
+[16:30:57 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636817457056	Duration: 54403 ms	Simulated time 2001208 ms	Ratio 36.78488318658898
+[16:40:50 - Thread-3] [SerialSocketServer.java:497] [INFO] - Socket closed
+[16:40:50 - Thread-3] [SerialSocketServer.java:501] [INFO] - End of Stream
+[16:40:50 - Thread-2] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[16:41:09 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[16:41:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:41:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:41:55 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[16:43:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:44:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[16:45:09 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:45:09 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:45:18 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:45:27 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[16:45:27 - AWT-EventQueue-0] [Z1Mote.java:58] [FATAL] - Error when creating Z1 mote: 
+java.io.FileNotFoundException: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1 (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at se.sics.mspsim.util.ELF.readELF(ELF.java:469)
+	at org.contikios.cooja.mspmote.MspMoteType.loadELF(MspMoteType.java:332)
+	at org.contikios.cooja.mspmote.MspMoteType.getELF(MspMoteType.java:341)
+	at org.contikios.cooja.mspmote.MspMote.prepareMote(MspMote.java:237)
+	at org.contikios.cooja.mspmote.Z1Mote.initEmulator(Z1Mote.java:56)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:117)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+[16:45:27 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.interfaces.RimeAddress
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.mote.memory.VarMemory.variableExists(VarMemory.java:92)
+	at org.contikios.cooja.interfaces.RimeAddress.hasRimeAddress(RimeAddress.java:85)
+	at org.contikios.cooja.interfaces.RimeAddress.<init>(RimeAddress.java:68)
+	... 94 more
+[16:45:27 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.interfaces.RimeAddress
+[16:45:27 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.interfaces.IPAddress
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.interfaces.IPAddress.<init>(IPAddress.java:85)
+	... 94 more
+[16:45:27 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.interfaces.IPAddress
+[16:45:27 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.mspmote.interfaces.MspDebugOutput
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.mote.memory.VarMemory.variableExists(VarMemory.java:92)
+	at org.contikios.cooja.mspmote.interfaces.MspDebugOutput.<init>(MspDebugOutput.java:77)
+	... 94 more
+[16:45:27 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.mspmote.interfaces.MspDebugOutput
+[16:45:34 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[16:45:34 - AWT-EventQueue-0] [Z1Mote.java:58] [FATAL] - Error when creating Z1 mote: 
+java.io.FileNotFoundException: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1 (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at se.sics.mspsim.util.ELF.readELF(ELF.java:469)
+	at org.contikios.cooja.mspmote.MspMoteType.loadELF(MspMoteType.java:332)
+	at org.contikios.cooja.mspmote.MspMoteType.getELF(MspMoteType.java:341)
+	at org.contikios.cooja.mspmote.MspMote.prepareMote(MspMote.java:237)
+	at org.contikios.cooja.mspmote.Z1Mote.initEmulator(Z1Mote.java:56)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:117)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+[16:45:34 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.interfaces.RimeAddress
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.mote.memory.VarMemory.variableExists(VarMemory.java:92)
+	at org.contikios.cooja.interfaces.RimeAddress.hasRimeAddress(RimeAddress.java:85)
+	at org.contikios.cooja.interfaces.RimeAddress.<init>(RimeAddress.java:68)
+	... 94 more
+[16:45:34 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.interfaces.RimeAddress
+[16:45:34 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.interfaces.IPAddress
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.interfaces.IPAddress.<init>(IPAddress.java:85)
+	... 94 more
+[16:45:34 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.interfaces.IPAddress
+[16:45:34 - AWT-EventQueue-0] [MoteInterface.java:86] [FATAL] - Exception when calling constructor of class org.contikios.cooja.mspmote.interfaces.MspDebugOutput
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.contikios.cooja.MoteInterface.generateInterface(MoteInterface.java:81)
+	at org.contikios.cooja.MoteInterfaceHandler.<init>(MoteInterfaceHandler.java:86)
+	at org.contikios.cooja.mspmote.MspMote.createMoteInterfaceHandler(MspMote.java:176)
+	at org.contikios.cooja.mspmote.MspMote.initMote(MspMote.java:118)
+	at org.contikios.cooja.mspmote.MspMoteType.generateMote(MspMoteType.java:130)
+	at org.contikios.cooja.dialogs.AddMoteDialog$AddMotesEventHandler.actionPerformed(AddMoteDialog.java:460)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at java.awt.Component.show(Component.java:1655)
+	at java.awt.Component.setVisible(Component.java:1607)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at org.contikios.cooja.dialogs.AddMoteDialog.showDialog(AddMoteDialog.java:131)
+	at org.contikios.cooja.Cooja.doAddMotes(Cooja.java:2659)
+	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2950)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
+	at java.awt.Component.processMouseEvent(Component.java:6516)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3312)
+	at java.awt.Component.processEvent(Component.java:6281)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:747)
+	at java.awt.EventQueue.access$300(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:706)
+	at java.awt.EventQueue$3.run(EventQueue.java:704)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.awt.EventQueue$4.run(EventQueue.java:718)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:717)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Caused by: java.lang.NullPointerException
+	at org.contikios.cooja.mote.memory.VarMemory.variableExists(VarMemory.java:92)
+	at org.contikios.cooja.mspmote.interfaces.MspDebugOutput.<init>(MspDebugOutput.java:77)
+	... 94 more
+[16:45:34 - AWT-EventQueue-0] [MoteInterfaceHandler.java:91] [FATAL] - Could not load interface: class org.contikios.cooja.mspmote.interfaces.MspDebugOutput
+[16:45:57 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[16:47:30 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:47:30 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:47:37 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[16:48:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:48:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[16:48:12 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[16:48:29 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:48:29 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:48:46 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:48:46 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:49:07 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:49:30 - Thread-12] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:49:30 - Thread-13] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:49:37 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636818577394
+[16:52:56 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636818776764	Duration: 199370 ms	Simulated time 493761 ms	Ratio 2.4766063098761095
+[16:52:59 - Thread-15] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-client.z1 with /home/user/contiki-3/examples/er-rest-example/er-example-client.z1 (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:52:59 - Thread-15] [Cooja.java:4146] [WARN] - Path is not portable: '/home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[16:52:59 - Thread-13] [SerialSocketServer.java:497] [INFO] - Socket closed
+[16:52:59 - Thread-13] [SerialSocketServer.java:501] [INFO] - End of Stream
+[16:52:59 - Thread-12] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[16:52:59 - Thread-15] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[16:52:59 - Thread-15] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:53:00 - Thread-15] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap.c:365:3: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘int32_t’ [-Wformat]
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap.c:373:3: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘uint32_t’ [-Wformat]
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap.c:381:3: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘uint32_t’ [-Wformat]
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap.c:386:3: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘uint32_t’ [-Wformat]
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../apps/er-coap/er-coap.c:335:5: warning: ‘option’ may be used uninitialized in this function [-Wuninitialized]
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> /tmp/ccUIFJjX.s: Assembler messages:
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> /tmp/ccUIFJjX.s:3145: Error: Repeated instruction must have register mode operands
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> make[1]: *** [obj_z1/er-coap.o] Error 1
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> make[1]: Leaving directory `/home/user/contiki-3/examples/er-rest-example'
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[16:53:00 - Thread-15] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[16:56:03 - Thread-15] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[16:56:03 - Thread-15] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:56:03 - Thread-15] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[16:56:03 - Thread-15] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[16:56:04 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[16:56:04 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[16:56:04 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:56:04 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[16:56:05 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:56:05 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:56:10 - Thread-17] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:56:10 - Thread-18] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:56:15 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636818975196
+[16:59:45 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636819185226	Duration: 210030 ms	Simulated time 209472 ms	Ratio 0.9973432366804742
+[17:12:21 - Thread-18] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:12:21 - Thread-18] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:12:21 - Thread-17] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:12:21 - Thread-20] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:12:21 - Thread-20] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:12:21 - Thread-20] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:12:21 - Thread-20] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:12:21 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:12:22 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:12:22 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:12:22 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:12:22 - Thread-20] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:12:22 - Thread-20] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:12:29 - Thread-21] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:12:29 - Thread-22] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:12:31 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636819951307
+[17:13:07 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636819987647	Duration: 36340 ms	Simulated time 36030 ms	Ratio 0.9914694551458448
+[17:20:50 - Thread-22] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:20:50 - Thread-22] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:20:50 - Thread-21] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:20:50 - Thread-24] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:20:50 - Thread-24] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:20:50 - Thread-24] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:20:50 - Thread-24] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:20:50 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:20:51 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:20:51 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:20:51 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:20:51 - Thread-24] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:20:51 - Thread-24] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:21:11 - Thread-25] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:21:11 - Thread-26] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:21:13 - Thread-27] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636820473084
+[17:22:33 - Thread-27] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636820553437	Duration: 80353 ms	Simulated time 80016 ms	Ratio 0.9958060059985315
+[17:25:48 - Thread-26] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:25:48 - Thread-26] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:25:48 - Thread-25] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:25:48 - Thread-28] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:25:48 - Thread-28] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:25:48 - Thread-28] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:25:48 - Thread-28] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:25:48 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:25:48 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:25:49 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:25:49 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:25:49 - Thread-28] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:25:49 - Thread-28] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:25:50 - Thread-30] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636820750828
+[17:25:54 - Thread-30] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636820754554	Duration: 3726 ms	Simulated time 3539 ms	Ratio 0.9498121309715513
+[17:25:55 - Thread-29] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:25:55 - Thread-31] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:25:55 - Thread-31] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:25:55 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:25:55 - Thread-31] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:25:55 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:25:55 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:25:56 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:25:56 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:25:56 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:25:56 - Thread-31] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:25:58 - Thread-32] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:25:58 - Thread-33] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:26:00 - Thread-34] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636820760730
+[17:26:16 - Thread-34] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636820776112	Duration: 15382 ms	Simulated time 15292 ms	Ratio 0.9941490053309062
+[17:27:30 - Thread-35] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636820850965
+[17:28:58 - Thread-35] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636820938503	Duration: 87538 ms	Simulated time 102302 ms	Ratio 1.1686581827320706
+[17:28:58 - Thread-33] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:28:58 - Thread-33] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:28:58 - Thread-32] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:28:59 - Thread-36] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:28:59 - Thread-36] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:28:59 - Thread-36] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:28:59 - Thread-36] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:28:59 - Thread-36] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:28:59 - Thread-36] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:28:59 - Thread-36] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:29:00 - Thread-36] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:29:00 - Thread-36] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:29:00 - Thread-36] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:29:20 - Thread-37] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:29:20 - Thread-38] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:29:22 - Thread-39] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636820962399
+[17:30:33 - Thread-39] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821033350	Duration: 70951 ms	Simulated time 70612 ms	Ratio 0.9952220546574396
+[17:31:40 - Thread-40] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821100331
+[17:31:44 - Thread-40] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821104232	Duration: 3901 ms	Simulated time 74485 ms	Ratio 19.093822096898233
+[17:31:45 - Thread-38] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:31:45 - Thread-38] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:31:45 - Thread-37] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:31:45 - Thread-41] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:31:45 - Thread-41] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:31:45 - Thread-41] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:31:45 - Thread-41] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:31:45 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:31:45 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:31:46 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:31:46 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:31:46 - Thread-41] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:31:46 - Thread-41] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:31:49 - Thread-42] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:31:49 - Thread-43] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:31:51 - Thread-44] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821111505
+[17:32:38 - Thread-44] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821158806	Duration: 47301 ms	Simulated time 46946 ms	Ratio 0.9924948732584935
+[17:32:41 - Thread-43] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:32:41 - Thread-43] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:32:41 - Thread-42] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:32:41 - Thread-45] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:32:41 - Thread-45] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:32:41 - Thread-45] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:32:41 - Thread-45] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:32:41 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:32:42 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:32:42 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:32:42 - Thread-45] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:32:42 - Thread-45] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:32:42 - Thread-45] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:32:43 - Thread-47] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821163589
+[17:32:55 - Thread-47] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821175630	Duration: 12041 ms	Simulated time 11922 ms	Ratio 0.9901170999086455
+[17:33:02 - Thread-46] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:33:02 - Thread-48] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:33:02 - Thread-48] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:33:02 - Thread-48] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:33:02 - Thread-48] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:33:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:33:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:33:03 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:33:03 - Thread-48] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:33:03 - Thread-48] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:33:05 - Thread-50] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821185863
+[17:33:20 - Thread-50] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821200310	Duration: 14447 ms	Simulated time 14396 ms	Ratio 0.9964698553332871
+[17:33:27 - Thread-51] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821207887
+[17:33:34 - Thread-51] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821214774	Duration: 6887 ms	Simulated time 21281 ms	Ratio 3.0900246841876
+[17:36:06 - Thread-49] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:36:06 - Thread-52] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:36:06 - Thread-52] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:36:06 - Thread-52] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:36:06 - Thread-52] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:36:06 - Thread-52] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:36:07 - Thread-52] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:36:07 - Thread-52] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:36:07 - Thread-52] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:36:07 - Thread-52] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:36:08 - Thread-54] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821368388
+[17:36:25 - Thread-54] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821385947	Duration: 17559 ms	Simulated time 17527 ms	Ratio 0.9981775727547126
+[17:38:10 - Thread-55] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636821490157
+[17:38:29 - Thread-55] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636821509488	Duration: 19331 ms	Simulated time 36844 ms	Ratio 1.90595416688221
+[17:49:38 - Thread-53] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:49:38 - Thread-56] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:49:38 - Thread-56] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:49:38 - Thread-56] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:49:38 - Thread-56] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:49:39 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:49:39 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:49:39 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:49:39 - Thread-56] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:49:39 - Thread-56] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:49:41 - Thread-58] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822181906
+[17:50:23 - Thread-58] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822223896	Duration: 41990 ms	Simulated time 41939 ms	Ratio 0.9987854251012146
+[17:52:38 - Thread-59] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822358626
+[17:52:40 - Thread-57] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:52:40 - Thread-59] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822360450	Duration: 1824 ms	Simulated time 43758 ms	Ratio 23.99013157894737
+[17:52:40 - Thread-60] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:52:40 - Thread-60] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:52:40 - Thread-60] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:52:40 - Thread-60] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:52:41 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:52:41 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:52:41 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:52:41 - Thread-60] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:52:41 - Thread-60] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:52:41 - Thread-62] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822361943
+[17:54:17 - Thread-61] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:54:17 - Thread-62] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822457591	Duration: 95648 ms	Simulated time 95429 ms	Ratio 0.9977103546336568
+[17:54:17 - Thread-63] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:54:17 - Thread-63] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:54:17 - Thread-63] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:54:18 - Thread-63] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:54:18 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:54:18 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:54:18 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:54:18 - Thread-63] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:54:19 - Thread-63] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:54:19 - Thread-65] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822459081
+[17:55:26 - Thread-64] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:55:26 - Thread-65] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822526633	Duration: 67552 ms	Simulated time 67354 ms	Ratio 0.9970689246802463
+[17:55:26 - Thread-66] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:55:26 - Thread-66] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:55:26 - Thread-66] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:55:27 - Thread-66] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:55:27 - Thread-66] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:55:27 - Thread-66] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:55:27 - Thread-66] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:55:27 - Thread-66] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:55:28 - Thread-66] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:55:28 - Thread-68] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822528110
+[17:56:13 - Thread-67] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:56:13 - Thread-68] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822573434	Duration: 45324 ms	Simulated time 45104 ms	Ratio 0.9951460594828347
+[17:56:13 - Thread-69] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:56:13 - Thread-69] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:56:13 - Thread-69] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:56:13 - Thread-69] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:56:14 - Thread-69] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:56:14 - Thread-69] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:56:14 - Thread-69] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:56:14 - Thread-69] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:56:14 - Thread-69] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:56:14 - Thread-71] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822574905
+[17:59:23 - Thread-70] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:59:23 - Thread-71] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822763774	Duration: 188869 ms	Simulated time 188575 ms	Ratio 0.9984433655073093
+[17:59:23 - Thread-72] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:59:23 - Thread-72] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:59:24 - Thread-72] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:59:24 - Thread-72] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:59:24 - Thread-72] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:59:24 - Thread-72] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:59:24 - Thread-72] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:59:25 - Thread-72] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:59:25 - Thread-72] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:59:25 - Thread-74] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822765392
+[17:59:50 - Thread-73] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:59:50 - Thread-74] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822790508	Duration: 25116 ms	Simulated time 24881 ms	Ratio 0.990643414556458
+[17:59:50 - Thread-75] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[17:59:50 - Thread-75] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:59:50 - Thread-75] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:59:50 - Thread-75] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:59:51 - Thread-75] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[17:59:51 - Thread-75] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[17:59:51 - Thread-75] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[17:59:51 - Thread-75] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:59:51 - Thread-75] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:59:52 - Thread-77] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822792025
+[18:01:10 - Thread-76] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:01:10 - Thread-77] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822870872	Duration: 78847 ms	Simulated time 78561 ms	Ratio 0.9963727218537167
+[18:01:10 - Thread-78] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:01:10 - Thread-78] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:01:11 - Thread-78] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:01:11 - Thread-78] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:01:11 - Thread-78] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:01:11 - Thread-78] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:01:12 - Thread-78] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:01:12 - Thread-78] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:01:12 - Thread-78] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:01:12 - Thread-80] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822872556
+[18:01:22 - Thread-80] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $0707d at $0848c
+[18:01:22 - Thread-80] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $0161f at $0848c
+[18:01:22 - Thread-80] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $07069 at $084ba
+[18:01:22 - Thread-80] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
+org.contikios.cooja.ContikiError
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: se.sics.mspsim.core.EmulationException: Reading outside memory: 0xe826a
+	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:162)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1003)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	... 4 more
+[18:01:47 - Thread-80] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822907090	Duration: 34534 ms	Simulated time 9692 ms	Ratio 0.2806509526843111
+[18:02:14 - Thread-79] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:02:14 - Thread-82] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:02:14 - Thread-82] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:02:14 - Thread-82] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:02:14 - Thread-82] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:02:15 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:02:15 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:02:15 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:02:15 - Thread-82] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:02:16 - Thread-82] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:02:24 - Thread-84] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822944841
+[18:03:13 - Thread-83] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:03:13 - Thread-84] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636822993457	Duration: 48616 ms	Simulated time 48543 ms	Ratio 0.998498436728649
+[18:03:13 - Thread-85] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:03:13 - Thread-85] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:03:13 - Thread-85] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:03:13 - Thread-85] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:03:14 - Thread-85] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:03:14 - Thread-85] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:03:14 - Thread-85] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:03:14 - Thread-85] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:03:15 - Thread-85] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:03:15 - Thread-87] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636822995051
+[18:03:24 - Thread-87] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $05f6d at $09180
+[18:03:24 - Thread-87] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
+org.contikios.cooja.ContikiError
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: se.sics.mspsim.core.EmulationException: Reading outside memory: 0x41112
+	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:162)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1003)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	... 4 more
+[18:03:45 - Thread-87] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823025546	Duration: 30495 ms	Simulated time 9693 ms	Ratio 0.3178553861288736
+[18:03:59 - Thread-86] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:03:59 - Thread-89] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:03:59 - Thread-89] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:03:59 - Thread-89] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:04:00 - Thread-89] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:04:00 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:04:00 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:04:00 - Thread-89] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:04:01 - Thread-89] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:04:01 - Thread-89] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:04:02 - Thread-91] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823042260
+[18:04:11 - Thread-91] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $0707d at $0848c
+[18:04:11 - Thread-91] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $0161f at $0848c
+[18:04:11 - Thread-91] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06b63 at $0864c
+[18:04:11 - Thread-91] [MspMote.java:229] [WARN] - 3: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $0164f at $084ba
+[18:04:12 - Thread-91] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
+org.contikios.cooja.ContikiError
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: se.sics.mspsim.core.EmulationException: Reading outside memory: 0x66964
+	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:162)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1003)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	... 4 more
+[18:04:18 - Thread-91] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823058632	Duration: 16372 ms	Simulated time 9696 ms	Ratio 0.5922306376740777
+[18:04:28 - Thread-93] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823068373
+[18:04:29 - Thread-93] [Simulation.java:292] [FATAL] - Simulation stopped due to error: Jumping to a time that is further than possible not LPM maxCycles:81715449 cycles: 70265773
+java.lang.IllegalArgumentException: Jumping to a time that is further than possible not LPM maxCycles:81715449 cycles: 70265773
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:242)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	at org.contikios.cooja.mspmote.MspMoteTimeEvent.execute(MspMoteTimeEvent.java:53)
+	at org.contikios.cooja.mspmote.interfaces.Msp802154Radio$7.execute(Msp802154Radio.java:362)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.lang.Thread.run(Thread.java:745)
+[18:04:33 - Thread-93] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823073577	Duration: 5204 ms	Simulated time 11127 ms	Ratio 2.138162951575711
+[18:04:35 - Thread-90] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:04:35 - Thread-95] [AbstractRadioMedium.java:198] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@2b214
+[18:04:35 - Thread-95] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:04:35 - Thread-95] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:04:35 - Thread-95] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:04:35 - Thread-95] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:04:35 - Thread-95] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:04:36 - Thread-95] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:04:36 - Thread-95] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:04:36 - Thread-95] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:04:36 - Thread-95] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:04:38 - Thread-97] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823078177
+[18:06:40 - Thread-96] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:06:40 - Thread-97] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823200693	Duration: 122516 ms	Simulated time 122399 ms	Ratio 0.9990450226909139
+[18:06:40 - Thread-98] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:06:40 - Thread-98] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:06:40 - Thread-98] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:06:41 - Thread-98] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:06:41 - Thread-98] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:06:41 - Thread-98] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:06:41 - Thread-98] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:06:42 - Thread-98] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:06:42 - Thread-98] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:06:42 - Thread-100] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823202342
+[18:08:43 - Thread-99] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:08:43 - Thread-100] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823323522	Duration: 121180 ms	Simulated time 120914 ms	Ratio 0.9978049183033504
+[18:08:43 - Thread-101] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:08:43 - Thread-101] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:08:43 - Thread-101] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:08:44 - Thread-101] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:08:44 - Thread-101] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:08:44 - Thread-101] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:08:44 - Thread-101] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:08:44 - Thread-101] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:08:45 - Thread-101] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:08:45 - Thread-103] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823325098
+[18:10:02 - Thread-102] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:10:02 - Thread-103] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823402147	Duration: 77049 ms	Simulated time 76843 ms	Ratio 0.9973263767213072
+[18:10:02 - Thread-104] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:10:02 - Thread-104] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:10:02 - Thread-104] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:10:02 - Thread-104] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:10:02 - Thread-104] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:10:03 - Thread-104] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:10:03 - Thread-104] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:10:03 - Thread-104] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:10:03 - Thread-104] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:10:03 - Thread-106] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823403779
+[18:11:14 - Thread-105] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:11:14 - Thread-106] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823474182	Duration: 70403 ms	Simulated time 70118 ms	Ratio 0.9959518770506939
+[18:11:14 - Thread-107] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:11:14 - Thread-107] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:11:14 - Thread-107] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:11:14 - Thread-107] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:11:14 - Thread-107] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:11:15 - Thread-107] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:11:15 - Thread-107] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:11:15 - Thread-107] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:11:15 - Thread-107] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:11:15 - Thread-109] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823475838
+[18:11:21 - Thread-108] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:11:21 - Thread-109] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823481731	Duration: 5893 ms	Simulated time 5632 ms	Ratio 0.9557101646020703
+[18:11:21 - Thread-110] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:11:21 - Thread-110] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:11:21 - Thread-110] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:11:22 - Thread-110] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:11:22 - Thread-110] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:11:22 - Thread-110] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:11:22 - Thread-110] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:11:23 - Thread-110] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:11:23 - Thread-110] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:11:23 - Thread-112] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823483324
+[18:12:49 - Thread-111] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:12:49 - Thread-112] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823569159	Duration: 85835 ms	Simulated time 85594 ms	Ratio 0.9971922875283975
+[18:12:49 - Thread-113] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:12:49 - Thread-113] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:12:49 - Thread-113] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:12:49 - Thread-113] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:12:49 - Thread-113] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:12:50 - Thread-113] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:12:50 - Thread-113] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:12:50 - Thread-113] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:12:50 - Thread-113] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:12:50 - Thread-115] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823570760
+[18:14:41 - Thread-114] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:14:41 - Thread-115] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823681291	Duration: 110531 ms	Simulated time 110277 ms	Ratio 0.9977020021532421
+[18:14:41 - Thread-116] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:14:41 - Thread-116] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:14:41 - Thread-116] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:14:41 - Thread-116] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:14:42 - Thread-116] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:14:42 - Thread-116] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:14:42 - Thread-116] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:14:42 - Thread-116] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:14:42 - Thread-116] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:14:42 - Thread-118] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823682901
+[18:14:53 - Thread-118] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823693237	Duration: 10336 ms	Simulated time 10117 ms	Ratio 0.978811919504644
+[18:15:48 - Thread-119] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823748502
+[18:19:12 - Thread-117] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:19:12 - Thread-119] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823952770	Duration: 204268 ms	Simulated time 214278 ms	Ratio 1.0490042493195215
+[18:19:12 - Thread-120] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:19:12 - Thread-120] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:19:12 - Thread-120] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:19:13 - Thread-120] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:19:13 - Thread-120] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:19:13 - Thread-120] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:19:13 - Thread-120] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:19:14 - Thread-120] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:19:14 - Thread-120] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:19:14 - Thread-122] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636823954371
+[18:19:59 - Thread-121] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:19:59 - Thread-122] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636823999785	Duration: 45414 ms	Simulated time 45139 ms	Ratio 0.9939445985819351
+[18:19:59 - Thread-123] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:19:59 - Thread-123] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:20:00 - Thread-123] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:20:00 - Thread-123] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:20:00 - Thread-123] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:20:00 - Thread-123] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:20:00 - Thread-123] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:20:01 - Thread-123] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:20:01 - Thread-123] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:20:01 - Thread-125] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636824001377
+[18:20:29 - Thread-125] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636824029204	Duration: 27827 ms	Simulated time 27625 ms	Ratio 0.9927408631904265
+[18:21:16 - Thread-124] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:21:16 - Thread-126] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:21:16 - Thread-126] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:21:16 - Thread-126] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:21:16 - Thread-126] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:21:16 - Thread-126] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:21:17 - Thread-126] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:21:17 - Thread-126] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:21:17 - Thread-126] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:21:17 - Thread-126] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:21:18 - Thread-128] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636824078084
+[18:28:12 - Thread-127] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:28:12 - Thread-128] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636824492258	Duration: 414174 ms	Simulated time 413854 ms	Ratio 0.9992273778653417
+[18:28:12 - Thread-129] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:28:12 - Thread-129] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:28:12 - Thread-129] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:28:12 - Thread-129] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:28:12 - Thread-129] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:28:13 - Thread-129] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:28:13 - Thread-129] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:28:13 - Thread-129] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:28:13 - Thread-129] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:28:13 - Thread-131] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636824493899
+[18:50:09 - Thread-131] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636825809600	Duration: 1315701 ms	Simulated time 1314961 ms	Ratio 0.9994375621816811
+[18:50:18 - AWT-EventQueue-0] [Cooja.java:3497] [INFO] - Saved to file: /home/user/contiki-3/examples/er-rest-example/server-client_ctr.csc
+[18:50:26 - Thread-130] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:50:27 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:50:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:50:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:50:52 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:54:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:54:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[18:54:39 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-observe-client.z1
+[18:55:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:55:22 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example (copy)/er-example-server.z1
+[18:55:34 - Thread-135] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826134544
+[18:57:44 - Thread-135] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826264053	Duration: 129509 ms	Simulated time 322010 ms	Ratio 2.4863909071956387
+[18:57:44 - Thread-136] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[18:57:44 - Thread-136] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:57:44 - Thread-136] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-client.z1 with /home/user/contiki-3/examples/er-rest-example/er-example-client.z1 (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[18:57:44 - Thread-136] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[18:57:45 - Thread-136] [Cooja.java:4267] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/er-example-server.z1 with /home/user/contiki-3/examples/er-rest-example/er-example-server.z1 (default: ../..), but could not find it. This does not have to be an error, as the file might be created later.
+[18:57:45 - Thread-136] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[18:57:45 - Thread-136] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[18:57:45 - Thread-136] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[18:57:45 - Thread-136] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[18:57:46 - Thread-136] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:57:46 - Thread-136] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:57:48 - Thread-138] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826268144
+[19:02:45 - Thread-137] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:02:45 - Thread-138] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826565144	Duration: 297000 ms	Simulated time 296843 ms	Ratio 0.9994713804713805
+[19:02:45 - Thread-139] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:02:45 - Thread-139] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:02:45 - Thread-139] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:02:45 - Thread-139] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:02:45 - Thread-139] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:02:45 - Thread-139] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:02:46 - Thread-139] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:02:46 - Thread-139] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:02:46 - Thread-139] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:02:46 - Thread-141] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826566619
+[19:04:10 - Thread-140] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:04:10 - Thread-141] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826650619	Duration: 84000 ms	Simulated time 83720 ms	Ratio 0.9966666666666667
+[19:04:10 - Thread-142] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:04:10 - Thread-142] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:04:10 - Thread-142] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:04:10 - Thread-142] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:04:11 - Thread-142] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:04:11 - Thread-142] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:04:11 - Thread-142] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:04:11 - Thread-142] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:04:12 - Thread-142] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:04:12 - Thread-144] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826652051
+[19:04:25 - Thread-143] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:04:25 - Thread-144] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826665526	Duration: 13475 ms	Simulated time 13330 ms	Ratio 0.989239332096475
+[19:04:25 - Thread-145] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:04:25 - Thread-145] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:04:25 - Thread-145] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:04:25 - Thread-145] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:04:26 - Thread-145] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:04:26 - Thread-145] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:04:26 - Thread-145] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:04:26 - Thread-145] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:04:26 - Thread-145] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:04:27 - Thread-147] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826667007
+[19:04:49 - Thread-146] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:04:49 - Thread-147] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826689721	Duration: 22714 ms	Simulated time 22504 ms	Ratio 0.9907546006868011
+[19:04:49 - Thread-148] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:04:49 - Thread-148] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:04:49 - Thread-148] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:04:50 - Thread-148] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:04:50 - Thread-148] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:04:50 - Thread-148] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:04:50 - Thread-148] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:04:50 - Thread-148] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:04:51 - Thread-148] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:04:51 - Thread-150] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826691180
+[19:07:02 - Thread-149] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:07:02 - Thread-150] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826822777	Duration: 131597 ms	Simulated time 131361 ms	Ratio 0.9982066460481622
+[19:07:02 - Thread-151] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:07:02 - Thread-151] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:07:02 - Thread-151] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:07:03 - Thread-151] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:07:03 - Thread-151] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:07:03 - Thread-151] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:07:03 - Thread-151] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:07:04 - Thread-151] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:07:04 - Thread-151] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:07:04 - Thread-153] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636826824257
+[19:07:32 - Thread-153] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636826852733	Duration: 28476 ms	Simulated time 28228 ms	Ratio 0.9912909116448939
+[19:14:21 - Thread-152] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:14:22 - Thread-154] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[19:14:22 - Thread-154] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[19:14:22 - Thread-154] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[19:14:22 - Thread-154] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[19:14:23 - Thread-154] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[19:14:23 - Thread-154] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[19:14:23 - Thread-154] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[19:14:24 - Thread-154] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:14:24 - Thread-154] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:14:26 - Thread-156] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636827266831
+[19:15:01 - Thread-156] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636827301579	Duration: 34748 ms	Simulated time 34304 ms	Ratio 0.9872222861747438
+[20:43:37 - Thread-157] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636832617503
+[20:43:39 - Thread-155] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:43:39 - Thread-157] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636832619884	Duration: 2381 ms	Simulated time 36669 ms	Ratio 15.400671986560269
+[20:43:40 - Thread-158] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[20:43:40 - Thread-158] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[20:43:40 - Thread-158] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[20:43:41 - Thread-158] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[20:43:41 - Thread-158] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[20:43:41 - Thread-158] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:43:41 - Thread-158] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[20:43:42 - Thread-158] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:43:42 - Thread-158] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:43:42 - Thread-160] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636832622820
+[20:49:36 - Thread-159] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:49:36 - Thread-160] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636832976655	Duration: 353835 ms	Simulated time 351656 ms	Ratio 0.9938417624033801
+[20:49:36 - Thread-161] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[20:49:37 - Thread-161] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[20:49:37 - Thread-161] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[20:49:37 - Thread-161] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[20:49:38 - Thread-161] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[20:49:38 - Thread-161] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:49:38 - Thread-161] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[20:49:39 - Thread-161] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:49:39 - Thread-161] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:49:39 - Thread-163] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636832979756
+[20:50:27 - Thread-163] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833027093	Duration: 47337 ms	Simulated time 46779 ms	Ratio 0.9882121807465619
+[20:51:07 - Thread-164] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833067875
+[20:51:42 - Thread-164] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833102490	Duration: 34615 ms	Simulated time 81231 ms	Ratio 2.3466994077711973
+[20:52:31 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:52:31 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:52:31 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:52:31 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:52:31 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:16 - Thread-162] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:53:16 - Thread-165] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[20:53:16 - Thread-165] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[20:53:17 - Thread-165] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[20:53:17 - Thread-165] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[20:53:17 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[20:53:17 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:53:18 - Thread-165] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:53:19 - Thread-165] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:53:23 - Thread-167] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833203231
+[20:57:03 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636833423497.pcap
+[20:57:15 - Thread-166] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:57:15 - Thread-167] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833435301	Duration: 232070 ms	Simulated time 228329 ms	Ratio 0.9838798638341879
+[20:57:15 - Thread-168] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[20:57:15 - Thread-168] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[20:57:15 - Thread-168] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[20:57:15 - Thread-168] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[20:57:15 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[20:57:16 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:16 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[20:57:17 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:17 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:17 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:17 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:17 - Thread-168] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[20:57:17 - Thread-168] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:57:17 - Thread-168] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:57:18 - Thread-170] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833438003
+[20:57:23 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636833443124.pcap
+[21:00:47 - Thread-169] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:00:47 - Thread-170] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833647108	Duration: 209105 ms	Simulated time 205422 ms	Ratio 0.9823868391477966
+[21:00:47 - Thread-171] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:00:47 - Thread-171] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:00:47 - Thread-171] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:00:47 - Thread-171] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:48 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:49 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:49 - Thread-171] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:00:49 - Thread-171] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:00:49 - Thread-171] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:00:49 - Thread-173] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833649481
+[21:00:53 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636833653658.pcap
+[21:00:55 - Thread-173] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833655191	Duration: 5710 ms	Simulated time 3524 ms	Ratio 0.6171628721541156
+[21:01:02 - Thread-172] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:01:02 - Thread-174] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:01:02 - Thread-174] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:01:02 - Thread-174] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:01:02 - Thread-174] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:01:02 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:03 - Thread-174] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:01:04 - Thread-174] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:01:04 - Thread-174] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:01:05 - Thread-176] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833665530
+[21:01:22 - Thread-176] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833682883	Duration: 17353 ms	Simulated time 1733 ms	Ratio 0.0998674580764133
+[21:02:08 - Thread-177] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833728925
+[21:02:11 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636833731134.pcap
+[21:02:58 - Thread-175] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:02:58 - Thread-177] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833778764	Duration: 49839 ms	Simulated time 6705 ms	Ratio 0.13453319689399867
+[21:02:58 - Thread-178] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:02:58 - Thread-178] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:02:59 - Thread-178] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:02:59 - Thread-178] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:02:59 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:02:59 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:00 - Thread-178] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:01 - Thread-178] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:03:01 - Thread-178] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:03:01 - Thread-180] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833781373
+[21:03:02 - Thread-180] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636833782875	Duration: 1502 ms	Simulated time 150 ms	Ratio 0.09986684420772303
+[21:03:08 - Thread-179] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:03:08 - Thread-181] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:03:08 - Thread-181] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:03:08 - Thread-181] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:03:09 - Thread-181] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:03:09 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:03:09 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:03:10 - Thread-181] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:03:10 - Thread-181] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:04:14 - Thread-183] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636833854220
+[21:07:29 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636834049715.pcap
+[21:10:14 - Thread-182] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:10:15 - Thread-183] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636834215072	Duration: 360852 ms	Simulated time 3600 ms	Ratio 0.009976389212197798
+[21:10:15 - Thread-184] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:10:15 - Thread-184] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:10:15 - Thread-184] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:10:15 - Thread-184] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:10:16 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:10:16 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:10:17 - Thread-184] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:10:17 - Thread-184] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:10:18 - Thread-186] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636834218093
+[21:13:33 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636834413616.pcap
+[21:21:45 - Thread-186] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636834905581	Duration: 687488 ms	Simulated time 6858 ms	Ratio 0.009975446844163098
+[21:27:18 - Thread-185] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[21:27:18 - Thread-187] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[21:27:18 - Thread-187] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[21:27:19 - Thread-187] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[21:27:19 - Thread-187] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[21:27:19 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[21:27:19 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:19 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[21:27:19 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:20 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:20 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:20 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:20 - Thread-187] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[21:27:20 - Thread-187] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[21:27:20 - Thread-187] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[21:27:22 - Thread-189] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636835242713
+[21:27:34 - Thread-189] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636835254230	Duration: 11517 ms	Simulated time 1149 ms	Ratio 0.09976556394894504
+[22:04:20 - Thread-188] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[22:04:21 - Thread-190] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[22:04:21 - Thread-190] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[22:04:21 - Thread-190] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[22:04:21 - Thread-190] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[22:04:21 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/ipv6/rpl-border-router/border-router.z1
+[22:04:21 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-server.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/contiki-3/examples/er-rest-example/er-example-client.z1
+[22:04:22 - Thread-190] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[22:04:22 - Thread-190] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[22:04:28 - Thread-192] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1636837468159
+[22:04:30 - AWT-EventQueue-0] [PcapExporter.java:36] [INFO] - Opened pcap file radiolog-1636837470846.pcap
+[22:08:32 - Thread-192] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1636837712662	Duration: 244503 ms	Simulated time 242372 ms	Ratio 0.9912843605190939

@@ -266,7 +266,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>1</z>
+    <z>2</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -282,7 +282,7 @@
       <viewport>6.808353994507452 0.0 0.0 6.808353994507452 -168.04352941659744 -103.4826908968402</viewport>
     </plugin_config>
     <width>400</width>
-    <z>3</z>
+    <z>4</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -330,7 +330,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>4</z>
+    <z>1</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -346,7 +346,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_HBEB_grid_3x3+1_1s5s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_BEB_grid_3x3+1_1s5s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 9"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
@@ -826,7 +826,7 @@ YIELD();&#xD;
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>2</z>
+    <z>3</z>
     <height>700</height>
     <location_x>944</location_x>
     <location_y>89</location_y>
