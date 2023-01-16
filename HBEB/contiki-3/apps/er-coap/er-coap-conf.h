@@ -55,7 +55,7 @@
 
 /* Maximum number of failed request attempts before action */
 #ifndef COAP_MAX_ATTEMPTS
-#define COAP_MAX_ATTEMPTS              4//4
+#define COAP_MAX_ATTEMPTS              4
 #endif /* COAP_MAX_ATTEMPTS */
 
 /* Conservative size limit, as not all options have to be set at the same time. Check when Proxy-Uri option is used */
@@ -69,6 +69,6 @@
 #endif /* COAP_MAX_OBSERVERS */
 
 /* Interval in notifies in which NON notifies are changed to CON notifies to check client. */
-#define COAP_OBSERVE_REFRESH_INTERVAL  9999999
+#define COAP_OBSERVE_REFRESH_INTERVAL  200
 
 #endif /* ER_COAP_CONF_H_ */

@@ -43,11 +43,13 @@
 
 /*
  * Modulo mask (thus +1) for a random number to get the tick number for the random
+
  * retransmission time between COAP_RESPONSE_TIMEOUT and COAP_RESPONSE_TIMEOUT*COAP_RESPONSE_RANDOM_FACTOR.
  */
 #define COAP_RESPONSE_TIMEOUT_TICKS         (CLOCK_SECOND * COAP_RESPONSE_TIMEOUT)
-//#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 2.0) + 1 //EnCoCo-RED
-#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 0.5) + 1 //Default CoAP
+#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 2.0) + 1 //EnCoCo-RED
+
+//#define COAP_RESPONSE_TIMEOUT_BACKOFF_MASK  (long)((CLOCK_SECOND * COAP_RESPONSE_TIMEOUT * ((float)COAP_RESPONSE_RANDOM_FACTOR - 1.0)) + 0.5) + 1 //Default CoAP
 
 /* container for transactions with message buffer and retransmission info */
 typedef struct coap_transaction {
@@ -59,6 +61,8 @@ typedef struct coap_transaction {
   
   uint8_t fpb_counter;
   uint8_t hbeb_counter;
+
+  int rx_buff;
 
   uip_ipaddr_t addr;
   uint16_t port;
