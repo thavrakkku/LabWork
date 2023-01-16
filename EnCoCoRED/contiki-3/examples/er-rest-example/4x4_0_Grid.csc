@@ -7,7 +7,7 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>4x4_0_grid</title>
+    <title>4x4-0_Grid</title>
     <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
@@ -372,7 +372,7 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>3</z>
+    <z>2</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -431,7 +431,7 @@
       <zoomfactor>500.0</zoomfactor>
     </plugin_config>
     <width>1646</width>
-    <z>8</z>
+    <z>3</z>
     <height>166</height>
     <location_x>0</location_x>
     <location_y>827</location_y>
@@ -443,7 +443,7 @@
       <decorations>true</decorations>
     </plugin_config>
     <width>966</width>
-    <z>7</z>
+    <z>1</z>
     <height>160</height>
     <location_x>680</location_x>
     <location_y>0</location_y>
@@ -459,7 +459,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_HBEB_grid_4x4-0_1s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_BEB_grid_4x4-0_1s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 16"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
@@ -936,7 +936,7 @@ YIELD();&#xD;
 }&#xD;
     &#xD;
 }</script>
-      <active>false</active>
+      <active>true</active>
     </plugin_config>
     <width>600</width>
     <z>4</z>
