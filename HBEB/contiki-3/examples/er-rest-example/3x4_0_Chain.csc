@@ -384,7 +384,7 @@ today = new Date(); // get current date&#xD;
 &#xD;
 date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();//date format&#xD;
 sl="/home/"+username+"/LabWork/"; //save location&#xD;
-sf=sl+date+"_Test_BEB_Chain_3x4-0_1s_log_"; //save file name  &#xD;
+sf=sl+date+"_Test_ENCOCORED_Chain_3x4-0_1s_log_"; //save file name  &#xD;
 ob_node="Observe OK form 12"; &#xD;
 simulate_time=300000; //simulate time after start measure  &#xD;
 i=1; //file index&#xD;
