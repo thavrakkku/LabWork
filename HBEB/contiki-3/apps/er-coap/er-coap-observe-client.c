@@ -256,7 +256,9 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   coap_observee_t *obs;
   coap_notification_flag_t flag;
   uint32_t observe;
-  double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
+  //double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
+  
+  double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.1*MAX_BUFFER, THRESHOLD_MAX = 0.9*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
   int RANDOM_VARIABLE = random_rand() %100, PERCENT_DROP = 0, numbuff = queuebuf_numfree();
 
   t->rx_buff += 1;
