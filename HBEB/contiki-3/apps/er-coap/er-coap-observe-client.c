@@ -258,7 +258,8 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
   uint32_t observe;
   //double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
   
-  double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
+  //double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.1*MAX_BUFFER, THRESHOLD_MAX = 0.5*MAX_BUFFER, MAX_P = 0.1; /*Tmin10% & Tmax50% */
+  double MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.4*MAX_BUFFER, MAX_P = 0.1; /*Tmin10% & Tmax50% */
   //float MAX_BUFFER = 5.0, PROBABILITY_DROP = 1.0, THRESHOLD_MIN = 0.2*MAX_BUFFER, THRESHOLD_MAX = 0.6*MAX_BUFFER, MAX_P = 0.1; /*Tmin20% & Tmax60% */
   int RANDOM_VARIABLE = random_rand() %100, PERCENT_DROP = 0, numbuff = queuebuf_numfree();
 

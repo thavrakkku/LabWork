@@ -1,70 +1,115 @@
-[14:23:23 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[14:23:23 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
-[14:23:23 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
-[14:23:35 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 637179869888430052
-[14:23:35 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[14:23:35 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-9-2.z1 TARGET=z1 
-[14:23:35 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[14:23:36 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[14:23:36 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[14:23:36 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-9-2.z1
-[14:23:36 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[14:23:37 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[14:23:37 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[14:23:38 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:23:40 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[14:23:40 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[14:23:41 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
-[14:24:53 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
-[14:24:53 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[14:25:04 - Thread-2] [Simulation.java:420] [INFO] - Simulation random seed: -2621212790659625108
-[14:25:04 - Thread-2] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[14:25:04 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-12-1.z1 TARGET=z1 
-[14:25:04 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[14:25:04 - Thread-2] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[14:25:04 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[14:25:04 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-12-1.z1
-[14:25:04 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:05 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[14:25:06 - Thread-2] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:25:06 - Thread-2] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[14:25:07 - Thread-2] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[14:25:07 - Thread-2] [ScriptRunner.java:386] [INFO] - Test script activated
-[14:25:45 - Thread-3] [LogScriptEngine.java:309] [INFO] - Test script finished
-[14:25:45 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[14:25:52 - Thread-4] [Simulation.java:420] [INFO] - Simulation random seed: -5125211620159202187
-[14:25:52 - Thread-4] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
-[14:25:52 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-12-2.z1 TARGET=z1 
-[14:25:52 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
-[14:25:52 - Thread-4] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
-[14:25:52 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-12-2.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:53 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:54 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
-[14:25:54 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[14:25:54 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
-[14:25:54 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:25:55 - Thread-4] [ScriptRunner.java:429] [INFO] - Test script deactivated
-[14:25:55 - Thread-4] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
-[14:25:55 - Thread-4] [ScriptRunner.java:386] [INFO] - Test script activated
-[11:40:43 - Thread-5] [LogScriptEngine.java:309] [INFO] - Test script finished
-[11:40:43 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:58:39 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[07:58:39 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[07:58:39 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /home/roger/.cooja.user.properties
+[07:58:57 - Thread-0] [Simulation.java:420] [INFO] - Simulation random seed: 3756172302073318285
+[07:58:57 - Thread-0] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[07:58:57 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-9-1.z1 TARGET=z1 
+[07:59:04 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[07:59:04 - Thread-0] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[07:59:05 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[07:59:05 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-9-1.z1
+[07:59:05 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[07:59:06 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[07:59:06 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[07:59:07 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[07:59:08 - Thread-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[07:59:08 - Thread-0] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[07:59:09 - Thread-0] [ScriptRunner.java:386] [INFO] - Test script activated
+[07:59:10 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1681952350595
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01205 at $07a26
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01207 at $07a2a
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01201 at $07a2c
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01203 at $07a30
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01209 at $07a48
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01215 at $07a26
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01217 at $07a2a
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01211 at $07a2c
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01213 at $07a30
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01219 at $07a48
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0f at $07a26
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f11 at $07a2a
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0b at $07a2c
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0d at $07a30
+[08:01:08 - Thread-2] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f13 at $07a48
+[08:01:08 - Thread-2] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
+org.contikios.cooja.ContikiError
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: se.sics.mspsim.core.EmulationException: Illegal read - out of bounds at $00f72
+	at se.sics.mspsim.core.NoMemSegment.read(NoMemSegment.java:13)
+	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:164)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1990)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	... 4 more
+[08:01:35 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1681952495420	Duration: 144825 ms	Simulated time 1260427 ms	Ratio 8.703103745900224
+[08:01:37 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1681952497274
+[08:01:37 - Thread-4] [Simulation.java:292] [FATAL] - Simulation stopped due to error: Jumping to a time that is further than possible not LPM maxCycles:10100422692 cycles: 10074006473
+java.lang.IllegalArgumentException: Jumping to a time that is further than possible not LPM maxCycles:10100422692 cycles: 10074006473
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:242)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	at org.contikios.cooja.mspmote.MspMoteTimeEvent.execute(MspMoteTimeEvent.java:53)
+	at org.contikios.cooja.mspmote.interfaces.Msp802154Radio$7.execute(Msp802154Radio.java:362)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[08:01:44 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1681952504651	Duration: 7377 ms	Simulated time 1263730 ms	Ratio 171.30676426731733
+[08:02:36 - Thread-1] [LogScriptEngine.java:309] [INFO] - Test script finished
+[08:02:36 - AWT-EventQueue-0] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[08:02:36 - Thread-6] [AbstractRadioMedium.java:198] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@db4d290
+[08:02:36 - Thread-6] [Simulation.java:420] [INFO] - Simulation random seed: 3756172302073318285
+[08:02:36 - Thread-6] [CompileContiki.java:140] [INFO] - > make udp-server.z1 TARGET=z1 
+[08:02:36 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-observe-client-9-1.z1 TARGET=z1 
+[08:02:36 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[08:02:36 - Thread-6] [CompileContiki.java:140] [INFO] - > make er-example-server_observe_blockwise.z1 TARGET=z1 
+[08:02:36 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/ipv6/rpl-udp/udp-server.z1
+[08:02:36 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-observe-client-9-1.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server.z1
+[08:02:37 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/roger/LabWork/BEB/contiki-3/examples/er-rest-example/er-example-server_observe_blockwise.z1
+[08:02:38 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[08:02:39 - Thread-6] [ScriptRunner.java:429] [INFO] - Test script deactivated
+[08:02:39 - Thread-6] [LogScriptEngine.java:265] [INFO] - Script timeout in 300000000000 ms
+[08:02:39 - Thread-6] [ScriptRunner.java:386] [INFO] - Test script activated
+[08:10:02 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1681953002533
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01205 at $07a26
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01207 at $07a2a
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01201 at $07a2c
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01203 at $07a30
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01209 at $07a48
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01215 at $07a26
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01217 at $07a2a
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01211 at $07a2c
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01213 at $07a30
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $01219 at $07a48
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0f at $07a26
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f11 at $07a2a
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0b at $07a2c
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f0d at $07a30
+[08:12:00 - Thread-8] [MspMote.java:229] [WARN] - 2: # MSP430[MISALIGNED_READ]: **** Illegal read - misaligned word from $06f13 at $07a48
+[08:12:00 - Thread-8] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
+org.contikios.cooja.ContikiError
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: se.sics.mspsim.core.EmulationException: Illegal read - out of bounds at $00f72
+	at se.sics.mspsim.core.NoMemSegment.read(NoMemSegment.java:13)
+	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:164)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1990)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	... 4 more
+[08:12:18 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1681953138487	Duration: 135954 ms	Simulated time 1260427 ms	Ratio 9.270981361342807
